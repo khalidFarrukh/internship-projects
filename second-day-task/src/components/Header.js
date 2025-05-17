@@ -30,7 +30,7 @@ export default function Header() {
           border-[var(--myBorderColor)]
         `}
       >
-        <div
+        <nav
           className=
           {`
             z-[50]
@@ -60,6 +60,7 @@ export default function Header() {
               cursor-pointer
               font-inter
               text-[12px]
+              font-semibold
             `}
             >
               Menu
@@ -69,7 +70,6 @@ export default function Header() {
               className=
               {`
               mx-auto
-              text-black
               font-poppins
               font-semibold
             `}
@@ -98,12 +98,11 @@ export default function Header() {
                 cursor-pointer
                 font-inter
                 text-[12px]
+                font-semibold
                 mr-6
               `}
               >
-                {
-                  "Search"
-                }
+                Search
               </Link>
               <Link
                 href="/account"
@@ -116,12 +115,11 @@ export default function Header() {
                 cursor-pointer
                 font-inter
                 text-[12px]
+                font-semibold
                 mr-6
               `}
               >
-                {
-                  "Account"
-                }
+                Account
               </Link>
               <Link
                 href="/cart"
@@ -133,6 +131,7 @@ export default function Header() {
                 {`
                 cursor-pointer
                 font-inter
+                font-semibold
                 text-[12px]
               `}
               >
@@ -145,7 +144,7 @@ export default function Header() {
               </Link>
             </div>
           </div>
-        </div>
+        </nav>
       </header>
     </>
   )

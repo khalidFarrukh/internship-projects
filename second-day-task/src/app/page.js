@@ -17,7 +17,7 @@ export default function Home() {
           relative
           flex
           flex-col
-          text-[var(--myNormalTextColor)]
+          text-[var(--myTextColorNormal)]
           `}
       >
         <Header />

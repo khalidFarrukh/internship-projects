@@ -8,18 +8,18 @@ export default function Main() {
   let mainSectionData = [
     {
       heading: "Latest Drops",
-      route: "/latest-drops"
+      route: "/collections/latest-drops"
     },
     {
       heading: "Weekly Picks",
-      route: "/weekly-picks"
+      route: "/collections/weekly-picks"
     },
     {
       heading: "Sale",
-      route: "/sale"
+      route: "/collections/sale"
     }
   ];
-  let products = [1, 2, 3];
+
   return (
     <>
       <main
@@ -29,19 +29,20 @@ export default function Main() {
           relative
           w-[100%]
           bg-white
-          py-12
+          my-12
           flex
           flex-col
         `}
       >
+        <div className="my-12"> </div>
         {
-          mainSectionData.map((section_f) => {
+          mainSectionData.map((section_v, index) => {
             return (
-
+              <MainSection key={index} heading={section_v.heading} route={section_v.route} />
             )
           })
         }
-        <section
+        {/* <section
           className=
           {`
             max-w-[1440px]
@@ -286,7 +287,7 @@ export default function Main() {
 
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
 
     </>

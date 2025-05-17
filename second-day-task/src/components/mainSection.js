@@ -3,7 +3,8 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-export default function MainSection() {
+export default function MainSection({ heading, route }) {
+  let products = [1, 2, 3];
   return (
     <>
       <section
@@ -34,11 +35,11 @@ export default function MainSection() {
               `}
           >
             <h1>
-              Latest Drops
+              {heading}
             </h1>
 
             <Link
-              href="/collections/latest-drops"
+              href={route}
               className=
               {`
                   absolute

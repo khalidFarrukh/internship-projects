@@ -5,7 +5,9 @@ import { useState } from "react";
 import Link from "next/link";
 import Card1 from "./Card1";
 
-export default function MainSection() {
+export default function MainSection({ id, heading, route }) {
+  let products = [1, 2, 3];
+  const [isViewMoreLinkHovered, setIsViewMoreLinkHovered] = useState(false);
   return (
     <>
       <section
@@ -41,7 +43,9 @@ export default function MainSection() {
             </h1>
 
             <Link
-              href="/collections/latest-drops"
+              href={route}
+              onMouseEnter={() => setIsViewMoreLinkHovered(true)}
+              onMouseLeave={() => setIsViewMoreLinkHovered(false)}
               className=
               {`
                   absolute

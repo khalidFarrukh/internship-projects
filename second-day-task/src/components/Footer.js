@@ -63,23 +63,21 @@ export default function Footer() {
                 <div
                   className=
                   {`
-                w-[50%]
-                h-full
-                flex
-                items-center
-                bg-[red]
-
-              `}
+                    w-[50%]
+                    h-full
+                    flex
+                    bg-[red]
+                  `}
                 >
                   <Link
                     href="/"
                     className=
                     {`
-                  
-                  text-[var(--myTextColorNormal)]
-                  font-poppins
-                  font-semibold
-                `}
+                      mt-4
+                      text-[var(--myTextColorNormal)]
+                      font-poppins
+                      font-semibold
+                    `}
                   >
                     MEDUSA STORE
                   </Link>
@@ -88,12 +86,157 @@ export default function Footer() {
                 <div
                   className=
                   {`
-                w-[50%]
-                h-full
-                bg-[green]
-              `}
+                    w-[50%]
+                    h-full
+                    flex
+                    bg-[green]
+                  `}
                 >
-
+                  <div
+                    className=
+                    {`
+                      w-[110px]
+                      bg-[blue]
+                    `}
+                  >
+                    <ul className=
+                      {`
+                      text-[14px]
+                    `}
+                    >
+                      <li
+                        className=
+                        {`
+                        
+                        text-black
+                      `}
+                      >
+                        Categories
+                      </li>
+                      <li>
+                        <Link href="/">
+                          Clothing
+                        </Link>
+                      </li>
+                      <li className="pl-6">
+                        <Link href="/">
+                          Hoodies
+                        </Link>
+                      </li>
+                      <li className="pl-6">
+                        <Link href="/">
+                          Accessories
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/">
+                          Audio
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/">
+                          Furniture
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className=
+                    {`
+                      w-[110px]
+                      bg-[blue]
+                    `}
+                  >
+                    <ul className=
+                      {`
+                      text-[14px]
+                    `}
+                    >
+                      <li
+                        className=
+                        {`
+                        
+                        text-black
+                      `}
+                      >
+                        Categories
+                      </li>
+                      <li>
+                        <Link href="/">
+                          Clothing
+                        </Link>
+                      </li>
+                      <li className="pl-6">
+                        <Link href="/">
+                          Hoodies
+                        </Link>
+                      </li>
+                      <li className="pl-6">
+                        <Link href="/">
+                          Accessories
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/">
+                          Audio
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/">
+                          Furniture
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className=
+                    {`
+                      
+                      w-[110px]
+                      bg-[blue]
+                    `}
+                  >
+                    <ul className=
+                      {`
+                      text-[14px]
+                    `}
+                    >
+                      <li
+                        className=
+                        {`
+                        
+                        text-black
+                      `}
+                      >
+                        Categories
+                      </li>
+                      <li>
+                        <Link href="/">
+                          Clothing
+                        </Link>
+                      </li>
+                      <li className="pl-6">
+                        <Link href="/">
+                          Hoodies
+                        </Link>
+                      </li>
+                      <li className="pl-6">
+                        <Link href="/">
+                          Accessories
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/">
+                          Audio
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/">
+                          Furniture
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
@@ -101,15 +244,15 @@ export default function Footer() {
             <div
               className=
               {`
-              w-[100%]
-              h-[10%]
-              text-[#9ca3af]
-              text-[13px]
-              flex
-              items-center
-              relative
-              
-            `}
+                w-[100%]
+                h-[10%]
+                text-[#9ca3af]
+                text-[13px]
+                flex
+                items-center
+                relative
+                
+              `}
             >
               <div>
                 © 2025 Medusa Store. All rights reserved.

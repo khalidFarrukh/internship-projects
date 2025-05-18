@@ -1,6 +1,10 @@
-import ProductMainSection from "@/components/ProductMainSection";
+"use client"
+import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Card1 from "@/components/Card1";
 
-export default async function Product({ params }) {
+export default function Product({ params }) {
   const { route } = params;
   useEffect(() => {
     fetch("/api/products/" + route)

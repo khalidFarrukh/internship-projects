@@ -3,6 +3,9 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { AppContextProvider } from "../context/AppContext";
 import Providers from './providers';
+import Header from "@/components/Header";
+import CustomCartBox from "@/components/smallCartBox";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter", // optional
@@ -28,7 +31,22 @@ export default function RootLayout({ children }) {
       >
         <Providers>
           <AppContextProvider>
-            {children}
+            <div
+              className=
+              {`
+                z-[1]
+                relative
+                flex
+                flex-col
+                font-inter
+                text-[var(--myTextColorNormal)]
+              `}
+            >
+              <Header />
+              <CustomCartBox />
+              {children}
+              <Footer />
+            </div>
           </AppContextProvider>
         </Providers>
       </body>

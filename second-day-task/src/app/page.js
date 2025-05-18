@@ -1,31 +1,48 @@
-"use client"
-import Image from "next/image";
-import SideBar from "@/components/sidebar";
-import Header from "@/components/Header";
-import CustomCartBox from "@/components/smallCartBox";
-import Main from "@/components/main";
-import Footer from "@/components/Footer";
+import HomeMainSection from "@/components/HomeMainSection";
 
 export default function Home() {
+  let mainSectionData = [
+    {
+      heading: "Latest Drops",
+      actualPath: "/api/LatestDrops",
+      route: "/collections/latest-drops"
+    },
+    {
+      heading: "Weekly Picks",
+      actualPath: "/api/WeeklyPicks",
+      route: "/collections/weekly-picks"
+    },
+    {
+      heading: "Sale",
+      actualPath: "/api/Sale",
+      route: "/collections/sale"
+    }
+  ];
 
   return (
     <>
-      <div
+      <div className="h-[70px]"> </div>
+      <main
         className=
         {`
           z-[1]
           relative
+          w-[100%]
+          bg-white
+          my-12
           flex
           flex-col
-          font-inter
-          text-[var(--myTextColorNormal)]
-          `}
+          items-center
+        `}
       >
-        <Header />
-        <CustomCartBox />
-        <Main />
-        <Footer />
-      </div>
+        {
+          mainSectionData.map((section_v, index) => {
+            return (
+              <HomeMainSection key={index} id={index} heading={section_v.heading} actualPath={section_v.actualPath} route={section_v.route} />
+            )
+          })
+        }
+      </main>
     </>
   )
 }

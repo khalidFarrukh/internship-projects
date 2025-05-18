@@ -221,30 +221,61 @@ export default function Footer() {
                 
               `}
             >
-              <div>
+              <div
+                className=
+                {`
+                  break-words
+                  w-full
+                  whitespace-normal
+                `}
+              >
                 © 2025 Medusa Store. All rights reserved.
               </div>
               <div
                 className=
                 {`
-                  flex
-                  absolute
-                  right-0
+
+                  relative
+                  break-words
+                  w-full
+                  whitespace-normal
+                  text-right
+                  right-16
                 `}
               >
-                Powered by Me &
-                <Link
-                  href="https://nextjs.org"
-                  className=""
+                Powered by
+              </div>
+              <div
+                className=
+                {`
+                  absolute
+                  right-0
+                  flex
+                  
+                `}
+              >
+                <div
+                  className=
+                  {`
+                    relative
+                    flex
+                  `}
                 >
-                  <Image
-                    src="./nextjs-icon.svg"
-                    alt="next js logo"
-                    width={50}
-                    height={50}
-                    className="w-[20px] ml-[10px]"
-                  />
-                </Link>
+                  Me &
+                  <Link
+                    href="https://nextjs.org"
+                    className=""
+                  >
+                    <Image
+                      src="./nextjs-icon.svg"
+                      alt="next js logo"
+                      width={50}
+                      height={50}
+                      className="w-[20px] ml-[10px]"
+                    />
+                  </Link>
+                </div>
+
               </div>
             </div>
           </div>

@@ -3,46 +3,44 @@ export async function GET() {
     {
       id: 1,
       pname: "Nebula Noir Hoodie",
-      discount: "0",
+      discount: 0,
       price: 199,
       pthumbLink: "https://next.medusajs.com/_next/image?url=https%3A%2F%2Fmedusa-server-testing.s3.us-east-1.amazonaws.com%2Fhoodie-nobg-1700675072425.png&w=828&q=50",
-      description: "Immerse in audio with the Audio Arrogance AuralElite Bluetooth headphones. Enjoy Active Noise Cancellation (ANC) for immersive experience. Indulge in flawless sound.",
+      description: "Immerse yourself in cosmic fashion. Unveil the enigmatic allure of the Nebula Noir Hoodie. Embrace its cozy and durable charm. Elevate your style to celestial heights. Get yours today!",
       options: {
-        color: ["Black", "Silver"],
-        noise_canceling: ["ANC", "None"]
+        size: ["S", "M", "L", "XL"],
       },
-      info: {}
+      info: {},
+      route: "nebula-noir-hoodie"
     },
     {
       id: 2,
       pname: "Exorbita Elegence Elite",
-      discount: "0",
+      discount: 0,
       price: 1199,
       pthumbLink: "https://next.medusajs.com/_next/image?url=https%3A%2F%2Fmedusa-server-testing.s3.us-east-1.amazonaws.com%2Fwatch-nobg-1700675096621.png&w=828&q=50",
-      description: "Elevate your travel experience with the luxurious Pinnacle Posh Pack. Crafted from genuine leather, this stylish backpack is tailor-made for modern adventurers. It's handmade, durable, and exudes a touch of sophistication. Upgrade your travel game today!",
+      description: "Introducing the Exorbita Elegance Elite watch, now available with the option of kinetic movement technology. Immerse yourself in timeless elegance and never worry about battery changes again. Discover the perfect blend of style and innovation.",
       options: {
-        color: ["Black", "White"],
+        Wristband: ["Leather", "Aluminium"],
+        Power: ["Battery", "Kinetic"],
       },
-      info: {
-        material: "Leather"
-      }
+      info: {},
+      route: "exorbita-elegence-elite"
     },
     {
       id: 3,
-      pname: "Vinyl Virtuoso Opulenza",
-      discount: "0",
-      price: "899",
-      pthumbLink: "https://next.medusajs.com/_next/image?url=https%3A%2F%2Fmedusa-server-testing.s3.us-east-1.amazonaws.com%2Fheadphones-nobg-1700675136219.png&w=828&q=50",
-      description: "Immerse in audio with the Audio Arrogance AuralElite Bluetooth headphones. Enjoy Active Noise Cancellation (ANC) for immersive experience. Indulge in flawless sound.",
+      pname: "Metallic Majesty Illuminator",
+      discount: 0,
+      price: 399,
+      pthumbLink: "https://next.medusajs.com/_next/image?url=https%3A%2F%2Fmedusa-server-testing.s3.us-east-1.amazonaws.com%2Flamp-nobg-1700675116934.png&w=828&q=75",
+      description: "Exquisite steel design lamp. Sleek construction exudes elegance and modernity. Illuminate with style and sophistication. Elevate your decor effortlessly. Perfect for warm and inviting ambiance. Unleash your creativity. Experience steel in a new light.",
       options: {
         color: ["Black", "White"]
       },
       info: {
-        material: "Aluminium",
-        weight: "80 g",
-        Country_of_origin: "DK",
-        Dimensions: "33L x 65W x 16H"
-      }
+        material: "Steel"
+      },
+      route: "metallic-majesty-illuminator"
 
     },
   ];

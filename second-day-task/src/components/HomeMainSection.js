@@ -1,19 +1,27 @@
 "use client"
 import Image from "next/image";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Card1 from "./Card1";
 
-export default function MainSection({ id, heading, route }) {
-  let products = [1, 2, 3];
+export default function HomeMainSection({ id, heading, actualPath, route }) {
   const [isViewMoreLinkHovered, setIsViewMoreLinkHovered] = useState(false);
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch(actualPath)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Fetched products:", data[0].pthumbLink);
+        setProducts(data);
+      })
+      .catch((err) => console.error("Error fetching products:", err));
+  }, []);
   return (
     <>
       <section
         className=
         {`
-          
           max-w-[1440px]
           w-full
         `}
@@ -54,7 +62,7 @@ export default function MainSection({ id, heading, route }) {
                   justify-center
                   right-0
                   text-[14px]
-                  text-[skyblue]
+                  text-[var(--myTextColorBlue)]
                   font-bold
                   
                 `}
@@ -81,17 +89,18 @@ export default function MainSection({ id, heading, route }) {
                 grid
                 grid-cols-2
                 lg:grid-cols-3
-                gap-x-4
+                gap-x-6
                 gap-y-22
                 w-full
-                
               `}
           >
             {
 
-              products.map((item, index) => (
-                <Card1 key={index} id={index} plink={"/products/"} pthumbnail={""} disc_price={0} canceled_price={0} />
-              ))
+              products.map((item, index) => {
+                return (
+                  <Card1 key={index} id={index} pname={item.pname} plink={"/products/" + String(item.route)} pthumbLink={item.pthumbLink} discount={item.discount} price={item.price} description={item.description} options={item.options} info={item.info} route={item.route} />
+                )
+              })
             }
           </div>
         </div>

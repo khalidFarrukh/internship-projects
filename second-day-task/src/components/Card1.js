@@ -1,15 +1,14 @@
-"use client"
+
 import Image from "next/image";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 
-export default function Card1({ id, plink, pthumbnail, pname, disc_price, canceled_price }) {
-  let products = [1, 2, 3];
-  const [isViewMoreLinkHovered, setIsViewMoreLinkHovered] = useState(false);
+export default function Card1({ id, plink, pname, discount, price, pthumbLink, description, options, info, route }) {
   return (
     <>
       <Link
+        key={id}
         href={plink}
         className=
         {`
@@ -41,17 +40,66 @@ export default function Card1({ id, plink, pthumbnail, pname, disc_price, cancel
               hover:shadow-sm
             `}
           >
+            <Image
+              src={pthumbLink}
+              alt={pname}
+              width={1200}
+              height={1200}
+            />
           </div>
           <div
             className=
             {`
+              relative
               flex
               mt-3
               w-[100%]
+              text-[95%]
               text-[var(--myTextColorNormal)]
+              font-semibold
+              reverse
             `}
           >
-            Item-1
+            <div
+              className=
+              {`
+                break-words
+                w-full
+                whitespace-normal
+              `}
+            >
+              {pname}
+            </div>
+            <div
+              className=
+              {`
+                flex
+                text-right
+              `}
+            >
+              {
+                discount > 0 &&
+                <div
+                  className=
+                  {`
+                    ml-3
+                    line-through
+                  `}
+                >
+                  {price}
+                </div>
+              }
+              <div
+                className=
+                {`
+                  ml-3
+                  ${discount > 0 && "text-[var(--myTextColorBlue)]"}
+                `}
+              >
+                {Math.floor((price / 100) * (100 - discount))}.00
+              </div>
+            </div>
+
           </div>
         </article>
       </Link>

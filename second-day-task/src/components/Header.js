@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import SideBar from "@/components/sidebar";
 import { MenuIcon } from "lucide-react";

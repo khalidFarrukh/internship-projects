@@ -8,9 +8,9 @@ import { useSelector } from "react-redux";
 
 export default function Product() {
 
-  const { product } = useParams();
-  const selected_product = useSelector((state) => state.medusaSelectedProduct);
-  console.log(selected_product);
+  const { proute } = useParams();
+  const product = useSelector((state) => state.medusaSelectedProduct);
+  console.log(product);
   return (
     <>
       <div className="h-[70px]"> </div>
@@ -48,33 +48,16 @@ export default function Product() {
               className=
               {`
                 w-[370px]
-                
-                flex
-                items-center
                 bg-[blue]
+                h-[700px]
               `}
             >
-              <div
-                className=
-                {`
-                  w-full
-                  h-[500px]
-                  bg-[red]
-                `}
-              >
-                <Link>
-                {
-                  selected_product.
-                }
-                </Link>
-
-              </div>
+              
             </div>
             <div
               className=
               {`
                 flex-1
-                h-[700px]
                 bg-[green]
               `}
             >

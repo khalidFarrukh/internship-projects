@@ -4,9 +4,11 @@ import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 
 import sidebarReducer from './sidebarSlice';
+import medusaSelectedProductReducer from './medusaselectedproductSlice'
 
 const rootReducer = combineReducers({
   sidebar: sidebarReducer,
+  medusaSelectedProduct: medusaSelectedProductReducer,
 });
 
 const persistConfig = {

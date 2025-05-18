@@ -267,7 +267,7 @@ export default function Footer() {
                     className=""
                   >
                     <Image
-                      src="./nextjs-icon.svg"
+                      src="./nextjsicon.svg"
                       alt="next js logo"
                       width={50}
                       height={50}

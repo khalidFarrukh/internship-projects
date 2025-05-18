@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   id: 0,
-  plink: "",
   pname: "",
   discount: 0,
   price: 0,
@@ -10,7 +9,8 @@ const initialState = {
   description: "",
   options: [],
   info: {},
-  route: ""
+  route: "",
+  collection: ""
 };
 
 const medusaselectedproductSlice = createSlice({

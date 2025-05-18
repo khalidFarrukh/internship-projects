@@ -9,7 +9,7 @@ export default function HomeMainSection({ id, heading, collection, route }) {
   const [isViewMoreLinkHovered, setIsViewMoreLinkHovered] = useState(false);
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("/api/collection/" + collection)
+    fetch("/api/collections/" + collection)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -28,22 +28,22 @@ export default function HomeMainSection({ id, heading, collection, route }) {
         <div
           className=
           {`
-              w-[calc(100%-3rem)]
-              my-12
-              lg:my-24
-              mx-auto
-            `}
+            w-[calc(100%-3rem)]
+            my-12
+            lg:my-24
+            mx-auto
+          `}
         >
           <div
             className=
             {`
-                flex
-                items-center
-                relative
-                text-[16px]
-                text-[var(--myTextColorHeading)]
-                font-medium
-              `}
+              flex
+              items-center
+              relative
+              text-[16px]
+              text-[var(--myTextColorHeading)]
+              font-medium
+            `}
           >
             <h1>
               {heading}
@@ -96,7 +96,7 @@ export default function HomeMainSection({ id, heading, collection, route }) {
             {
               products.map((item, index) => {
                 return (
-                  <Card1 key={index} productObj={item} id={index} pname={item.pname} plink={"/products/" + String(item.route)} pthumbLink={item.pthumbLink} discount={item.discount} price={item.price} description={item.description} options={item.options} info={item.info} route={item.route} />
+                  <Card1 key={index} productObj={item} heading={heading} id={index} pname={item.pname} plink={"/products/" + String(item.route)} pthumbLink={item.pthumbLink} discount={item.discount} price={item.price} description={item.description} options={item.options} info={item.info} route={item.route} collection={item.collection} />
                 )
               })
             }

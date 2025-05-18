@@ -13,6 +13,8 @@
   --color-foreground: var(--foreground);
   --font-inter: var(--font-inter);
   --font-poppins: var(--font-poppins);
+  --breakpoint-w768: 768px;
+  --breakpoint-w512: 512px;
 }
 
 @media (prefers-color-scheme: dark) {

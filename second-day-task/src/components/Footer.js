@@ -48,7 +48,6 @@ export default function Footer() {
                 pt-12
                 w-[100%]
                 h-[90%]
-                bg-[yellow]
               `}
             >
               <div
@@ -56,17 +55,21 @@ export default function Footer() {
                 {`
                   w-[100%]
                   h-[100%]
+                  font-poppins
                   flex
-                  items-center
+                  flex-col
+                  w512:flex-row
+                  w512:items-center
                 `}
               >
                 <div
                   className=
                   {`
-                    w-[50%]
-                    h-full
+                    mb-6
+                    w512:w-[50%]
+                    w512:h-full
+                    w512:mb-0
                     flex
-                    bg-[red]
                   `}
                 >
                   <Link
@@ -75,7 +78,7 @@ export default function Footer() {
                     {`
                       mt-4
                       text-[var(--myTextColorNormal)]
-                      font-poppins
+                      
                       font-semibold
                     `}
                   >
@@ -86,156 +89,120 @@ export default function Footer() {
                 <div
                   className=
                   {`
+                    relative
+                    text-[var(--myTextColorNormal)]
                     w-[50%]
                     h-full
-                    flex
-                    bg-[green]
                   `}
                 >
                   <div
                     className=
                     {`
-                      w-[110px]
-                      bg-[blue]
-                    `}
-                  >
-                    <ul className=
-                      {`
-                      text-[14px]
-                    `}
-                    >
-                      <li
-                        className=
-                        {`
-                        
-                        text-black
-                      `}
-                      >
-                        Categories
-                      </li>
-                      <li>
-                        <Link href="/">
-                          Clothing
-                        </Link>
-                      </li>
-                      <li className="pl-6">
-                        <Link href="/">
-                          Hoodies
-                        </Link>
-                      </li>
-                      <li className="pl-6">
-                        <Link href="/">
-                          Accessories
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/">
-                          Audio
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/">
-                          Furniture
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div
-                    className=
-                    {`
-                      w-[110px]
-                      bg-[blue]
-                    `}
-                  >
-                    <ul className=
-                      {`
-                      text-[14px]
-                    `}
-                    >
-                      <li
-                        className=
-                        {`
-                        
-                        text-black
-                      `}
-                      >
-                        Categories
-                      </li>
-                      <li>
-                        <Link href="/">
-                          Clothing
-                        </Link>
-                      </li>
-                      <li className="pl-6">
-                        <Link href="/">
-                          Hoodies
-                        </Link>
-                      </li>
-                      <li className="pl-6">
-                        <Link href="/">
-                          Accessories
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/">
-                          Audio
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/">
-                          Furniture
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div
-                    className=
-                    {`
+                      absolute
+                      grid
+                      grid-cols-2
+
+                      gap-x-10
+                      w768:gap-x-20
                       
-                      w-[110px]
-                      bg-[blue]
+                      h-full
+                      mr-6
+                      right-0
                     `}
                   >
-                    <ul className=
+
+                    <div
+                      className=
                       {`
-                      text-[14px]
+                      w-[110px]
                     `}
                     >
-                      <li
-                        className=
+                      <ul className=
                         {`
-                        
-                        text-black
-                      `}
+                        leading-7
+                      text-[11px]
+                    `}
                       >
-                        Categories
-                      </li>
-                      <li>
-                        <Link href="/">
-                          Clothing
-                        </Link>
-                      </li>
-                      <li className="pl-6">
-                        <Link href="/">
-                          Hoodies
-                        </Link>
-                      </li>
-                      <li className="pl-6">
-                        <Link href="/">
-                          Accessories
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/">
-                          Audio
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/">
-                          Furniture
-                        </Link>
-                      </li>
-                    </ul>
+                        <li
+                          className=
+                          {`
+                            font-semibold
+                            text-black
+                          `}
+                        >
+                          Categories
+                        </li>
+                        <li>
+                          <Link href="/"
+                            className=
+                            {`
+                              font-medium
+                              text-black
+                            `}
+                          >
+                            Clothing
+                          </Link>
+                        </li>
+                        <li className="pl-6">
+                          <Link href="/">
+                            Hoodies
+                          </Link>
+                        </li>
+                        <li className="pl-6">
+                          <Link href="/">
+                            Accessories
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/">
+                            Audio
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/">
+                            Furniture
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      className=
+                      {`
+                      w-[110px]
+                    `}
+                    >
+                      <ul className=
+                        {`
+                        leading-7
+                      text-[11px]
+                    `}
+                      >
+                        <li
+                          className=
+                          {`
+                            font-semibold
+                            text-black
+                          `}
+                        >
+                          Collections
+                        </li>
+                        <li>
+                          <Link href="/">
+                            Latest Drops
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/">
+                            Weekly Picks
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/">
+                            Sale
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -60,7 +60,6 @@ export default function Header() {
                 absolute
                 left-0
                 cursor-pointer
-                font-inter
                 text-[12px]
                 font-semibold
               `}
@@ -86,7 +85,6 @@ export default function Header() {
               right-0
               flex
               items-center
-              bg-[red]
             `}
             >
               <Link
@@ -98,7 +96,6 @@ export default function Header() {
                 hidden
                 lg:block
                 cursor-pointer
-                font-inter
                 text-[12px]
                 font-semibold
                 mr-6
@@ -115,7 +112,6 @@ export default function Header() {
                 hidden
                 lg:block
                 cursor-pointer
-                font-inter
                 text-[12px]
                 font-semibold
                 mr-6
@@ -132,12 +128,10 @@ export default function Header() {
                 className=
                 {`
                 cursor-pointer
-                font-inter
                 font-semibold
                 text-[12px]
               `}
               >
-
                 {
                   "Cart (" +
                   0

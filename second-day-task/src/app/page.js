@@ -17,6 +17,7 @@ export default function Home() {
           relative
           flex
           flex-col
+          font-inter
           text-[var(--myTextColorNormal)]
           `}
       >

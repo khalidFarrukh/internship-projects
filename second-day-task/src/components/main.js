@@ -22,6 +22,7 @@ export default function Main() {
 
   return (
     <>
+      <div className="h-[70px]"> </div>
       <main
         className=
         {`
@@ -32,13 +33,13 @@ export default function Main() {
           my-12
           flex
           flex-col
+          items-center
         `}
       >
-        <div className="my-12"> </div>
         {
           mainSectionData.map((section_v, index) => {
             return (
-              <MainSection key={index} heading={section_v.heading} route={section_v.route} />
+              <MainSection key={index} id={index} heading={section_v.heading} route={section_v.route} />
             )
           })
         }

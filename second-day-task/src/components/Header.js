@@ -57,11 +57,13 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className=
               {`
-              cursor-pointer
-              font-inter
-              text-[12px]
-              font-semibold
-            `}
+                absolute
+                left-0
+                cursor-pointer
+                font-inter
+                text-[12px]
+                font-semibold
+              `}
             >
               Menu
             </button>

@@ -51,12 +51,13 @@ export default function Footer() {
                 bg-[yellow]
               `}
             >
-              {/* <div
+              <div
                 className=
                 {`
                   w-[100%]
                   h-[100%]
                   flex
+                  items-center
                 `}
               >
                 <div
@@ -75,7 +76,7 @@ export default function Footer() {
                     className=
                     {`
                   
-                  text-black
+                  text-[var(--myTextColorNormal)]
                   font-poppins
                   font-semibold
                 `}
@@ -94,7 +95,7 @@ export default function Footer() {
                 >
 
                 </div>
-              </div> */}
+              </div>
 
             </div>
             <div

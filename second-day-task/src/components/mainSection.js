@@ -1,26 +1,27 @@
 "use client"
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { useState } from "react";
 import Link from "next/link";
+import Card1 from "./Card1";
 
-export default function MainSection({ heading, route }) {
-  let products = [1, 2, 3];
+export default function MainSection() {
   return (
     <>
       <section
         className=
         {`
-            max-w-[1440px]
-            w-full
-            mx-auto
-          `}
+          
+          max-w-[1440px]
+          w-full
+        `}
       >
         <div
           className=
           {`
               w-[calc(100%-3rem)]
               my-12
-              sm:my-24
+              lg:my-24
               mx-auto
             `}
         >
@@ -30,7 +31,8 @@ export default function MainSection({ heading, route }) {
                 flex
                 items-center
                 relative
-                text-black
+                text-[16px]
+                text-[var(--myTextColorHeading)]
                 font-medium
               `}
           >
@@ -39,7 +41,7 @@ export default function MainSection({ heading, route }) {
             </h1>
 
             <Link
-              href={route}
+              href="/collections/latest-drops"
               className=
               {`
                   absolute
@@ -47,8 +49,10 @@ export default function MainSection({ heading, route }) {
                   items-center
                   justify-center
                   right-0
-                  text-[13px]
+                  text-[14px]
                   text-[skyblue]
+                  font-bold
+                  
                 `}
             >
               <div>
@@ -57,8 +61,11 @@ export default function MainSection({ heading, route }) {
               <ArrowUpRight
                 className=
                 {`
-                    w-[20px]
-                  `}
+                  transiion-all
+                  duration-300
+                  w-[20px]
+                  ${!isViewMoreLinkHovered ? "rotate-0" : "rotate-45"}
+                `}
               />
             </Link>
 
@@ -68,65 +75,20 @@ export default function MainSection({ heading, route }) {
             {`
                 mt-7
                 grid
-                grid-cols-3
+                grid-cols-2
+                lg:grid-cols-3
                 gap-x-4
+                gap-y-22
                 w-full
-
+                
               `}
           >
             {
 
               products.map((item, index) => (
-                <Link
-                  key={index}
-                  href=""
-                  className=
-                  {`
-                      w-[100%]
-                      h-[43vw]
-                      max-h-[610px]
-                      
-                    `}
-                >
-                  <article
-                    className=
-                    {`
-                        w-[100%]
-                        h-[100%]
-                        flex
-                        flex-col
-                      `}
-                  >
-                    <div
-                      className=
-                      {`
-                          w-[100%]
-                          h-[100%]
-                          rounded-[12px]
-                          bg-[#fafafa]
-                          border-2
-                          border-[lightgray]
-                        `}
-                    >
-                    </div>
-                    <div
-                      className=
-                      {`
-                          flex
-                          mt-3
-                          w-[100%]
-                          
-                          text-[gray]
-                        `}
-                    >
-                      Item-1
-                    </div>
-                  </article>
-                </Link>
+                <Card1 key={index} id={index} plink={"/products/"} pthumbnail={""} disc_price={0} canceled_price={0} />
               ))
             }
-
-
           </div>
         </div>
       </section>

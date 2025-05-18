@@ -5,6 +5,7 @@
   --foreground: #171717;
   --myBorderColor: #e5e7eb;
   --myTextColorNormal: #4b5563;
+  --myTextColorHeading: black;
 }
 
 @theme inline {

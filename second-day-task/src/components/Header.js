@@ -73,6 +73,7 @@ export default function Header() {
               {`
               mx-auto
               font-poppins
+              text-[120%]
               font-semibold
             `}
             >

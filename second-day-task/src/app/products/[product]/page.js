@@ -1,5 +1,5 @@
 "use client"
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Plus } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Card1 from "@/components/Card1";
@@ -107,20 +107,66 @@ export default function Product() {
                     font-poppins
                     text-[90%]
                     font-bold
-                  `}
+                    `}
                 >
                   {
                     selected_product.description
                   }
                 </p>
-                <hr
+                <div
                   className=
                   {`
-                    mt-6
+                    w-full
+                    mt-5
+                    border-t
                     border-[lightgray]
+
                   `}
-                />
-                
+                >
+                </div>
+                <div
+                  className=
+                  {`
+                    relative
+                    mb-5
+                    py-3
+                    flex
+                    items-center
+                    w-full
+                    
+                    border-b
+                    border-[lightgray]
+                    `}
+                >
+                  <h4
+                    className=
+                    {`
+                      font-poppins
+                      text-[90%]
+                      font-semibold
+                      `}
+                  >
+                    Product Information
+                  </h4>
+                  <button
+                    className=
+                    {`
+                      absolute
+                      cursor-pointer
+                      w-8
+                      h-8
+                      right-0
+                      mr-6
+                      hover:bg-[#fafafa]
+                      rounded-[50%]
+                      flex
+                      items-center
+                      justify-center
+                    `}
+                  >
+                    <Plus width={16} height={16} />
+                  </button>
+                </div>
               </div>
             </div>
             <div

@@ -1,6 +1,7 @@
 export const products = [
   {
     id: 1,
+    pheading: "Latest Drops",
     pname: "Audio Arrogance Aural Elite",
     discount: 0,
     price: 249,
@@ -16,6 +17,7 @@ export const products = [
   },
   {
     id: 2,
+    pheading: "Latest Drops",
     pname: "Pinnacle Posh Pack",
     discount: 0,
     price: 405,
@@ -32,6 +34,7 @@ export const products = [
   },
   {
     id: 3,
+    pheading: "Latest Drops",
     pname: "Vinyl Virtuoso Opulenza",
     discount: 0,
     price: 899,
@@ -53,6 +56,7 @@ export const products = [
 
   {
     id: 4,
+    pheading: "Weekly Picks",
     pname: "Nebula Noir Hoodie",
     discount: 0,
     price: 199,
@@ -67,6 +71,7 @@ export const products = [
   },
   {
     id: 5,
+    pheading: "Weekly Picks",
     pname: "Exorbita Elegence Elite",
     discount: 0,
     price: 1199,
@@ -82,6 +87,7 @@ export const products = [
   },
   {
     id: 6,
+    pheading: "Weekly Picks",
     pname: "Metallic Majesty Illuminator",
     discount: 0,
     price: 399,
@@ -99,6 +105,7 @@ export const products = [
   },
   {
     id: 7,
+    pheading: "Sale",
     pname: "BlendMaster Elite Fusionator",
     discount: 33,
     price: 299,
@@ -113,6 +120,7 @@ export const products = [
   },
   {
     id: 8,
+    pheading: "Sale",
     pname: "Corporate Commando Throne",
     discount: 8,
     price: 600,
@@ -127,6 +135,7 @@ export const products = [
   },
   {
     id: 9,
+    pheading: "Sale",
     pname: "Decibel Dominator Deluxe",
     discount: 20,
     price: 249,

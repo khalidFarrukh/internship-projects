@@ -40,7 +40,7 @@ export default function Product() {
             {`
               flex
               w-[calc(100%-3rem)]
-              bg-[red]
+              
               mx-auto
             `}
           >
@@ -51,23 +51,76 @@ export default function Product() {
                 
                 flex
                 items-center
-                bg-[blue]
+                relative
+                
               `}
             >
               <div
                 className=
                 {`
-                  w-full
+                  absolute
+                  w-[330px]
                   h-[500px]
-                  bg-[red]
+                  
                 `}
               >
-                <Link>
-                {
-                  selected_product.
-                }
+                <Link
+                  href={"/collections/" + selected_product.pheading}
+                  className=
+                  {`
+                    block
+                  `}
+                >
+                  <h3
+                    className=
+                    {`
+                      font-poppins
+                      text-[105%]
+                      font-bold
+                    `}
+                  >
+                    {
+                      selected_product.pheading
+                    }
+                  </h3>
                 </Link>
-
+                <h1
+                  className=
+                  {`
+                    mt-3
+                    w-full
+                    font-poppins
+                    text-black
+                    text-[205%]
+                    font-semibold
+                  `}
+                >
+                  {
+                    selected_product.pname
+                  }
+                </h1>
+                <p
+                  className=
+                  {`
+                    mt-3
+                    w-full
+                    font-poppins
+                    text-[90%]
+                    font-bold
+                  `}
+                >
+                  {
+                    selected_product.description
+                  }
+                </p>
+                <hr
+                  className=
+                  {`
+                    mt-6
+                    border-[lightgray]
+                  `}
+                />
+                
               </div>
             </div>
             <div

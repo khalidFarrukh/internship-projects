@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useDispatch } from 'react-redux';
 import { setMedusaSelectedProduct } from '@/store/medusaselectedproductSlice';
 
-export default function Card1({ productObj, heading, id, plink, pname, discount, price, pthumbLink, description, options, info, route, collection }) {
+export default function Card1({ productObj, id, plink, pname, discount, price, pthumbLink, description, options, info, route, collection }) {
   const dispatch = useDispatch();
   return (
     <>

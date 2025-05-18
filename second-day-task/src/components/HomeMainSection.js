@@ -96,7 +96,7 @@ export default function HomeMainSection({ id, heading, collection, route }) {
             {
               products.map((item, index) => {
                 return (
-                  <Card1 key={index} productObj={item} heading={heading} id={index} pname={item.pname} plink={"/products/" + String(item.route)} pthumbLink={item.pthumbLink} discount={item.discount} price={item.price} description={item.description} options={item.options} info={item.info} route={item.route} collection={item.collection} />
+                  <Card1 key={index} productObj={item} id={index} pname={item.pname} plink={"/products/" + String(item.route)} pthumbLink={item.pthumbLink} discount={item.discount} price={item.price} description={item.description} options={item.options} info={item.info} route={item.route} collection={item.collection} />
                 )
               })
             }

@@ -5,14 +5,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Card1 from "./Card1";
 
-export default function HomeMainSection({ id, heading, actualPath, route }) {
+export default function HomeMainSection({ id, heading, collection, route }) {
   const [isViewMoreLinkHovered, setIsViewMoreLinkHovered] = useState(false);
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch(actualPath)
+    fetch("/api/collection/" + collection)
       .then((res) => res.json())
       .then((data) => {
-        console.log("Fetched products:", data[0].pthumbLink);
         setProducts(data);
       })
       .catch((err) => console.error("Error fetching products:", err));
@@ -95,10 +94,9 @@ export default function HomeMainSection({ id, heading, actualPath, route }) {
               `}
           >
             {
-
               products.map((item, index) => {
                 return (
-                  <Card1 key={index} id={index} pname={item.pname} plink={"/products/" + String(item.route)} pthumbLink={item.pthumbLink} discount={item.discount} price={item.price} description={item.description} options={item.options} info={item.info} route={item.route} />
+                  <Card1 key={index} productObj={item} id={index} pname={item.pname} plink={"/products/" + String(item.route)} pthumbLink={item.pthumbLink} discount={item.discount} price={item.price} description={item.description} options={item.options} info={item.info} route={item.route} />
                 )
               })
             }

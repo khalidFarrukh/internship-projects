@@ -4,17 +4,17 @@ export default function Home() {
   let mainSectionData = [
     {
       heading: "Latest Drops",
-      actualPath: "/api/LatestDrops",
+      collection: "latest-drops",
       route: "/collections/latest-drops"
     },
     {
       heading: "Weekly Picks",
-      actualPath: "/api/WeeklyPicks",
+      collection: "weekly-picks",
       route: "/collections/weekly-picks"
     },
     {
       heading: "Sale",
-      actualPath: "/api/Sale",
+      collection: "sale",
       route: "/collections/sale"
     }
   ];
@@ -38,7 +38,7 @@ export default function Home() {
         {
           mainSectionData.map((section_v, index) => {
             return (
-              <HomeMainSection key={index} id={index} heading={section_v.heading} actualPath={section_v.actualPath} route={section_v.route} />
+              <HomeMainSection key={index} id={index} heading={section_v.heading} collection={section_v.collection} route={section_v.route} />
             )
           })
         }

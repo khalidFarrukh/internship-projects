@@ -3,12 +3,16 @@ import Image from "next/image";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import { useDispatch } from 'react-redux';
+import { setMedusaSelectedProduct } from '@/store/medusaselectedproductSlice';
 
-export default function Card1({ id, plink, pname, discount, price, pthumbLink, description, options, info, route }) {
+export default function Card1({ productObj, id, plink, pname, discount, price, pthumbLink, description, options, info, route }) {
+  const dispatch = useDispatch();
   return (
     <>
       <Link
         key={id}
+        onClick={() => dispatch(setMedusaSelectedProduct(productObj))}
         href={plink}
         className=
         {`

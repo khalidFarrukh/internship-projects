@@ -10,7 +10,7 @@ export default function Footer() {
       <footer
         className=
         {`
-          z-[50]
+          z-[40]
           relative
           w-full
           h-[600px]

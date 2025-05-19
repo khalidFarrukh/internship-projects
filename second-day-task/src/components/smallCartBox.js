@@ -17,8 +17,9 @@ export default function CustomCartBox() {
         onMouseLeave={() => setIsCartBtnHovered(false)}
         className=
         {`  
+
           z-[50]
-          absolute
+          fixed
           w-[400px]
           h-[300px]
           bg-[blue]

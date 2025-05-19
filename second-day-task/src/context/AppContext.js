@@ -8,6 +8,7 @@ const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartBtnHovered, setIsCartBtnHovered] = useState(false);
+  const [isProductPageArrowDown, setIsProductPageArrowDown] = useState(true);
 
 
   const menuBtnRef = useRef(null);
@@ -27,6 +28,8 @@ export const AppContextProvider = ({ children }) => {
         setIsMenuOpen,
         isCartBtnHovered,
         setIsCartBtnHovered,
+        isProductPageArrowDown,
+        setIsProductPageArrowDown,
         menuBtnRef,
         menuRef,
         searchBtnRef,

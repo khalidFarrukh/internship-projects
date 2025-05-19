@@ -2,12 +2,18 @@
 import { ArrowUpRight, ArrowRight, Plus } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Card1 from "@/components/Card1";
+import Card2 from "@/components/Card2";
+import TextAndPlus from "@/components/TextAndPlus";
 import { useParams } from 'next/navigation';
 import { useSelector } from "react-redux";
+import { useAppContext } from "@/context/AppContext";
 
 export default function Product() {
+  const {
+    isProductPageArrowDown,
+    setIsProductPageArrowDown
 
+  } = useAppContext();
   const { product } = useParams();
   const selected_product = useSelector((state) => state.medusaSelectedProduct);
   console.log(selected_product);
@@ -48,20 +54,14 @@ export default function Product() {
               className=
               {`
                 w-[370px]
-                
                 flex
                 items-center
-                relative
-                
               `}
             >
               <div
                 className=
                 {`
-                  absolute
                   w-[330px]
-                  h-[500px]
-                  
                 `}
               >
                 <Link
@@ -75,8 +75,10 @@ export default function Product() {
                     className=
                     {`
                       font-poppins
+                      text-[var(--myTextColorLightGray)]
                       text-[105%]
                       font-bold
+                      hover:text-black
                     `}
                   >
                     {
@@ -113,71 +115,180 @@ export default function Product() {
                     selected_product.description
                   }
                 </p>
-                <div
+                <hr
                   className=
                   {`
                     w-full
                     mt-5
                     border-t
-                    border-[lightgray]
-
+                    border-[var(--myBorderColor)]
                   `}
-                >
-                </div>
+                />
+                <TextAndPlus key={1} title="Product Information" />
                 <div
                   className=
                   {`
-                    relative
-                    mb-5
-                    py-3
-                    flex
-                    items-center
-                    w-full
+                    overflow-hidden 
+                    transition-all
+                    duration-550
+                    ease-in-out
                     
-                    border-b
-                    border-[lightgray]
-                    `}
+                    w-full
+                    ${isProductPageArrowDown ? "h-[0px] pointer-events-none pb-0" : "pb-3 h-[160px]"}
+                  `}
                 >
-                  <h4
+                  <div
                     className=
                     {`
+                      grid 
+                      grid-cols-2 
+                      gap-x-4
+                      gap-y-4
+                      text-black
                       font-poppins
-                      text-[90%]
-                      font-semibold
-                      `}
-                  >
-                    Product Information
-                  </h4>
-                  <button
-                    className=
-                    {`
-                      absolute
-                      cursor-pointer
-                      w-8
-                      h-8
-                      right-0
-                      mr-6
-                      hover:bg-[#fafafa]
-                      rounded-[50%]
-                      flex
-                      items-center
-                      justify-center
+                      text-[80%]
+                      font-extrabold
                     `}
                   >
-                    <Plus width={16} height={16} />
-                  </button>
+                    <div
+                      className=
+                      {`
+                        flex
+                        flex-col
+                        
+                      `}
+                    >
+                      <div>
+                        Material
+                      </div>
+                      <div
+                        className=
+                        {`
+                          text-[90%]
+                          text-[var(--myTextColorNormal)]
+                          font-bold
+                        `}
+                      >
+                        Leather
+                      </div>
+                    </div>
+                    <div
+                      className=
+                      {`
+                        flex
+                        flex-col
+
+                      `}
+                    >
+                      <div>
+                        Material
+                      </div>
+                      <div
+                        className=
+                        {`
+                          text-[90%]
+                          text-[var(--myTextColorNormal)]
+                          font-bold
+                        `}
+                      >
+                        Leather
+                      </div>
+                    </div>
+                    <div
+                      className=
+                      {`
+                        flex
+                        flex-col
+
+                      `}
+                    >
+                      <div>
+                        Material
+                      </div>
+                      <div
+                        className=
+                        {`
+                          text-[90%]
+                          text-[var(--myTextColorNormal)]
+                          font-bold
+                        `}
+                      >
+                        Leather
+                      </div>
+                    </div>
+                    <div
+                      className=
+                      {`
+                        flex
+                        flex-col
+
+                      `}
+                    >
+                      <div>
+                        Material
+                      </div>
+                      <div
+                        className=
+                        {`
+                          text-[90%]
+                          text-[var(--myTextColorNormal)]
+                          font-bold
+                        `}
+                      >
+                        Leather
+                      </div>
+                    </div>
+                    <div
+                      className=
+                      {`
+                        flex
+                        flex-col
+
+                      `}
+                    >
+                      <div>
+                        Material
+                      </div>
+                      <div
+                        className=
+                        {`
+                          text-[90%]
+                          text-[var(--myTextColorNormal)]
+                          font-bold
+                        `}
+                      >
+                        Leather
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <hr
+                  className=
+                  {`
+                    w-full
+                    border-t
+                    border-[var(--myBorderColor)]
+                  `}
+                />
+                <TextAndPlus key={2} title="Shipping & Returns" />
+                <hr
+                  className=
+                  {`
+                    w-full
+                    border-t
+                    border-[var(--myBorderColor)]
+                  `}
+                />
               </div>
             </div>
             <div
               className=
               {`
                 flex-1
-                h-[700px]
                 bg-[green]
               `}
             >
-
+              <Card2 pthumbLink={selected_product.pthumbLink} pname={selected_product.pname} />
             </div>
             <div
               className=

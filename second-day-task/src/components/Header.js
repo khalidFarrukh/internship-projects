@@ -63,6 +63,7 @@ export default function Header() {
                 cursor-pointer
                 text-[12px]
                 font-semibold
+                hover:text-black
               `}
             >
               Menu
@@ -75,6 +76,7 @@ export default function Header() {
               font-poppins
               text-[120%]
               font-semibold
+              hover:text-black
             `}
             >
               MEDUSA STORE
@@ -100,6 +102,7 @@ export default function Header() {
                 cursor-pointer
                 text-[12px]
                 font-semibold
+                hover:text-black
                 mr-6
               `}
               >
@@ -116,6 +119,7 @@ export default function Header() {
                 cursor-pointer
                 text-[12px]
                 font-semibold
+                hover:text-black
                 mr-6
               `}
               >
@@ -132,6 +136,7 @@ export default function Header() {
                 cursor-pointer
                 font-semibold
                 text-[12px]
+                hover:text-black
               `}
               >
                 {

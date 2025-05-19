@@ -11,8 +11,9 @@ export default function Header() {
     setIsMenuOpen,
     isCartBtnHovered,
     setIsCartBtnHovered,
+    isSearchBtnClicked,
+    setIsSearchBtnClicked,
     menuBtnRef,
-    searchBtnRef,
     accBtnRef,
     cartBtnRef
 
@@ -93,7 +94,6 @@ export default function Header() {
             >
               <Link
                 href="/search"
-                ref={searchBtnRef}
                 //onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className=
                 {`
@@ -110,7 +110,6 @@ export default function Header() {
               </Link>
               <Link
                 href="/account"
-                ref={accBtnRef}
                 //onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className=
                 {`
@@ -127,7 +126,6 @@ export default function Header() {
               </Link>
               <Link
                 href="/cart"
-                ref={cartBtnRef}
                 onMouseEnter={() => setIsCartBtnHovered(true)}
                 onMouseLeave={() => setIsCartBtnHovered(false)}
                 //onClick={() => setIsMenuOpen(!isMenuOpen)}

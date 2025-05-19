@@ -7,7 +7,8 @@ export default function Card2({ pthumbLink, pname }) {
       <div
         className=
         {`
-          w-[100%]
+          flex-1
+          w-full
           h-[100%]
           rounded-[12px]
           bg-[#fafafa]

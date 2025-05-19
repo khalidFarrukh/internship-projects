@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import { AppContextProvider } from "../context/AppContext";
 import Providers from './providers';
+import { AppContextProvider } from "@/context/AppContext";
 import Header from "@/components/Header";
 import CustomCartBox from "@/components/smallCartBox";
 import Footer from "@/components/Footer";

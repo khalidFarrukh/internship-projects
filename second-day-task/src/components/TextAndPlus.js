@@ -4,12 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useAppContext } from "../context/AppContext";
 
-export default function TextAndPlus({ title }) {
-  const {
-    isProductPageArrowDown,
-    setIsProductPageArrowDown
-
-  } = useAppContext();
+export default function TextAndPlus({ id, title, state, setState }) {
   return (
     <>
       <div
@@ -35,7 +30,7 @@ export default function TextAndPlus({ title }) {
           }
         </h4>
         <button
-          onClick={() => setIsProductPageArrowDown(!isProductPageArrowDown)}
+          onClick={() => setState(!state)}
           className=
           {`
             absolute
@@ -52,7 +47,8 @@ export default function TextAndPlus({ title }) {
           `}
         >
           {
-            isProductPageArrowDown ?
+
+            state ?
               <ArrowDown width={16} height={16} />
               :
               <ArrowUp width={16} height={16} />

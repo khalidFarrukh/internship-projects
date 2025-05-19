@@ -8,14 +8,14 @@ const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartBtnHovered, setIsCartBtnHovered] = useState(false);
-  const [isProductPageArrowDown, setIsProductPageArrowDown] = useState(true);
+  const [isProductPageArrowDown1, setIsProductPageArrowDown1] = useState(true);
+  const [isProductPageArrowDown2, setIsProductPageArrowDown2] = useState(true);
+  const [isSearchBtnClicked, setIsSearchBtnClicked] = useState(false);
 
 
   const menuBtnRef = useRef(null);
   const menuRef = useRef(null);
-  const searchBtnRef = useRef(null);
-  const accBtnRef = useRef(null);
-  const cartBtnRef = useRef(null);
+  const searchBarRef = useRef(null);
   const smallCartBoxRef = useRef(null);
 
   // Close Menu when clicking outside
@@ -28,13 +28,13 @@ export const AppContextProvider = ({ children }) => {
         setIsMenuOpen,
         isCartBtnHovered,
         setIsCartBtnHovered,
-        isProductPageArrowDown,
-        setIsProductPageArrowDown,
+        isProductPageArrowDown1,
+        setIsProductPageArrowDown1,
+        isProductPageArrowDown2,
+        setIsProductPageArrowDown2,
         menuBtnRef,
         menuRef,
-        searchBtnRef,
-        accBtnRef,
-        cartBtnRef,
+        searchBarRef,
         smallCartBoxRef,
       }}>
       {children}

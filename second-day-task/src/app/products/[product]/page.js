@@ -10,8 +10,10 @@ import { useAppContext } from "@/context/AppContext";
 
 export default function Product() {
   const {
-    isProductPageArrowDown,
-    setIsProductPageArrowDown
+    isProductPageArrowDown1,
+    setIsProductPageArrowDown1,
+    isProductPageArrowDown2,
+    setIsProductPageArrowDown2
 
   } = useAppContext();
   const { product } = useParams();
@@ -124,7 +126,7 @@ export default function Product() {
                     border-[var(--myBorderColor)]
                   `}
                 />
-                <TextAndPlus key={1} title="Product Information" />
+                <TextAndPlus id={1} title="Product Information" state={isProductPageArrowDown1} setState={setIsProductPageArrowDown1} />
                 <div
                   className=
                   {`
@@ -134,7 +136,7 @@ export default function Product() {
                     ease-in-out
                     
                     w-full
-                    ${isProductPageArrowDown ? "h-[0px] pointer-events-none pb-0" : "pb-3 h-[160px]"}
+                    ${isProductPageArrowDown1 ? "h-[0px] pointer-events-none pb-0" : "pb-3 h-[160px]"}
                   `}
                 >
                   <div
@@ -270,7 +272,7 @@ export default function Product() {
                     border-[var(--myBorderColor)]
                   `}
                 />
-                <TextAndPlus key={2} title="Shipping & Returns" />
+                <TextAndPlus id={2} title="Shipping & Returns" state={isProductPageArrowDown2} setState={setIsProductPageArrowDown2} />
                 <hr
                   className=
                   {`

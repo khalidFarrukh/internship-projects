@@ -1,5 +1,9 @@
 @import "tailwindcss";
-/* Add Flowbite styles */
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "flowbite";
+@config "../tailwind.config.js";
+
 
 :root {
   --background: #ffffff;
@@ -14,10 +18,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-inter: var(--font-inter);
-  --font-poppins: var(--font-poppins);
   --breakpoint-w768: 768px;
   --breakpoint-w512: 512px;
+
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flowbite HTML Project</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" /> -->
+  <!-- <link href="./globals.css" rel="stylesheet"> -->
+  <style type="text/tailwindcss">
+    @layer components {
+      [aria-selected="false"] {
+        @apply !text-[#999999] !border-[#999999] hover:!text-[#F48E8B] hover:!border-[#F48E8B];
+      }
+      [aria-selected="true"] {
+        @apply !text-[#960D0D] !border-[#960D0D] hover:!text-[#F48E8B] hover:!border-[#F48E8B];
+      }
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none; 
+      /* Firefox */
+    }
+  </style>
+
+</head>
+
+<!-- <body class="-bg-[black] flex flex-col items-center"> -->
+
+<body class="-bg-[black] flex flex-col">
+  <main class="bg-[white] text-black w-full max-w-[1440px] px-12 flex justify-center">
+    <div class="-bg-[yellow] w-full">
+      <section class="-bg-[red] w-full h-fit flex flex-col items-center">
+        <div class="w-full h-full flex flex-col">
+          <div class="-bg-[blue] w-full h-fit mt-[48px] relative flex gap-12">
+            <div class="-bg-[green] w-[312px] full ">
+              <img src="./user-photo.png" alt="user photo">
+            </div>
+            <div class="-bg-[orange] w-[538px] h-[314px] flex flex-col gap-4">
+              <div class="-bg-[pink] text-[#470001] text-[40px]">
+                Diana Fleming
+              </div>
+              <div class="-bg-[purple] w-fit h-fit text-[16px] flex gap-2">
+                <div class="text-[#454545] font-medium">
+                  Product Manager
+                </div>
+                <div class="text-[#737373] font-medium">
+                  at
+                </div>
+                <div class="text-[#454545] font-semibold">
+                  LoftView
+                </div>
+              </div>
+              <div class="-bg-[purple] w-fit h-fit text-[16px] flex gap-2">
+                <div class="text-[#454545] flex items-center">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.3332 6.66683C13.3332 9.9955 9.6405 13.4622 8.4005 14.5328C8.28499 14.6197 8.14437 14.6667 7.99984 14.6667C7.85531 14.6667 7.71469 14.6197 7.59917 14.5328C6.35917 13.4622 2.6665 9.9955 2.6665 6.66683C2.6665 5.25234 3.22841 3.89579 4.2286 2.89559C5.2288 1.8954 6.58535 1.3335 7.99984 1.3335C9.41433 1.3335 10.7709 1.8954 11.7711 2.89559C12.7713 3.89579 13.3332 5.25234 13.3332 6.66683Z"
+                      stroke="#737373" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M7.99984 8.66683C9.10441 8.66683 9.99984 7.7714 9.99984 6.66683C9.99984 5.56226 9.10441 4.66683 7.99984 4.66683C6.89527 4.66683 5.99984 5.56226 5.99984 6.66683C5.99984 7.7714 6.89527 8.66683 7.99984 8.66683Z"
+                      stroke="#737373" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="text-[#737373] font-medium">
+                  Madrid, Spain
+                </div>
+              </div>
+              <div class="-bg-[red] text-[#737373] w-full h-fit flex flex-col gap-2">
+                Bio:
+                <div class="-bg-[yellow] text-[#454545] w-full line-clamp-3 leading-[150%] tracking-[-1%]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </div>
+              </div>
+              <div class="-bg-[blue] w-fit h-fit gap-2 flex justify-start">
+                <label
+                  class="bg-[#FFE2E1] w-fit h-fit flex items-center justify-center  text-[#737373] font-medium px-4 py-2 rounded-sm border border-white">
+                  Skill 1
+                </label>
+                <label
+                  class="bg-[#FFE2E1] h-full flex items-center justify-center  text-[#737373] font-medium px-4 py-2 rounded-sm border border-white">
+                  Skill 2
+                </label>
+              </div>
+
+            </div>
+            <div
+              class="bg-[#FFF3CB] absolute top-[-24px] right-0 w-[418px] h-[114px] flex flex-col items-center py-[12px] px-[16px] gap-3">
+
+              <div class="-bg-[red] w-[386px] h-[24px] flex items-center relative">
+                <div class="w-[297px] h-full gap-3 flex items-center ">
+                  <div>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 9V13" stroke="#C89D00" stroke-width="1.5" stroke-linecap="square"
+                        stroke-linejoin="round" />
+                      <path d="M12 16.5H12.01" stroke="#C89D00" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M1.61522 18.7503L11.1338 2.25139C11.5186 1.58435 12.4814 1.58435 12.8662 2.25139L22.3848 18.7503C22.7694 19.4169 22.2882 20.25 21.5186 20.25H2.48141C1.71175 20.25 1.23061 19.4169 1.61522 18.7503Z"
+                        stroke="#C89D00" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="text-[14px]">
+                    Complete your profile - 60% Completed
+                  </div>
+                </div>
+                <button class="cursor-pointer absolute right-0">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 3L8 8M8 8L3 13M8 8L13 13M8 8L3 3" stroke="#BABABA" stroke-width="1.5" />
+                  </svg>
+                </button>
+              </div>
+              <div class="-bg-[yellow] w-full flex-1 gap-3 text-[13px]">
+                <div class="-bg-[green] flex-1 h-full gap-3 text-[13px] text-[#737373] font-medium ml-9 flex">
+                  Missing sections:
+                  <ul class="font-normal">
+                    <li class="list-disc list-inside">Instagram</li>
+                    <li class="list-disc list-inside">Linkedin</li>
+                    <li class="list-disc list-inside">Profile Picture</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="-bg-[pink] w-full h-fit">
+            <div class="-bg-[red] w-[312px] h-fit flex flex-col gap-6 mt-6">
+              <div class="-bg-[blue] w-full h-fit gap-2 justify-between flex items-center relative">
+                <div class="w-fit h-fit gap-2 flex items-center">
+                  <div
+                    class="w-fit h-fit rounded-[100px] border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-x-2 flex items-center justify-center text-[#454545] z-3">
+
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2492_6547)">
+                        <path
+                          d="M11.6668 4.3335H11.6735M4.66683 1.3335H11.3335C13.1744 1.3335 14.6668 2.82588 14.6668 4.66683V11.3335C14.6668 13.1744 13.1744 14.6668 11.3335 14.6668H4.66683C2.82588 14.6668 1.3335 13.1744 1.3335 11.3335V4.66683C1.3335 2.82588 2.82588 1.3335 4.66683 1.3335ZM10.6668 7.58016C10.7491 8.13499 10.6543 8.70164 10.396 9.19951C10.1377 9.69737 9.72893 10.1011 9.22791 10.3533C8.7269 10.6055 8.15913 10.6932 7.60535 10.6041C7.05158 10.515 6.54 10.2536 6.14339 9.85694C5.74677 9.46032 5.48532 8.94875 5.39621 8.39497C5.3071 7.8412 5.39487 7.27343 5.64705 6.77241C5.89922 6.2714 6.30295 5.86266 6.80082 5.60432C7.29868 5.34599 7.86533 5.25122 8.42016 5.3335C8.98611 5.41742 9.51006 5.68114 9.91462 6.0857C10.3192 6.49026 10.5829 7.01421 10.6668 7.58016Z"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2492_6547">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div class="text-[#878F7A] hover:text-black relative group flex items-center">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="20" height="20" rx="10" fill="currentColor" />
+                        <path d="M5 10H15M10 15V10V5" stroke="white" stroke-width="1.5" stroke-linecap="square" />
+                      </svg>
+                      <div class="absolute hidden group-hover:flex items-center left-[140%] ">
+                        <svg width="5" height="12" viewBox="0 0 5 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M0.611521 5.82733C0.264775 6.20875 0.264774 6.79125 0.611521 7.17267L5 12L5 1L0.611521 5.82733Z"
+                            fill="black" />
+                        </svg>
+                        <div class="text-nowrap bg-black py-1.5 px-3 rounded-[4px] text-white text-[12px]">
+                          Add a link to your instagram page so people can get to know more about you.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="w-fit h-fit rounded-[100px] border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-x-2 flex items-center justify-center text-[#454545] z-2">
+                    <div class="mr-2 text-[#454545]">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.75 3.5322C2.75 3.17865 2.86825 2.88699 3.10473 2.6572C3.34121 2.4274 3.64865 2.3125 4.02703 2.3125C4.39865 2.3125 4.69932 2.42562 4.92905 2.65189C5.16554 2.88523 5.28378 3.18926 5.28378 3.56402C5.28378 3.90341 5.16892 4.18623 4.93919 4.4125C4.70271 4.64583 4.39189 4.7625 4.00676 4.7625H3.99662C3.625 4.7625 3.32433 4.64583 3.09459 4.4125C2.86486 4.17917 2.75 3.88573 2.75 3.5322ZM2.88176 12.8125V5.72765H5.13176V12.8125H2.88176ZM6.37838 12.8125H8.62838V8.85644C8.62838 8.60896 8.65541 8.41805 8.70946 8.28371C8.80405 8.0433 8.94763 7.84002 9.1402 7.67386C9.33277 7.5077 9.57432 7.42462 9.86486 7.42462C10.6216 7.42462 11 7.95846 11 9.02614V12.8125H13.25V8.75038C13.25 7.70391 13.0135 6.91023 12.5405 6.36932C12.0676 5.82841 11.4426 5.55795 10.6655 5.55795C9.79392 5.55795 9.11486 5.95038 8.62838 6.73523V6.75644H8.61824L8.62838 6.73523V5.72765H6.37838C6.39189 5.95391 6.39865 6.65744 6.39865 7.83826C6.39865 9.01906 6.39189 10.6771 6.37838 12.8125Z"
+                          fill="currentColor" />
+                      </svg>
+                    </div>
+                    <div class="text-[#878F7A] hover:text-black relative group flex items-center">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="20" height="20" rx="10" fill="currentColor" />
+                        <path d="M5 10H15M10 15V10V5" stroke="white" stroke-width="1.5" stroke-linecap="square" />
+                      </svg>
+                      <div class="absolute hidden group-hover:flex items-center left-[140%] ">
+                        <svg width="5" height="12" viewBox="0 0 5 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M0.611521 5.82733C0.264775 6.20875 0.264774 6.79125 0.611521 7.17267L5 12L5 1L0.611521 5.82733Z"
+                            fill="black" />
+                        </svg>
+                        <div class="text-nowrap bg-black py-1.5 px-3 rounded-[4px] text-white text-[12px]">
+                          Add a link to your instagram page so people can get to know more about you.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-pointer w-fit h-fit rounded-[100px] border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-2 flex items-center justify-center text-[#454545]">
+
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                  </div>
+                </div>
+
+
+                <div class="-bg-[green] text-[#737373] w-fit h-fit gap-x-2 flex items-center">
+                  Connections:
+                  <div class=" text-black">
+                    10
+                  </div>
+                </div>
+              </div>
+              <button
+                class="-bg-[red] cursor-pointer w-full h-fit rounded-[6px] border border-white py-3 px-8 bg-[#F0EFEB] text-black font-medium">
+                Edit profile
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="-bg-[blue] w-full h-fit mt-18 flex flex-col">
+        <div class="bg-[lightblue] w-full h-fit relative">
+          <div class="bg-[blue] w-full h-fit">
+            <div class="w-full h-fit flex items-center justify-between relative -bg-[red]">
+              <div class="font-semibold text-[20px]">
+                My KURIOs
+              </div>
+              <button type="submit"
+                class="cursor-pointer w-fit h-fit rounded-[6px] py-3 px-8 text-white bg-[#960D0D] font-medium  text-sm">Create
+                a new KURIO
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="-bg-[pink] w-full border-b border-[#E8E8E8] text-sm font-medium text-center ">
+          <ul class="flex flex-wrap -mb-px gap-10" id="default-tab" data-tabs-toggle="#default-tab-content"
+            role="tablist">
+            <li class="me-2">
+              <button class="selected-tab p-2 inline-block border-b-2 rounded-t-lg   " id="active-tab"
+                data-tabs-target="#active" type="button" role="tab" aria-controls="active" aria-selected="true">
+                Active</button>
+            </li>
+            <li class="me-2">
+              <button class="selected-tab inline-block p-2 border-b-2 rounded-t-lg " id="shared-tab"
+                data-tabs-target="#shared" type="button" role="tab" aria-controls="shared" aria-selected="false">
+                Shared</button>
+            </li>
+            <li class="me-2">
+              <button class="selected-tab inline-block p-2 border-b-2 rounded-t-lg " id="archived-tab"
+                data-tabs-target="#archived" type="button" role="tab" aria-controls="archived" aria-selected="false">
+                Archived</button>
+            </li>
+          </ul>
+        </div>
+        <div id="default-tab-content">
+          <div class="hidden overflow-y-scroll h-[296px] w-full scrollbar-hide" id="active" role="tabpanel"
+            aria-labelledby="active-tab">
+            <div class="-bg-[red] w-full h-[74px] border-b text-[#E8E8E8] flex items-center justify-center">
+              <div class="-bg-[orange] w-[1312px] h-[52px] text-black flex">
+                <div class="-bg-[blue] w-[400px] h-full flex flex-col leading-[150%] tracking-[-1%]">
+                  <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
+                  <div class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap">
+                    KURIO name sdsddsdsdsdsdsdsdsdsdsdsdsdsdsds
+                  </div>
+                  <div class="-bg-[lightgreen] w-full h-[50%] truncate max-w-full whitespace-nowrap">
+                    Description Description Description Description Description Description
+                  </div>
+                </div>
+                <div class="-bg-[lightblue] flex-1 h-full flex items-center justify-end">
+                  <div class="-bg-[green] h-[34px] flex justify-end">
+                    <div class="-bg-[orange] h-full flex justify-end">
+                      <span
+                        class="bg-[#FFE2E1] h-full flex items-center justify-center  text-[#737373] font-medium me-2 px-4 rounded-sm">
+                        Skill 1
+                      </span>
+                      <span
+                        class="bg-[#FFE2E1] h-full flex items-center justify-center  text-[#737373] font-medium me-2 px-4 rounded-sm">
+                        Skill 2
+                      </span>
+                    </div>
+                    <div class="-bg-[pink] w-[190px] h-full ml-4 flex items-center relative">
+
+                      <div class="w-[16px] h-full text-[#454545] flex items-center">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.99984 1.66699C4.50203 1.66699 1.6665 4.50252 1.6665 8.00033C1.6665 11.4981 4.50203 14.3337 7.99984 14.3337C10.4515 14.3337 12.5778 12.9406 13.6304 10.9029"
+                            stroke="currentColor" stroke-width="1.5" />
+                          <path
+                            d="M14.1953 6.68392C14.922 10.1054 12.7374 13.4682 9.31591 14.1948C5.89442 14.9215 2.53167 12.7369 1.80501 9.31542C1.07834 5.89393 3.26292 2.53119 6.68441 1.80452C10.1059 1.07785 13.4686 3.26244 14.1953 6.68392Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" />
+                          <path
+                            d="M8.00098 4.18066V7.48549C8.00098 7.80844 8.15694 8.11151 8.41974 8.29922L10.4315 9.73622"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                        </svg>
+                      </div>
+
+                      <div class="flex items-center ml-[5%]">
+                        2 hrs left
+                      </div>
+                      <div
+                        class="cursor-pointer text-black hover:text-[#960D0D] w-[16px] h-full flex items-center ml-[10%]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_4188_4852)">
+                            <path d="M12 1.33301L14.6667 3.99967" stroke="currentColor" stroke-width="1.5"
+                              stroke-linecap="square" stroke-linejoin="round" />
+                            <path
+                              d="M4.9987 13.6663L12.6654 5.99967L9.9987 3.33301L2.33203 10.9997L1.33203 14.6663L4.9987 13.6663Z"
+                              stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                              stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_4188_4852">
+                              <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div class="flex items-center">
+                        <button data-dropdown-toggle="active-profile-3Dots-DropDown"
+                          class="cursor-pointer w-[16px] h-full flex items-center absolute end-3">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8.0013" cy="3.33333" r="1.33333" fill="black" />
+                            <circle cx="8.0013" cy="12.6663" r="1.33333" fill="black" />
+                            <circle cx="8.0013" cy="8.00033" r="1.33333" fill="black" />
+                          </svg>
+                        </button>
+                        <div id="active-profile-3Dots-DropDown"
+                          class="absolute right-0 top-[80%] mt-2 w-[160px] bg-white border-[1px] border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50">
+                          <ul class="py-1">
+                            <li>
+                              <a href="#" class="block px-4 py-3 hover:bg-[#F0EFEB]">
+
+                                <div class="flex items-center gap-3">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
+                                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                  </svg>
+                                  Share
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="block px-4 py-3 hover:bg-[#F0EFEB]">
+                                <div class="flex items-center gap-3">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.5 7.3L6.625 11.5L13.5 4.5" stroke="currentColor" stroke-width=" 1.5"
+                                      stroke-linecap="square" stroke-linejoin="round" />
+                                  </svg>
+                                  Mark as cured
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="block px-4 py-3 hover:bg-[#F0EFEB]">
+                                <div class="flex items-center gap-3">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M7.99984 1.66699C4.50203 1.66699 1.6665 4.50252 1.6665 8.00033C1.6665 11.4981 4.50203 14.3337 7.99984 14.3337C10.4515 14.3337 12.5778 12.9406 13.6304 10.9029"
+                                      stroke="currentColor" stroke-width="1.5" />
+                                    <path
+                                      d="M14.1953 6.68392C14.922 10.1054 12.7374 13.4682 9.31591 14.1948C5.89442 14.9215 2.53167 12.7369 1.80501 9.31542C1.07834 5.89393 3.26292 2.53119 6.68441 1.80452C10.1059 1.07785 13.4686 3.26244 14.1953 6.68392Z"
+                                      stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" />
+                                    <path
+                                      d="M8.00098 4.18066V7.48549C8.00098 7.80844 8.15694 8.11151 8.41974 8.29922L10.4315 9.73622"
+                                      stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                                  </svg>
+                                  Add more time
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <button data-modal-target="archive-modal" data-modal-toggle="archive-modal"
+                                onclick="closeDropdown('active-profile-3Dots-DropDown')"
+                                class="block w-full px-4 py-3 hover:bg-[#F0EFEB]">
+                                <div class="flex items-center gap-3">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M2.66683 5.33333V12.6667C2.66683 13.0203 2.80731 13.3594 3.05735 13.6095C3.3074 13.8595 3.64654 14 4.00016 14H12.0002C12.3538 14 12.6929 13.8595 12.943 13.6095C13.193 13.3594 13.3335 13.0203 13.3335 12.6667V5.33333M6.66683 8H9.3335M2.00016 2H14.0002C14.3684 2 14.6668 2.29848 14.6668 2.66667V4.66667C14.6668 5.03486 14.3684 5.33333 14.0002 5.33333H2.00016C1.63197 5.33333 1.3335 5.03486 1.3335 4.66667V2.66667C1.3335 2.29848 1.63197 2 2.00016 2Z"
+                                      stroke="#470001" stroke-width="1.5" stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                  </svg>
+                                  Archive
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <a href="#" class="block px-4 py-3 hover:bg-[#F0EFEB]">
+                                <div class="flex items-center text-[#C93636] gap-3">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
+                                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                  </svg>
+                                  Delete
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden overflow-y-scroll h-[296px] w-full scrollbar-hide" id="shared" role="tabpanel"
+            aria-labelledby="shared-tab">
+            <div class="-bg-[red] w-full h-[74px] border-b text-[#E8E8E8] flex items-center justify-center">
+              <div class="-bg-[orange] w-[1312px] h-[52px] text-black flex items-center">
+                <div class="flex items-center gap-8">
+
+                  <div class="-bg-[green] w-10 h-10 flex leading-[150%] tracking-[-1%] overflow-hidden rounded-full ">
+
+                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg"
+                      alt="Rounded avatar">
+                    <!-- <svg class="w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                        clip-rule="evenodd"></path>
+                    </svg> -->
+                  </div>
+                  <div class="-bg-[blue] w-[400px] h-full flex flex-col leading-[150%] tracking-[-1%]">
+                    <div class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap">
+                      KURIO name sdsddsdsdsdsdsdsdsdsdsdsdsdsdsds
+                    </div>
+                    <div class="-bg-[lightgreen] w-full h-[50%] truncate max-w-full whitespace-nowrap">
+                      Description Description Description Description Description Description
+                    </div>
+                  </div>
+                </div>
+                <div class="-bg-[lightblue] flex-1 h-full flex items-center justify-end">
+                  <div class="-bg-[green] flex-1 h-[34px] flex justify-end">
+                    <div class="-bg-[orange] flex-1 h-full flex justify-end">
+                      <span
+                        class="bg-[#FFE2E1] h-full flex items-center justify-center  text-[#737373] font-medium me-2 px-4 rounded-sm">
+                        Skill 1
+                      </span>
+                      <span
+                        class="bg-[#FFE2E1] h-full flex items-center justify-center  text-[#737373] font-medium me-2 px-4 rounded-sm">
+                        Skill 2
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden overflow-y-scroll h-[296px] w-full scrollbar-hide" id="archived" role="tabpanel"
+            aria-labelledby="archived-tab">
+            <div class="-bg-[red] w-full h-[74px] border-b text-[#E8E8E8] flex items-center justify-center">
+              <div class="-bg-[orange] w-[1312px] h-[52px] text-black flex">
+                <div class="-bg-[blue] w-[400px] h-full flex flex-col leading-[150%] tracking-[-1%]">
+                  <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
+                  <div class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap">
+                    KURIO name sdsddsdsdsdsdsdsdsdsdsdsdsdsdsds
+                  </div>
+                  <div class="-bg-[lightgreen] w-full h-[50%] truncate max-w-full whitespace-nowrap">
+                    Description Description Description Description Description Description
+                  </div>
+                </div>
+                <div class="-bg-[lightblue] flex-1 h-full flex items-center justify-end">
+                  <div class="-bg-[green] h-[34px] flex justify-end">
+                    <div class="-bg-[orange] h-full flex justify-end">
+                      <span
+                        class="bg-[#FFE2E1] h-full flex items-center justify-center  text-[#737373] font-medium me-2 px-4 rounded-sm">
+                        Skill 1
+                      </span>
+                      <span
+                        class="bg-[#FFE2E1] h-full flex items-center justify-center  text-[#737373] font-medium me-2 px-4 rounded-sm">
+                        Skill 2
+                      </span>
+                    </div>
+                    <div class="-bg-[pink] w-[190px] h-full ml-4 flex items-center relative">
+
+                      <div class="w-[16px] h-full text-[#454545] flex items-center">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.99984 1.66699C4.50203 1.66699 1.6665 4.50252 1.6665 8.00033C1.6665 11.4981 4.50203 14.3337 7.99984 14.3337C10.4515 14.3337 12.5778 12.9406 13.6304 10.9029"
+                            stroke="currentColor" stroke-width="1.5" />
+                          <path
+                            d="M14.1953 6.68392C14.922 10.1054 12.7374 13.4682 9.31591 14.1948C5.89442 14.9215 2.53167 12.7369 1.80501 9.31542C1.07834 5.89393 3.26292 2.53119 6.68441 1.80452C10.1059 1.07785 13.4686 3.26244 14.1953 6.68392Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" />
+                          <path
+                            d="M8.00098 4.18066V7.48549C8.00098 7.80844 8.15694 8.11151 8.41974 8.29922L10.4315 9.73622"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                        </svg>
+                      </div>
+
+                      <div class="flex items-center ml-[5%]">
+                        Expired
+                      </div>
+                      <div
+                        class="cursor-pointer text-black hover:text-[#960D0D] w-[16px] h-full flex items-center ml-[10%]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_4188_4852)">
+                            <path d="M12 1.33301L14.6667 3.99967" stroke="currentColor" stroke-width="1.5"
+                              stroke-linecap="square" stroke-linejoin="round" />
+                            <path
+                              d="M4.9987 13.6663L12.6654 5.99967L9.9987 3.33301L2.33203 10.9997L1.33203 14.6663L4.9987 13.6663Z"
+                              stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                              stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_4188_4852">
+                              <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div class="flex items-center">
+                        <button data-dropdown-toggle="archived-profile-3Dots-DropDown"
+                          class="cursor-pointer w-[16px] h-full flex items-center absolute end-3">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8.0013" cy="3.33333" r="1.33333" fill="black" />
+                            <circle cx="8.0013" cy="12.6663" r="1.33333" fill="black" />
+                            <circle cx="8.0013" cy="8.00033" r="1.33333" fill="black" />
+                          </svg>
+                        </button>
+                        <div id="archived-profile-3Dots-DropDown"
+                          class="absolute right-0 top-[80%] mt-2 w-[160px] bg-white border-[1px] border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50">
+                          <ul class="py-1">
+                            <li>
+                              <button data-modal-target="share-modal" data-modal-toggle="share-modal"
+                                onclick="closeDropdown('archived-profile-3Dots-DropDown')"
+                                class="block w-full px-4 py-3 hover:bg-[#F0EFEB]">
+                                <div class="flex items-center gap-3">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
+                                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                  </svg>
+                                  Share
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <a href="#" class="block px-4 py-3 hover:bg-[#F0EFEB]">
+                                <div class="flex items-center text-[#C93636] gap-3">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
+                                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                  </svg>
+                                  Delete
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+  </main>
+
+  <div id="archive-modal" tabindex="-1" aria-hidden="true"
+    class="hidden overflow-y-auto overflow fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
+    <div class="bg-[white] relative w-[352px] max-w-[352px] rounded-lg py-6 px-8">
+      <!-- Modal content -->
+      <div class=" -bg-[yellow] flex flex-col items-center gap-6">
+        <div class="-bg-[blue] flex flex-col items-center gap-3">
+          <div class="text-[17px] font-semibold">
+            Do you want to Archive this KURIO?
+          </div>
+          <div class="text-center text-[14px] w-[288px] flex-1 ">
+            Archive this thread to add to your collection of trusted insights from your KURIO Crowd!
+          </div>
+          <div class="text-center text-[14px] w-[288px] flex-1 ">
+            You will find it under the Archived tab.
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="flex w-full h-[40px] items-center gap-3">
+          <button data-modal-hide="archive-modal" type="button"
+            class="cursor-pointer w-[50%] h-full text-[15px] text-black font-medium focus:outline-none bg-[#F0EFEB] rounded-lg text-center">
+            Cancel</button>
+          <button data-modal-hide="archive-modal" type="button"
+            class="cursor-pointer w-[50%] h-full text-[15px] text-white font-medium focus:outline-none bg-[#960D0D] rounded-lg text-center">Archive</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="share-modal" tabindex="-1" aria-hidden="true"
+    class="hidden overflow-y-auto overflow fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
+    <div class="bg-[white] relative w-[352px] max-w-[352px] rounded-lg py-6 px-8">
+      <!-- Modal content -->
+      <div class=" -bg-[yellow] w-[288px] flex flex-col items-center gap-6">
+        <div class="-bg-[blue] w-full flex flex-col items-center gap-3">
+          <div class="w-full text-center text-[17px] font-semibold">
+            Share Archived KURIO
+          </div>
+          <div class="w-full text-center text-[14px] flex-1 text-balance">
+            Share this KURIO with specific members of your network
+          </div>
+        </div>
+        <div class="-bg-[blue] w-full flex flex-col items-center gap-3">
+          <button
+            class="cursor-pointer w-full h-[40px] border border-[#F8EFE8] rounded-lg relative px-3 flex items-center">
+            <div class="text-[14px] font-normal">
+              Share via Email
+            </div>
+            <div class="flex-1 h-full flex items-center justify-end">
+
+              <svg class="right-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.6668 4.66602L8.68683 8.46602C8.48101 8.59497 8.24304 8.66336 8.00016 8.66336C7.75728 8.66336 7.51931 8.59497 7.3135 8.46602L1.3335 4.66602M2.66683 2.66602H13.3335C14.0699 2.66602 14.6668 3.26297 14.6668 3.99935V11.9993C14.6668 12.7357 14.0699 13.3327 13.3335 13.3327H2.66683C1.93045 13.3327 1.3335 12.7357 1.3335 11.9993V3.99935C1.3335 3.26297 1.93045 2.66602 2.66683 2.66602Z"
+                  stroke="#470001" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </button>
+          <button
+            class="cursor-pointer w-full h-[40px] border border-[#F8EFE8] rounded-lg relative px-3 flex items-center">
+            <div class="text-[14px] font-normal">
+              Share via Email
+            </div>
+            <div class="flex-1 h-full flex items-center justify-end">
+
+              <svg class="right-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.6668 4.66602L8.68683 8.46602C8.48101 8.59497 8.24304 8.66336 8.00016 8.66336C7.75728 8.66336 7.51931 8.59497 7.3135 8.46602L1.3335 4.66602M2.66683 2.66602H13.3335C14.0699 2.66602 14.6668 3.26297 14.6668 3.99935V11.9993C14.6668 12.7357 14.0699 13.3327 13.3335 13.3327H2.66683C1.93045 13.3327 1.3335 12.7357 1.3335 11.9993V3.99935C1.3335 3.26297 1.93045 2.66602 2.66683 2.66602Z"
+                  stroke="#470001" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <!-- Modal footer -->
+        <div class="flex w-full h-[40px] items-center gap-3">
+          <button data-modal-hide="share-modal" type="button"
+            class="cursor-pointer w-full h-full text-[15px] text-black font-medium focus:outline-none bg-[#F0EFEB] rounded-lg text-center">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script>
+  <script src="scripts/controller.js"></script>
+</body>
+
+</html>

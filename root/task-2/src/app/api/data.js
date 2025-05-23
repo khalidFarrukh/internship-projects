@@ -57,7 +57,7 @@ export const products = [
     info: {
       material: "Aluminium",
       weight: "80 g",
-      Country_of_origin: "DK",
+      country_of_origin: "DK",
       dimensions: "33L x 65W x 16H",
       type: "-"
 

@@ -176,12 +176,9 @@ export default function Product() {
                       {`
                         flex
                         flex-col
-
                       `}
                     >
-
                       Weight
-
                       <div
                         className=
                         {`
@@ -201,9 +198,7 @@ export default function Product() {
 
                       `}
                     >
-
                       Country of origin
-
                       <div
                         className=
                         {`
@@ -223,9 +218,7 @@ export default function Product() {
 
                       `}
                     >
-
                       Dimensions
-
                       <div
                         className=
                         {`

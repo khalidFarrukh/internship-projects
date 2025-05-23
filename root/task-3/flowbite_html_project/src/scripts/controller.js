@@ -1,10 +1,15 @@
-function closeDropdown(dropdownId) {
-  const dropdown = document.getElementById(dropdownId);
-  if (dropdown && dropdown.classList.contains('block')) {
-    dropdown.classList.add('hidden');
-    dropdown.classList.remove('block');
+function elementToggle(elementId, containsClass = 'block') {
+  const element = document.getElementById(elementId);
+  if (element && element.classList.contains(containsClass)) {
+    element.classList.add('hidden');
+    element.classList.remove(containsClass);
+  }
+  else {
+    element.classList.remove('hidden');
+    element.classList.add(containsClass);
   }
 }
+
 document.querySelectorAll('[data-dropdown-toggle="profile3DotsDropDown"]').forEach(btn => {
   btn.addEventListener('click', function (e) {
     const dropdown = document.getElementById('profile3DotsDropDown');

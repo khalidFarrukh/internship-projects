@@ -38,8 +38,7 @@
 
 </head>
 
-<!-- <body class="-bg-[black] w-full flex flex-col items-center"> -->
-
+<!-- <body class="-bg-[black] flex flex-col items-center"> -->
 
 <body class="-bg-[black] w-full flex flex-col items-center">
   <header class="z-40 bg-[#F8EFE8] text-black w-full h-fit fixed">
@@ -166,223 +165,145 @@
     </nav>
   </header>
   <main class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-[72px] px-12 flex flex-col items-center">
-
     <div class="-bg-[yellow] w-full h-fit mx-auto">
-      <button
-        class="-bg-[red] cursor-pointer w-fit h-fit mt-[24px] rounded-sm gap-x-2 flex items-center text-[#737373]">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9.75 4L6.25 8L9.75 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-            stroke-linejoin="round" />
-        </svg>
-        <div class="text-[14px]">
-          Back
-        </div>
-      </button>
-      <div class="-bg-[red] w-full h-fit mt-[20px] left-[48px] flex items-center justify-between">
-        <div class="font-semibold text-[20px] leading-[140%] tracking-[-1%]">
-          Kurio name
-        </div>
-        <div class="w-fit h-fit gap-8 flex items-center">
-          <button onclick="" class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm  text-[#470001]">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.5 7.3L6.625 11.5L13.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                stroke-linejoin="round" />
-            </svg>
-            Mark as cured
-          </button>
-          <button onclick="" class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm  text-[#4BAE00]">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.5 7.3L6.625 11.5L13.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                stroke-linejoin="round" />
-            </svg>
-            Cured
-          </button>
-          <button onclick="" class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm  text-[#470001]">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Share
-          </button>
-          <button onclick="" class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm  text-[#470001]">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M2.66683 5.33333V12.6667C2.66683 13.0203 2.80731 13.3594 3.05735 13.6095C3.3074 13.8595 3.64654 14 4.00016 14H12.0002C12.3538 14 12.6929 13.8595 12.943 13.6095C13.193 13.3594 13.3335 13.0203 13.3335 12.6667V5.33333M6.66683 8H9.3335M2.00016 2H14.0002C14.3684 2 14.6668 2.29848 14.6668 2.66667V4.66667C14.6668 5.03486 14.3684 5.33333 14.0002 5.33333H2.00016C1.63197 5.33333 1.3335 5.03486 1.3335 4.66667V2.66667C1.3335 2.29848 1.63197 2 2.00016 2Z"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-            Archive
-          </button>
-          <button onclick="" class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm  text-[#C93636]">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 4H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                stroke-linejoin="round" />
-              <path
-                d="M12.6668 4V13.3333C12.6668 14 12.0002 14.6667 11.3335 14.6667H4.66683C4.00016 14.6667 3.3335 14 3.3335 13.3333V4"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
-              <path
-                d="M5.3335 3.99967V2.66634C5.3335 1.99967 6.00016 1.33301 6.66683 1.33301H9.3335C10.0002 1.33301 10.6668 1.99967 10.6668 2.66634V3.99967"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
-              <path d="M6.6665 7.33301V11.333" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                stroke-linejoin="round" />
-              <path d="M9.3335 7.33301V11.333" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                stroke-linejoin="round" />
-            </svg>
-            Delete
-          </button>
-        </div>
-      </div>
-      <div class="w-full h-fit mt-[32px] gap-4 flex items-center justify-between">
-        <div class="-bg-[red] text-[#737373] sm:w-[400px] md:w-[500px] lg:w-[750px] h-fit flex flex-col gap-2">
-          Description:
-          <div class="-bg-[yellow] text-[#454545] w-full line-clamp-3 leading-[150%] tracking-[-1%]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </div>
-        </div>
-        <div class="-bg-[blue] w-fit h-fit gap-1 flex items-center">
-          <div class="-bg-[blue] w-fit h-fit gap-1 flex">
-            <label
-              class="bg-[#FFE2E1] w-fit h-fit flex items-center justify-center  text-[#737373] font-medium px-4 py-2 rounded-sm border border-white">
-              Skill 1
-            </label>
-          </div>
-          <button
-            class="bg-[#960D0D] cursor-pointer w-fit h-fit flex items-center justify-center  text-white font-medium px-3 py-3 rounded-sm border border-white">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_4188_5619)">
-                <path d="M12 1.33301L14.6667 3.99967" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                  stroke-linejoin="round" />
-                <path d="M4.9987 13.6663L12.6654 5.99967L9.9987 3.33301L2.33203 10.9997L1.33203 14.6663L4.9987 13.6663Z"
-                  stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
-              </g>
-              <defs>
-                <clipPath id="clip0_4188_5619">
-                  <rect width="16" height="16" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div class="w-fit h-fit gap-[40px] mt-[16px] flex items-center">
-        <div class="w-fit h-fit gap-4 flex items-center">
-          <div class="bg-[red] w-[80px] h-[80px] rounded-sm">
-            <img class="" src="/docs/images/people/profile-picture-5.jpg" alt="">
-          </div>
-          <div class="bg-[red] w-[80px] h-[80px] rounded-sm">
-            <img class="" src="/docs/images/people/profile-picture-5.jpg" alt="">
-          </div>
-          <!-- image 2 and so on one by one with div here -->
-        </div>
-
-        <label class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm  text-[#470001]" for="file_input">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10.4908 7.5C9.91694 7.5 9.37076 7.74648 8.9911 8.17676L7.53831 9.82324C7.15866 10.2535 6.61247 10.5 6.03864 10.5H2"
-              stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-            <path
-              d="M7 2H3.5C2.67157 2 2 2.67157 2 3.5V12.5C2 13.3284 2.67157 14 3.5 14H12.5C13.3284 14 14 13.3284 14 12.5V9"
-              stroke="currentColor" stroke-width="1.5" />
-            <path d="M10 3H13M13 3H16M13 3V6M13 3V0" stroke="currentColor" stroke-width="1.5" />
-          </svg>
-          <div class="text-[14px] font-medium">
-            Upload new files
-          </div>
-        </label>
-        <input class="hidden" id="file_input" type="file" placeholder="ds">
-
-      </div>
-      <div class="-bg-[blue] w-full h-fit pb-8 border-b border-[#E8E8E8] gap-6 mt-6 flex items-center justify-between">
-        <div
-          class="w-fit h-fit gap-3 rounded-sm border border-[#E8E8E8] py-[14px] px-[24px] flex items-center text-[#737373]">
-
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.0098 16L12.0098 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-              stroke-linejoin="round" />
-            <path d="M12.0098 8L11.9998 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <path
-              d="M12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5Z"
-              stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
-          </svg>
-
-          <div class="text-[14px]">
-            You have 24 hours after your KURIO expires to archive it before it disappears!
-          </div>
-        </div>
-        <button
-          class="cursor-pointer w-fit h-fit rounded-sm border border-[#E8E8E8] py-[8px] px-[16px] gap-2  flex items-center relative">
-          <div class="w-fit h-fit text-[#454545] flex items-center">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M7.99984 1.66699C4.50203 1.66699 1.6665 4.50252 1.6665 8.00033C1.6665 11.4981 4.50203 14.3337 7.99984 14.3337C10.4515 14.3337 12.5778 12.9406 13.6304 10.9029"
-                stroke="currentColor" stroke-width="1.5" />
-              <path
-                d="M14.1953 6.68392C14.922 10.1054 12.7374 13.4682 9.31591 14.1948C5.89442 14.9215 2.53167 12.7369 1.80501 9.31542C1.07834 5.89393 3.26292 2.53119 6.68441 1.80452C10.1059 1.07785 13.4686 3.26244 14.1953 6.68392Z"
-                stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" />
-              <path d="M8.00098 4.18066V7.48549C8.00098 7.80844 8.15694 8.11151 8.41974 8.29922L10.4315 9.73622"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
-            </svg>
-          </div>
-          <div class="w-fit h-fit flex items-center">
-            24hrs left
-          </div>
-          <div>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 6.25L8 9.75L12 6.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                stroke-linejoin="round" />
-            </svg>
-
-          </div>
-        </button>
-      </div>
-      <div class="-bg-[blue] w-full h-fit gap-6 mt-6 flex items-center justify-between">
-        <div class="w-fit h-fit flex items-center">
-          <div>
-            Responses:
-          </div>
-          <div class="ml-2">
-            25
-          </div>
-        </div>
-        <button
-          class="-bg-[red] cursor-pointer w-fit h-fit rounded-[6px] border border-white py-3 px-8 gap-3 bg-[#F0EFEB] text-black font-medium flex items-center">
-          <div class="w-fit h-fit">
-            Add a response
-          </div>
-          <div>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.5 12H19.5M12 19.5V12V4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
-            </svg>
-          </div>
-        </button>
-      </div>
-      <div class="w-full h-fit mt-6 flex flex-col">
-        <div
-          class="-bg-[red] w-full h-fit rounded-lg border border-[#E8E8E8] py-[16px] px-[24px] gap-x-10 flex items-center justify-center">
-          <div class="-bg-[blue] w-full h-fit gap-8 flex items-center">
-            <img class="w-12 h-12 rounded-full" src="./user-photo.png" alt="Rounded avatar">
-            <div class="-bg-[blue] w-full h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
-              <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
-              <div class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap">
-                KURIO name
+      <h1 class="-bg-[red] w-fit h-fit mt-[44px] text-[40px] text-[#470001]  flex items-center ">
+        My responses
+      </h1>
+      <div
+        class="-bg-[yellow] w-full h-fit mt-4 rounded-lg border border-[#E8E8E8]  py-4 px-6 gap-6 flex flex-col items-center">
+        <div class=" w-full h-fit gap-4 flex flex-col items-center">
+          <div class="w-full h-fit gap-4 flex flex-col items-center">
+            <div class="-bg-[red] w-full h-fit flex items-center justify-between">
+              <div class="-bg-[red] w-fit h-fit gap-4 flex items-center">
+                <img class="w-12 h-12 rounded-full" src="./user-photo.png" alt="Rounded avatar">
+                <div class="-bg-[green] w-full h-fit font-medium text-[18px]">
+                  KURIO name
+                </div>
               </div>
-              <p class="-bg-[lightgreen] w-full max-w-[636px] h-fit line-clamp-2 leading-[150%] tracking-[-1%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur.
-              </p>
+              <div class="w-fit h-fit gap-8 flex items-center">
+                <button onclick=""
+                  class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm  text-[#470001]">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Share
+                </button>
+                <button onclick=""
+                  class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm  text-[#C93636]">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M12.6668 4V13.3333C12.6668 14 12.0002 14.6667 11.3335 14.6667H4.66683C4.00016 14.6667 3.3335 14 3.3335 13.3333V4"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
+                    <path
+                      d="M5.3335 3.99967V2.66634C5.3335 1.99967 6.00016 1.33301 6.66683 1.33301H9.3335C10.0002 1.33301 10.6668 1.99967 10.6668 2.66634V3.99967"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
+                    <path d="M6.6665 7.33301V11.333" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                      stroke-linejoin="round" />
+                    <path d="M9.3335 7.33301V11.333" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                      stroke-linejoin="round" />
+                  </svg>
+                  Delete
+                </button>
+                <button onclick="" class="cursor-pointer">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6.25L8 9.75L12 6.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+              </div>
             </div>
           </div>
-          <span class=" w-fit h-fit text-[#454545] font-normal leading-[150%] tracking-[-1%]">
-            Wed, 17 Nov 5:30PM
-          </span>
+          <div class="-bg-[yellow] w-full h-fit gap-4 flex items-center justify-between">
+            <div class="-bg-[red]  w-[720px] h-fit flex flex-col gap-2">
+              <div class="w-[208px] truncate whitespace-nowrap text-black">
+                KURIO name
+              </div>
+              <div class="-bg-[yellow] text-[#454545] w-fit[720px] line-clamp-2 leading-[150%] tracking-[-1%]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </div>
+            </div>
+            <div class="-bg-[blue] w-fit h-fit gap-4 flex flex-col">
+              <div class="-bg-[blue] w-fit h-fit gap-1 flex">
+                <label
+                  class="bg-[#FFE2E1] w-fit h-fit flex items-center justify-center  text-[#737373] font-medium px-4 py-2 rounded-sm border border-white">
+                  Skill 1
+                </label>
+                <label
+                  class="bg-[#FFE2E1] w-fit h-fit flex items-center justify-center  text-[#737373] font-medium px-4 py-2 rounded-sm border border-white">
+                  Skill 1
+                </label>
+              </div>
+              <div class="-bg-[red] w-full h-fit gap-3 flex items-center justify-end text-[#454545]">
+
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.99984 1.66699C4.50203 1.66699 1.6665 4.50252 1.6665 8.00033C1.6665 11.4981 4.50203 14.3337 7.99984 14.3337C10.4515 14.3337 12.5778 12.9406 13.6304 10.9029"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path
+                    d="M14.1953 6.68392C14.922 10.1054 12.7374 13.4682 9.31591 14.1948C5.89442 14.9215 2.53167 12.7369 1.80501 9.31542C1.07834 5.89393 3.26292 2.53119 6.68441 1.80452C10.1059 1.07785 13.4686 3.26244 14.1953 6.68392Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" />
+                  <path d="M8.00098 4.18066V7.48549C8.00098 7.80844 8.15694 8.11151 8.41974 8.29922L10.4315 9.73622"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                </svg>
+
+                <div class="w-fit h-fit flex items-center">
+                  24hrs left
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="w-full border-b border-[#E8E8E8]" />
+        <div class="w-full h-fit gap-2 flex items-center">
+          Responses:
+          <div>
+            10
+          </div>
+        </div>
+        <div class="w-full h-fit px-8 gap-6 divide-y-2 divide-[#E8E8E8]">
+          <div class="-bg-[red] w-full h-fit pt-[16px] pb-[32px] px-[24px] gap-x-10 flex items-center">
+            <div class="-bg-[blue] w-[900px] h-fit gap-8 flex items-center">
+              <img class="w-12 h-12 rounded-full" src="./user-photo.png" alt="Rounded avatar">
+              <div class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
+                <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
+                <div class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap">
+                  KURIO name
+                </div>
+                <p class="-bg-[lightgreen] w-full h-fit line-clamp-2 leading-[150%] tracking-[-1%]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="-bg-[red] w-full h-fit pt-[16px] pb-[32px] px-[24px] gap-x-10 flex items-center">
+            <div class="-bg-[blue] w-[900px] h-fit gap-8 flex items-center">
+              <img class="w-12 h-12 rounded-full" src="./user-photo.png" alt="Rounded avatar">
+              <div class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
+                <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
+                <div class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap">
+                  KURIO name
+                </div>
+                <p class="-bg-[lightgreen] w-full h-fit line-clamp-2 leading-[150%] tracking-[-1%]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

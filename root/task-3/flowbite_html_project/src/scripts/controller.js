@@ -21,3 +21,34 @@ document.querySelectorAll('[data-dropdown-toggle="profile3DotsDropDown"]').forEa
     dropdown.classList.toggle('hidden');
   });
 });
+
+
+function swapElements(el1, el2) {
+  const el_1 = document.getElementById(el1);
+  const el_2 = document.getElementById(el2);
+
+  const parent1 = el_1.parentNode;
+  const parent2 = el_2.parentNode;
+
+  // create a temporary placeholder
+  const temp = document.createElement("div");
+
+  parent1.replaceChild(temp, el_1);
+  parent2.replaceChild(el_1, el_2);
+  parent1.replaceChild(el_2, temp);
+}
+
+
+function viewportLessThan825pxSwap(el1, el2) {
+  if (window.innerWidth < 825) {
+    swapElements(el1, el2);
+  }
+}
+
+
+
+// Run on load
+window.addEventListener('load', viewportLessThan825pxSwap("swap1_n1", "swap1_n2"));
+
+// Run on resize
+window.addEventListener('resize', viewportLessThan825pxSwap("swap1_n1", "swap1_n2"));

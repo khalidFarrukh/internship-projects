@@ -40,7 +40,7 @@
   <header class="z-40 bg-[#F8EFE8] text-black w-full h-fit fixed">
     <nav class="w-full h-fit flex justify-center">
       <div
-        class="w-full max-w-[1440px] h-fit border-b py-4 px-12 gap-4 bg-[#F8EFE8] border-[#4700011A] flex items-center justify-between">
+        class="w-full max-w-[1440px] h-fit border-b py-4 px-6 w825:px-12 gap-4 bg-[#F8EFE8] border-[#4700011A] flex items-center justify-between">
         <a href="#" class="text-[#470001]">
           <svg width="88" height="24" viewBox="0 0 88 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -161,23 +161,24 @@
     </nav>
   </header>
 
-  <main class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-[72px] px-12 flex flex-col items-center">
+  <main
+    class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-[72px] px-6 w825:px-12 flex flex-col items-center">
     <div class="-bg-[yellow] w-full h-fit mx-auto">
       <!-- warning panel -->
       <div class="relative w-full flex justify-center">
         <div
-          class="bg-[#FFF3CB] z-3  w514:absolute mt-[24px] right-0 w-[418px] h-fit rounded-[8px] py-3 px-4 gap-3 flex flex-col">
+          class="bg-[#FFF3CB] z-3  w825:absolute mt-3 right-0 w-[418px] h-fit rounded-[8px] py-3 px-4 gap-3 flex flex-col">
           <div class="-bg-[red] w-full h-fit flex items-center justify-between">
             <div class="w-fit h-fit gap-3 flex items-center ">
-              <div>
+              <div class="text-[#C89D00]">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 9V13" stroke="#C89D00" stroke-width="1.5" stroke-linecap="square"
+                  <path d="M12 9V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
                     stroke-linejoin="round" />
-                  <path d="M12 16.5H12.01" stroke="#C89D00" stroke-width="1.5" stroke-linecap="round"
+                  <path d="M12 16.5H12.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                   <path
                     d="M1.61522 18.7503L11.1338 2.25139C11.5186 1.58435 12.4814 1.58435 12.8662 2.25139L22.3848 18.7503C22.7694 19.4169 22.2882 20.25 21.5186 20.25H2.48141C1.71175 20.25 1.23061 19.4169 1.61522 18.7503Z"
-                    stroke="#C89D00" stroke-width="1.5" stroke-linejoin="round" />
+                    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
                 </svg>
               </div>
               <div class="text-[14px]">
@@ -207,25 +208,116 @@
 
       <section class="-bg-[red] w-full h-fit flex flex-col items-center">
         <div class="w-full h-fit flex flex-col">
-          <div class="-bg-[blue] w-full h-fit mt-[48px] relative flex gap-12 justify-between">
-            <img class="w-[312px] h-[312px]" src="./user-photo.png" alt="user photo">
-            <div class="-bg-[orange] w-full h-fit flex flex-col gap-4">
-              <div class="-bg-[pink] text-[#470001] text-[40px]">
-                Diana Fleming
+          <div
+            class="-bg-[blue] w-full h-fit mt-[12px] w825:mt-[48px] relative flex flex-col w825:flex-row gap-12 w825:justify-between">
+
+            <!-- <img class="w-[312px] h-[312px]" src="./user-photo.png" alt="user photo"> -->
+            <div class="-bg-[green] w-full w825:w-fit h-fit flex w825:flex-col justify-between">
+              <img class="w-[312px]" src="./user-photo.png" alt="user photo">
+              <div id="swap1_n1" class="-bg-[red] w-[312px] h-fit flex flex-col gap-6 mt-7">
+                <div class="-bg-[blue] w-full h-fit gap-2 justify-between flex items-center relative">
+                  <div class="w-fit h-fit gap-2 flex items-center">
+                    <div
+                      class="w-fit h-fit rounded-full border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-x-2 flex items-center justify-center text-[#454545] z-3">
+
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2492_6547)">
+                          <path
+                            d="M11.6668 4.3335H11.6735M4.66683 1.3335H11.3335C13.1744 1.3335 14.6668 2.82588 14.6668 4.66683V11.3335C14.6668 13.1744 13.1744 14.6668 11.3335 14.6668H4.66683C2.82588 14.6668 1.3335 13.1744 1.3335 11.3335V4.66683C1.3335 2.82588 2.82588 1.3335 4.66683 1.3335ZM10.6668 7.58016C10.7491 8.13499 10.6543 8.70164 10.396 9.19951C10.1377 9.69737 9.72893 10.1011 9.22791 10.3533C8.7269 10.6055 8.15913 10.6932 7.60535 10.6041C7.05158 10.515 6.54 10.2536 6.14339 9.85694C5.74677 9.46032 5.48532 8.94875 5.39621 8.39497C5.3071 7.8412 5.39487 7.27343 5.64705 6.77241C5.89922 6.2714 6.30295 5.86266 6.80082 5.60432C7.29868 5.34599 7.86533 5.25122 8.42016 5.3335C8.98611 5.41742 9.51006 5.68114 9.91462 6.0857C10.3192 6.49026 10.5829 7.01421 10.6668 7.58016Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_2492_6547">
+                            <rect width="16" height="16" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <button class="cursor-pointer text-[#878F7A] hover:text-black relative group flex items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="20" height="20" rx="10" fill="currentColor" />
+                          <path d="M5 10H15M10 15V10V5" stroke="white" stroke-width="1.5" stroke-linecap="square" />
+                        </svg>
+                        <div class="absolute hidden group-hover:flex items-center left-[140%] ">
+                          <svg width="5" height="12" viewBox="0 0 5 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M0.611521 5.82733C0.264775 6.20875 0.264774 6.79125 0.611521 7.17267L5 12L5 1L0.611521 5.82733Z"
+                              fill="black" />
+                          </svg>
+                          <div class="text-nowrap bg-black py-1.5 px-3 rounded-[4px] text-white text-[12px]">
+                            Add a link to your instagram page so people can get to know more about you.
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      class="w-fit h-fit rounded-full border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-x-2 flex items-center justify-center text-[#454545] z-2">
+                      <div class="mr-2 text-[#454545]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M2.75 3.5322C2.75 3.17865 2.86825 2.88699 3.10473 2.6572C3.34121 2.4274 3.64865 2.3125 4.02703 2.3125C4.39865 2.3125 4.69932 2.42562 4.92905 2.65189C5.16554 2.88523 5.28378 3.18926 5.28378 3.56402C5.28378 3.90341 5.16892 4.18623 4.93919 4.4125C4.70271 4.64583 4.39189 4.7625 4.00676 4.7625H3.99662C3.625 4.7625 3.32433 4.64583 3.09459 4.4125C2.86486 4.17917 2.75 3.88573 2.75 3.5322ZM2.88176 12.8125V5.72765H5.13176V12.8125H2.88176ZM6.37838 12.8125H8.62838V8.85644C8.62838 8.60896 8.65541 8.41805 8.70946 8.28371C8.80405 8.0433 8.94763 7.84002 9.1402 7.67386C9.33277 7.5077 9.57432 7.42462 9.86486 7.42462C10.6216 7.42462 11 7.95846 11 9.02614V12.8125H13.25V8.75038C13.25 7.70391 13.0135 6.91023 12.5405 6.36932C12.0676 5.82841 11.4426 5.55795 10.6655 5.55795C9.79392 5.55795 9.11486 5.95038 8.62838 6.73523V6.75644H8.61824L8.62838 6.73523V5.72765H6.37838C6.39189 5.95391 6.39865 6.65744 6.39865 7.83826C6.39865 9.01906 6.39189 10.6771 6.37838 12.8125Z"
+                            fill="currentColor" />
+                        </svg>
+                      </div>
+                      <button class="cursor-pointer text-[#878F7A] hover:text-black relative group flex items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="20" height="20" rx="10" fill="currentColor" />
+                          <path d="M5 10H15M10 15V10V5" stroke="white" stroke-width="1.5" stroke-linecap="square" />
+                        </svg>
+                        <div class="absolute hidden group-hover:flex items-center left-[140%] ">
+                          <svg width="5" height="12" viewBox="0 0 5 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M0.611521 5.82733C0.264775 6.20875 0.264774 6.79125 0.611521 7.17267L5 12L5 1L0.611521 5.82733Z"
+                              fill="black" />
+                          </svg>
+                          <div class="text-nowrap bg-black py-1.5 px-3 rounded-[4px] text-white text-[12px]">
+                            Add a link to your instagram page so people can get to know more about you.
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      class="cursor-pointer w-fit h-fit rounded-full border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-2 flex items-center justify-center text-[#454545]">
+
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="-bg-[green] text-[#737373] w-fit h-fit gap-x-2 flex items-center">
+                    Connections:
+                    <div class=" text-black">
+                      10
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="-bg-[red] cursor-pointer w-full h-fit rounded-[6px] border border-white py-3 px-8 bg-[#F0EFEB] text-black font-medium">
+                  Edit profile
+                </button>
               </div>
-              <div class="-bg-[purple] w-fit h-fit text-[16px] flex gap-2">
-                <span class="text-[#454545] font-medium">
-                  Product Manager
-                </span>
-                <span class="text-[#737373] font-medium">
-                  at
-                </span>
-                <span class="text-[#454545] font-semibold">
-                  LoftView
-                </span>
+            </div>
+            <div class="-bg-[orange] w-full h-fit ">
+              <div id="swap1_n2" class="w-fit h-fit flex flex-col gap-4">
+                <div class="-bg-[pink] text-[#470001] text-[40px]">
+                  Diana Fleming
+                </div>
+                <div class="-bg-[purple] w-fit h-fit text-[16px] flex gap-2">
+                  <span class="text-[#454545] font-medium">
+                    Product Manager
+                  </span>
+                  <span class="text-[#737373] font-medium">
+                    at
+                  </span>
+                  <span class="text-[#454545] font-semibold">
+                    LoftView
+                  </span>
+                </div>
               </div>
-              <div class="-bg-[purple] w-fit h-fit text-[16px] flex gap-2">
-                <div class="text-[#454545] flex items-center">
+
+              <div class="-bg-[purple] text-[#737373] w-fit h-fit text-[16px]  flex gap-2">
+                <div class="flex items-center">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M13.3332 6.66683C13.3332 9.9955 9.6405 13.4622 8.4005 14.5328C8.28499 14.6197 8.14437 14.6667 7.99984 14.6667C7.85531 14.6667 7.71469 14.6197 7.59917 14.5328C6.35917 13.4622 2.6665 9.9955 2.6665 6.66683C2.6665 5.25234 3.22841 3.89579 4.2286 2.89559C5.2288 1.8954 6.58535 1.3335 7.99984 1.3335C9.41433 1.3335 10.7709 1.8954 11.7711 2.89559C12.7713 3.89579 13.3332 5.25234 13.3332 6.66683Z"
@@ -235,7 +327,7 @@
                       stroke="#737373" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </div>
-                <span class="text-[#737373] font-medium">
+                <span class=" font-medium">
                   Madrid, Spain
                 </span>
               </div>
@@ -263,89 +355,7 @@
             </div>
           </div>
           <div class="-bg-[pink] w-full h-fit">
-            <div class="-bg-[red] w-[312px] h-fit flex flex-col gap-6 mt-7">
-              <div class="-bg-[blue] w-full h-fit gap-2 justify-between flex items-center relative">
-                <div class="w-fit h-fit gap-2 flex items-center">
-                  <div
-                    class="w-fit h-fit rounded-full border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-x-2 flex items-center justify-center text-[#454545] z-3">
 
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_2492_6547)">
-                        <path
-                          d="M11.6668 4.3335H11.6735M4.66683 1.3335H11.3335C13.1744 1.3335 14.6668 2.82588 14.6668 4.66683V11.3335C14.6668 13.1744 13.1744 14.6668 11.3335 14.6668H4.66683C2.82588 14.6668 1.3335 13.1744 1.3335 11.3335V4.66683C1.3335 2.82588 2.82588 1.3335 4.66683 1.3335ZM10.6668 7.58016C10.7491 8.13499 10.6543 8.70164 10.396 9.19951C10.1377 9.69737 9.72893 10.1011 9.22791 10.3533C8.7269 10.6055 8.15913 10.6932 7.60535 10.6041C7.05158 10.515 6.54 10.2536 6.14339 9.85694C5.74677 9.46032 5.48532 8.94875 5.39621 8.39497C5.3071 7.8412 5.39487 7.27343 5.64705 6.77241C5.89922 6.2714 6.30295 5.86266 6.80082 5.60432C7.29868 5.34599 7.86533 5.25122 8.42016 5.3335C8.98611 5.41742 9.51006 5.68114 9.91462 6.0857C10.3192 6.49026 10.5829 7.01421 10.6668 7.58016Z"
-                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_2492_6547">
-                          <rect width="16" height="16" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                    <button class="cursor-pointer text-[#878F7A] hover:text-black relative group flex items-center">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="20" height="20" rx="10" fill="currentColor" />
-                        <path d="M5 10H15M10 15V10V5" stroke="white" stroke-width="1.5" stroke-linecap="square" />
-                      </svg>
-                      <div class="absolute hidden group-hover:flex items-center left-[140%] ">
-                        <svg width="5" height="12" viewBox="0 0 5 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M0.611521 5.82733C0.264775 6.20875 0.264774 6.79125 0.611521 7.17267L5 12L5 1L0.611521 5.82733Z"
-                            fill="black" />
-                        </svg>
-                        <div class="text-nowrap bg-black py-1.5 px-3 rounded-[4px] text-white text-[12px]">
-                          Add a link to your instagram page so people can get to know more about you.
-                        </div>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="w-fit h-fit rounded-full border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-x-2 flex items-center justify-center text-[#454545] z-2">
-                    <div class="mr-2 text-[#454545]">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M2.75 3.5322C2.75 3.17865 2.86825 2.88699 3.10473 2.6572C3.34121 2.4274 3.64865 2.3125 4.02703 2.3125C4.39865 2.3125 4.69932 2.42562 4.92905 2.65189C5.16554 2.88523 5.28378 3.18926 5.28378 3.56402C5.28378 3.90341 5.16892 4.18623 4.93919 4.4125C4.70271 4.64583 4.39189 4.7625 4.00676 4.7625H3.99662C3.625 4.7625 3.32433 4.64583 3.09459 4.4125C2.86486 4.17917 2.75 3.88573 2.75 3.5322ZM2.88176 12.8125V5.72765H5.13176V12.8125H2.88176ZM6.37838 12.8125H8.62838V8.85644C8.62838 8.60896 8.65541 8.41805 8.70946 8.28371C8.80405 8.0433 8.94763 7.84002 9.1402 7.67386C9.33277 7.5077 9.57432 7.42462 9.86486 7.42462C10.6216 7.42462 11 7.95846 11 9.02614V12.8125H13.25V8.75038C13.25 7.70391 13.0135 6.91023 12.5405 6.36932C12.0676 5.82841 11.4426 5.55795 10.6655 5.55795C9.79392 5.55795 9.11486 5.95038 8.62838 6.73523V6.75644H8.61824L8.62838 6.73523V5.72765H6.37838C6.39189 5.95391 6.39865 6.65744 6.39865 7.83826C6.39865 9.01906 6.39189 10.6771 6.37838 12.8125Z"
-                          fill="currentColor" />
-                      </svg>
-                    </div>
-                    <button class="cursor-pointer text-[#878F7A] hover:text-black relative group flex items-center">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="20" height="20" rx="10" fill="currentColor" />
-                        <path d="M5 10H15M10 15V10V5" stroke="white" stroke-width="1.5" stroke-linecap="square" />
-                      </svg>
-                      <div class="absolute hidden group-hover:flex items-center left-[140%] ">
-                        <svg width="5" height="12" viewBox="0 0 5 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M0.611521 5.82733C0.264775 6.20875 0.264774 6.79125 0.611521 7.17267L5 12L5 1L0.611521 5.82733Z"
-                            fill="black" />
-                        </svg>
-                        <div class="text-nowrap bg-black py-1.5 px-3 rounded-[4px] text-white text-[12px]">
-                          Add a link to your instagram page so people can get to know more about you.
-                        </div>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="cursor-pointer w-fit h-fit rounded-full border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-2 flex items-center justify-center text-[#454545]">
-
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
-                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="-bg-[green] text-[#737373] w-fit h-fit gap-x-2 flex items-center">
-                  Connections:
-                  <div class=" text-black">
-                    10
-                  </div>
-                </div>
-              </div>
-              <button
-                class="-bg-[red] cursor-pointer w-full h-fit rounded-[6px] border border-white py-3 px-8 bg-[#F0EFEB] text-black font-medium">
-                Edit profile
-              </button>
-            </div>
           </div>
         </div>
       </section>

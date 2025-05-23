@@ -5,9 +5,6 @@ export const content = [
 ];
 export const theme = {
   extend: {
-    colors: {
-      mycolor: 'blue',
-    },
   },
 };
 export const plugins = [

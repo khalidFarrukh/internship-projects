@@ -38,17 +38,25 @@ function swapElements(el1, el2) {
   parent1.replaceChild(el_2, temp);
 }
 
-
-function viewportLessThan825pxSwap(el1, el2) {
-  if (window.innerWidth < 825) {
+let w825_swap1_check = false;
+function swapCondition(width, check, el1, el2) {
+  console.log(check)
+  if (window.innerWidth < width && !check) {
+    console.log("shrinking");
     swapElements(el1, el2);
+    return !check;
   }
+  else if (window.innerWidth >= width && check) {
+    console.log("expanding");
+    swapElements(el1, el2);
+    return !check;
+  }
+  return check;
 }
 
 
-
 // Run on load
-window.addEventListener('load', viewportLessThan825pxSwap("swap1_n1", "swap1_n2"));
+window.addEventListener('load', () => { w825_swap1_check = swapCondition(825, w825_swap1_check, "swap1_n1", "swap1_n2") });
 
 // Run on resize
-window.addEventListener('resize', viewportLessThan825pxSwap("swap1_n1", "swap1_n2"));
+window.addEventListener('resize', () => { w825_swap1_check = swapCondition(825, w825_swap1_check, "swap1_n1", "swap1_n2") });

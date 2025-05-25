@@ -381,12 +381,12 @@
             data-tabs-toggle="#default-tab-content" role="tablist">
             <li class="flex w-fit h-fit gap-x-2">
               <button class="cursor-pointer inline-block p-2 border-b-2 " id="active-tab" data-tabs-target="#active"
-                type="button" role="tab" aria-controls="active" aria-selected="true">
+                type="button" role="tab" aria-controls="active" aria-selected="false">
                 Active</button>
             </li>
             <li class="flex w-fit h-fit gap-x-2">
               <button class="cursor-pointer inline-block p-2 border-b-2 " id="shared-tab" data-tabs-target="#shared"
-                type="button" role="tab" aria-controls="shared" aria-selected="false">
+                type="button" role="tab" aria-controls="shared" aria-selected="true">
                 Shared</button>
             </li>
             <li class="flex w-fit h-fit gap-x-2">
@@ -401,7 +401,7 @@
             aria-labelledby="active-tab">
             <!-- you should choose one from the below available divs based on screen width.  -->
             <!-- desktop component -->
-            <div id=""
+            <div
               class="-bg-[red] w-full h-fit border-b py-[11px] w825:px-[16px] text-[#E8E8E8] flex items-center justify-center">
               <div class="-bg-[orange] w-full h-fit text-black flex items-center justify-between">
                 <div class="bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
@@ -559,7 +559,7 @@
               </div>
             </div>
             <!-- mobile component -->
-            <div id=""
+            <div
               class="-bg-[red] w-full h-fit border-b py-[11px] w825:px-[16px] text-[#E8E8E8] flex items-center justify-center">
               <div class="-bg-[orange] w-full h-fit text-black flex items-center justify-between">
                 <div class="bg-[blue] w-full h-fit gap-3 flex flex-col leading-[150%] tracking-[-1%]">
@@ -710,19 +710,18 @@
                     </label>
                   </div>
                 </div>
-                <div class="bg-[lightblue] w-fit h-fit gap-6 flex items-center">
-
-                </div>
               </div>
             </div>
 
           </div>
           <div class="hidden overflow-y-scroll w-full h-fit max-h-[320px] scrollbar-hide" id="shared" role="tabpanel"
             aria-labelledby="shared-tab">
+            <!-- you should choose one from the below available divs based on screen width.  -->
+            <!-- desktop component -->
             <div
               class="-bg-[red] w-full h-fit border-b border-[#E8E8E8] py-[11px] px-[16px] gap-x-2 flex items-center justify-center">
               <div class="-bg-[orange] w-full h-fit text-black flex items-center justify-between">
-                <div class="w-full h-fit gap-x-8 flex items-center">
+                <div class="bg-[red] w-full h-fit gap-x-8 flex items-center">
                   <img class="w-12 h-12 rounded-full" src="/docs/images/people/profile-picture-5.jpg"
                     alt="Rounded avatar">
                   <div class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
@@ -743,12 +742,37 @@
                 </div>
               </div>
             </div>
+            <!-- mobile component -->
+            <div
+              class="-bg-[red] w-full h-fit border-b border-[#E8E8E8] py-[11px] px-[16px] gap-x-2 flex items-center justify-center">
+              <div class="-bg-[orange] w-full h-fit text-black gap-3 flex flex-col justify-between">
+                <div class="bg-[red] w-full h-fit gap-x-3 flex items-center">
+                  <img class="w-12 h-12 rounded-full" src="/docs/images/people/profile-picture-5.jpg"
+                    alt="Rounded avatar">
+                  <div class="-bg-[blue] w-fit h-fit gap-[2px] flex flex-col leading-[150%] tracking-[-1%]">
+                    <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
+                    <div class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap">
+                      KURIO name sdsddsdsdsdsdsdsdsdsdsdsdsdsdsds
+                    </div>
+                    <p class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap">
+                      Description Description Description Description Description Description
+                    </p>
+                  </div>
+                </div>
+                <div class="w-fit h-fit gap-1 flex">
+                  <label
+                    class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white pt-[5px] pb-[3px] px-3 gap-x-2 flex items-center justify-center  text-[#737373] font-medium ">
+                    Skill 1
+                  </label>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="hidden overflow-y-scroll w-full h-fit max-h-[320px] scrollbar-hide" id="archived" role="tabpanel"
             aria-labelledby="archived-tab">
             <!-- you should choose one from the below available divs based on screen width.  -->
             <!-- desktop component -->
-            <div id=""
+            <div
               class="-bg-[red] w-full h-fit border-b py-[11px] w825:px-[16px] text-[#E8E8E8] flex items-center justify-center">
               <div class="-bg-[orange] w-full h-fit text-black flex items-center justify-between">
                 <div class="bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
@@ -867,7 +891,7 @@
               </div>
             </div>
             <!-- mobile component -->
-            <div id=""
+            <div
               class="-bg-[red] w-full h-fit border-b py-[11px] w825:px-[16px] text-[#E8E8E8] flex items-center justify-center">
               <div class="-bg-[orange] w-full h-fit text-black flex items-center justify-between">
                 <div class="bg-[blue] w-full h-fit gap-3 flex flex-col leading-[150%] tracking-[-1%]">

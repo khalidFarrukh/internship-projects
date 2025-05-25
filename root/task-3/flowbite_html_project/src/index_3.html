@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flowbite HTML Project</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" /> -->
-  <!-- <link href="./globals.css" rel="stylesheet"> -->
   <style type="text/tailwindcss">
     @theme inline{
       --breakpoint-w1140: 1140px;
@@ -41,7 +39,7 @@
 <!-- <body class="-bg-[black] flex flex-col items-center"> -->
 
 <body class="-bg-[black] w-full flex flex-col items-center">
-  <header class="z-40 bg-[#F8EFE8] text-black w-full h-fit fixed">
+  <header id="nav-container" class="z-40 bg-[#F8EFE8] text-black w-full h-fit fixed">
     <nav class="w-full h-fit flex justify-center">
       <div
         class="w-full max-w-[1440px] h-fit border-b py-4 px-6 w825:px-12 gap-4 bg-[#F8EFE8] border-[#4700011A] flex items-center justify-between">
@@ -118,7 +116,7 @@
               <button data-dropdown-toggle="profile-DropDown"
                 class="cursor-pointer w-fit h-fit gap-3 flex items-center">
                 <div class="w-[40px] h-[40px]">
-                  <img class="w-full h-full rounded-full" src="./user-photo.png" alt="Rounded avatar">
+                  <img class="w-full h-full rounded-full" src="images/user-photo.png" alt="Rounded avatar">
                 </div>
                 <div class="hidden w1000:block w-fit h-fit">
                   <div
@@ -176,7 +174,7 @@
           <div class="w-full h-fit gap-4 flex flex-col items-center">
             <div class="-bg-[red] w-full h-fit flex items-center justify-between">
               <div class="-bg-[red] w-fit h-fit gap-4 flex items-center">
-                <img class="w-12 h-12 rounded-full" src="./user-photo.png" alt="Rounded avatar">
+                <img class="w-12 h-12 rounded-full" src="images/user-photo.png" alt="Rounded avatar">
                 <div class="-bg-[green] w-full h-fit font-medium text-[18px]">
                   KURIO name
                 </div>
@@ -273,7 +271,7 @@
         <div class="w-full h-fit px-8 gap-6 divide-y-2 divide-[#E8E8E8]">
           <div class="-bg-[red] w-full h-fit pt-[16px] pb-[32px] px-[24px] gap-x-10 flex items-center">
             <div class="-bg-[blue] w-[900px] h-fit gap-8 flex items-center">
-              <img class="w-12 h-12 rounded-full" src="./user-photo.png" alt="Rounded avatar">
+              <img class="w-12 h-12 rounded-full" src="images/user-photo.png" alt="Rounded avatar">
               <div class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
                 <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
                 <div class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap">
@@ -290,7 +288,7 @@
           </div>
           <div class="-bg-[red] w-full h-fit pt-[16px] pb-[32px] px-[24px] gap-x-10 flex items-center">
             <div class="-bg-[blue] w-[900px] h-fit gap-8 flex items-center">
-              <img class="w-12 h-12 rounded-full" src="./user-photo.png" alt="Rounded avatar">
+              <img class="w-12 h-12 rounded-full" src="images/user-photo.png" alt="Rounded avatar">
               <div class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
                 <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
                 <div class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap">

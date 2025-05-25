@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flowbite HTML Project</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" /> -->
-  <!-- <link href="./globals.css" rel="stylesheet"> -->
   <style type="text/tailwindcss">
     @theme inline{
       --breakpoint-w1140: 1140px;
@@ -35,11 +33,10 @@
       /* Firefox */
     }
   </style>
-
 </head>
 
 <body class="-bg-[black] w-full flex flex-col items-center">
-  <header class="z-40 bg-[#F8EFE8] text-black w-full h-fit fixed">
+  <header id="nav-container" class="z-40 bg-[#F8EFE8] text-black w-full h-fit fixed">
     <nav class="w-full h-fit flex justify-center">
       <div
         class="w-full max-w-[1440px] h-fit border-b py-4 px-6 w825:px-12 gap-4 bg-[#F8EFE8] border-[#4700011A] flex items-center justify-between">
@@ -116,7 +113,7 @@
               <button data-dropdown-toggle="profile-DropDown"
                 class="cursor-pointer w-fit h-fit gap-3 flex items-center">
                 <div class="w-[40px] h-[40px]">
-                  <img class="w-full h-full rounded-full" src="./user-photo.png" alt="Rounded avatar">
+                  <img class="w-full h-full rounded-full" src="images/user-photo.png" alt="Rounded avatar">
                 </div>
                 <div class="hidden w1000:block w-fit h-fit">
                   <div

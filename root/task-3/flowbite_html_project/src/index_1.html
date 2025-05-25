@@ -37,7 +37,7 @@
 </head>
 
 <body class="-bg-[black] w-full flex flex-col items-center">
-  <header class="z-40 bg-[#F8EFE8] text-black w-full h-fit fixed">
+  <header id="nav-container" class="z-40 bg-[#F8EFE8] text-black w-full h-fit fixed">
     <nav class="w-full h-fit flex justify-center">
       <div
         class="w-full max-w-[1440px] h-fit border-b py-4 px-6 w825:px-12 gap-4 bg-[#F8EFE8] border-[#4700011A] flex items-center justify-between">
@@ -114,7 +114,7 @@
               <button data-dropdown-toggle="profile-DropDown"
                 class="cursor-pointer w-fit h-fit gap-3 flex items-center">
                 <div class="w-[40px] h-[40px]">
-                  <img class="w-full h-full rounded-full" src="./user-photo.png" alt="Rounded avatar">
+                  <img class="w-full h-full rounded-full" src="images/user-photo.png" alt="Rounded avatar">
                 </div>
                 <div class="hidden w1000:block w-fit h-fit">
                   <div
@@ -200,7 +200,6 @@
               <li class="list-disc list-inside">Linkedin</li>
               <li class="list-disc list-inside">Profile Picture</li>
             </ul>
-
           </div>
         </div>
       </div>
@@ -213,9 +212,9 @@
 
             <!-- <img class="w-[312px] h-[312px]" src="./user-photo.png" alt="user photo"> -->
             <div class="-bg-[green] w-full w825:w-fit h-fit gap-6 flex w825:flex-col justify-between">
-              <img class="min-w-[168px] max-w-[312px] min-h-[168px] h-full max-h-[312px]" src="./user-photo.png"
+              <img class="min-w-[168px] max-w-[312px] min-h-[168px] h-full max-h-[312px]" src="images/user-photo.png"
                 alt="user photo">
-              <div id="swap1_n1" class="-bg-[red] w-[312px] w-full h-fit flex flex-col gap-6">
+              <div id="swap1_n1" class="-bg-[red] w-full h-fit flex flex-col gap-6">
                 <div class="-bg-[blue] w-full h-fit gap-2 justify-between flex items-center relative">
                   <div class="w-fit h-fit gap-2 flex items-center">
                     <div
@@ -381,12 +380,12 @@
             data-tabs-toggle="#default-tab-content" role="tablist">
             <li class="flex w-fit h-fit gap-x-2">
               <button class="cursor-pointer inline-block p-2 border-b-2 " id="active-tab" data-tabs-target="#active"
-                type="button" role="tab" aria-controls="active" aria-selected="false">
+                type="button" role="tab" aria-controls="active" aria-selected="true">
                 Active</button>
             </li>
             <li class="flex w-fit h-fit gap-x-2">
               <button class="cursor-pointer inline-block p-2 border-b-2 " id="shared-tab" data-tabs-target="#shared"
-                type="button" role="tab" aria-controls="shared" aria-selected="true">
+                type="button" role="tab" aria-controls="shared" aria-selected="false">
                 Shared</button>
             </li>
             <li class="flex w-fit h-fit gap-x-2">
@@ -559,8 +558,7 @@
               </div>
             </div>
             <!-- mobile component -->
-            <div
-              class="-bg-[red] w-full h-fit border-b py-[11px] w825:px-[16px] text-[#E8E8E8] flex items-center justify-center">
+            <div class="-bg-[red] w-full h-fit border-b py-[11px] text-[#E8E8E8] flex items-center justify-center">
               <div class="-bg-[orange] w-full h-fit text-black flex items-center justify-between">
                 <div class="bg-[blue] w-full h-fit gap-3 flex flex-col leading-[150%] tracking-[-1%]">
                   <div class="bg-[red] w-full h-fit flex items-center justify-between gap-6">
@@ -722,8 +720,7 @@
               class="-bg-[red] w-full h-fit border-b border-[#E8E8E8] py-[11px] px-[16px] gap-x-2 flex items-center justify-center">
               <div class="-bg-[orange] w-full h-fit text-black flex items-center justify-between">
                 <div class="-bg-[red] w-full h-fit gap-x-8 flex items-center">
-                  <img class="w-12 h-12 rounded-full" src="/docs/images/people/profile-picture-5.jpg"
-                    alt="Rounded avatar">
+                  <img class="w-12 h-12 rounded-full" src="images/user-photo.png" alt="Rounded avatar">
                   <div class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
                     <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
                     <div class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap">
@@ -744,11 +741,10 @@
             </div>
             <!-- mobile component -->
             <div
-              class="-bg-[red] w-full h-fit border-b border-[#E8E8E8] py-[11px] px-[16px] gap-x-2 flex items-center justify-center">
+              class="-bg-[red] w-full h-fit border-b border-[#E8E8E8] py-[11px] gap-x-2 flex items-center justify-center">
               <div class="-bg-[orange] w-full h-fit text-black gap-3 flex flex-col justify-between">
                 <div class="-bg-[red] w-full h-fit gap-x-3 flex items-center">
-                  <img class="w-12 h-12 rounded-full" src="/docs/images/people/profile-picture-5.jpg"
-                    alt="Rounded avatar">
+                  <img class="w-12 h-12 rounded-full" src="images/user-photo.png" alt="Rounded avatar">
                   <div class="-bg-[blue] w-fit h-fit gap-[2px] flex flex-col leading-[150%] tracking-[-1%]">
                     <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
                     <div class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap">
@@ -891,8 +887,7 @@
               </div>
             </div>
             <!-- mobile component -->
-            <div
-              class="-bg-[red] w-full h-fit border-b py-[11px] w825:px-[16px] text-[#E8E8E8] flex items-center justify-center">
+            <div class="-bg-[red] w-full h-fit border-b py-[11px] text-[#E8E8E8] flex items-center justify-center">
               <div class="-bg-[orange] w-full h-fit text-black flex items-center justify-between">
                 <div class="bg-[blue] w-full h-fit gap-3 flex flex-col leading-[150%] tracking-[-1%]">
                   <div class="bg-[red] w-full h-fit flex items-center justify-between gap-6">
@@ -1100,6 +1095,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script>
   <script src="scripts/controller.js"></script>
+
 </body>
 
 </html>

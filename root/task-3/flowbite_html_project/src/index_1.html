@@ -11,7 +11,7 @@
       --breakpoint-w1140: 1140px;
       --breakpoint-w1000: 1000px;
       --breakpoint-w825: 825px;
-      --breakpoint-w514: 514px;
+      --breakpoint-w425: 425px;
     }
     @layer components {
       [aria-selected="false"] {
@@ -209,12 +209,13 @@
       <section class="-bg-[red] w-full h-fit flex flex-col items-center">
         <div class="w-full h-fit flex flex-col">
           <div
-            class="-bg-[blue] w-full h-fit mt-[12px] w825:mt-[48px] relative flex flex-col w825:flex-row gap-12 w825:justify-between">
+            class="-bg-[blue] w-full h-fit mt-[12px] w825:mt-[48px] relative flex flex-col w825:flex-row gap-6 w825:gap-12 w825:justify-between">
 
             <!-- <img class="w-[312px] h-[312px]" src="./user-photo.png" alt="user photo"> -->
-            <div class="bg-[green] w-full w825:w-fit h-fit gap-7 flex w825:flex-col justify-between">
-              <img class="min-w-[168px] max-w-[312px]" src="./user-photo.png" alt="user photo">
-              <div id="swap1_n1" class="-bg-[red] w-[312px] h-fit flex flex-col gap-6">
+            <div class="-bg-[green] w-full w825:w-fit h-fit gap-6 flex w825:flex-col justify-between">
+              <img class="min-w-[168px] max-w-[312px] min-h-[168px] h-full max-h-[312px]" src="./user-photo.png"
+                alt="user photo">
+              <div id="swap1_n1" class="-bg-[red] w-[312px] w-full h-fit flex flex-col gap-6">
                 <div class="-bg-[blue] w-full h-fit gap-2 justify-between flex items-center relative">
                   <div class="w-fit h-fit gap-2 flex items-center">
                     <div
@@ -298,16 +299,16 @@
                 </button>
               </div>
             </div>
-            <div class="-bg-[orange] w-full h-fit ">
-              <div id="swap1_n2" class="bg-[red] min-w-[150px] w-fit h-fit flex flex-col justify-center gap-4">
-                <div class="-bg-[pink] text-[#470001] text-[40px]">
+            <div class="-bg-[orange] w-full h-fit flex flex-col gap-4">
+              <div id="swap1_n2" class="-bg-[red] min-w-[150px] w-full flex flex-col justify-between gap-4">
+                <div class="-bg-[pink] text-[#470001] text-[40px] leading-[100%] tracking-[0%]">
                   Diana Fleming
                 </div>
-                <div class="-bg-[purple] w-full h-full text-[16px] flex w825:flex-row gap-2">
+                <div class="-bg-[yellow] w-fit h-fit text-[16px] flex flex-col w825:flex-row w825:gap-2">
                   <span class="text-[#454545] font-medium">
                     Product Manager
                   </span>
-                  <div class="bg-[blue]">
+                  <div class="-bg-[blue]">
                     <span class="text-[#737373] font-medium">
                       at
                     </span>
@@ -318,7 +319,7 @@
                 </div>
               </div>
 
-              <div class="-bg-[purple] text-[#737373] w-fit h-fit text-[16px]  flex gap-2">
+              <div class="-bg-[purple] text-[#737373] w-fit h-fit text-[16px] mt-[8px] w825:mt-0 flex gap-2">
                 <div class="flex items-center">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -361,15 +362,15 @@
           </div>
         </div>
       </section>
-      <section class="-bg-[blue] w-full h-fit mt-18 flex flex-col">
-        <div class="-bg-[lightblue] w-full h-fit mb-8 relative">
+      <section class="-bg-[blue] w-full h-fit mt-10 w825:mt-18 flex flex-col">
+        <div class="-bg-[lightblue] w-full h-fit mb-8">
           <div class="-bg-[blue] w-full h-fit">
-            <div class="w-full h-fit flex items-center justify-between  -bg-[red]">
+            <div class="-bg-[red] w-full h-fit flex flex-col w425:flex-row w425:items-center justify-between gap-6">
               <div class="font-semibold text-[20px]">
                 My KURIOs
               </div>
               <button type="submit"
-                class="cursor-pointer w-fit h-fit rounded-[6px] py-3 px-8 text-white bg-[#960D0D] font-medium  text-sm">Create
+                class="cursor-pointer w-full w425:w-fit h-fit rounded-[6px] py-3 px-8 text-white bg-[#960D0D] font-medium  text-sm">Create
                 a new KURIO
               </button>
             </div>
@@ -398,28 +399,33 @@
         <div id="default-tab-content">
           <div class="hidden overflow-y-scroll w-full h-fit max-h-[320px] scrollbar-hide" id="active" role="tabpanel"
             aria-labelledby="active-tab">
-            <div
-              class="-bg-[red] w-full h-fit border-b py-[11px] px-[16px] text-[#E8E8E8] flex items-center justify-center">
+            <!-- you should choose of the below available divs based on screen width.  -->
+            <!-- desktop component -->
+            <div id=""
+              class="-bg-[red] w-full h-fit border-b py-[11px] w825:px-[16px] text-[#E8E8E8] flex items-center justify-center">
               <div class="-bg-[orange] w-full h-fit text-black flex items-center justify-between">
-                <div class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
-                  <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
-                  <div class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap">
-                    KURIO name sdsddsdsdsdsdsdsdsdsdsdsdsdsdsds
+                <div class="bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
+                  <div class="bg-[red] w-full h-fit flex items-center justify-between gap-6">
+                    <div class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap">
+                      KURIO name desktop component
+                    </div>
                   </div>
-                  <p class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap">
-                    Description Description Description Description Description Description
-                  </p>
+                  <div class="bg-[red] w-full h-fit flex justify-between gap-6">
+                    <p class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap">
+                      Description Description Description Description Description Description
+                    </p>
+                  </div>
                 </div>
-                <div class="-bg-[lightblue] w-fit h-fit gap-6 flex items-center">
+                <div class="bg-[lightblue] w-fit h-fit gap-6 flex items-center">
 
-                  <div class="-bg-[orange] w-fit h-fit gap-1 flex">
+                  <div class="w-fit h-fit gap-1 flex">
                     <label
                       class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center  text-[#737373] font-medium ">
                       Skill 1
                     </label>
                   </div>
 
-                  <div class="-bg-[pink] w-fit h-fit gap-2 flex items-center relative">
+                  <div class="bg-[orange] w-fit h-fit gap-2 flex items-center relative">
                     <div class="w-fit h-fit text-[#454545] flex items-center">
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -436,117 +442,276 @@
 
 
                     <div class="w-fit h-fit flex items-center">
-                      2 hrs left
+                      2hrs left
                     </div>
                   </div>
-                  <button class="cursor-pointer w-fit h-fit flex items-center text-black hover:text-[#960D0D] ">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_4188_4852)">
-                        <path d="M12 1.33301L14.6667 3.99967" stroke="currentColor" stroke-width="1.5"
-                          stroke-linecap="square" stroke-linejoin="round" />
-                        <path
-                          d="M4.9987 13.6663L12.6654 5.99967L9.9987 3.33301L2.33203 10.9997L1.33203 14.6663L4.9987 13.6663Z"
-                          stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_4188_4852">
-                          <rect width="16" height="16" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </button>
-                  <div class="w-fit h-fit flex items-center">
-                    <button data-dropdown-toggle="active-profile-3Dots-DropDown"
-                      class="cursor-pointer w-fit h-fit flex items-center">
+                  <div class="bg-[orange] w-fit h-fit flex gap-6">
+                    <button class="cursor-pointer w-fit h-fit flex items-center text-black hover:text-[#960D0D] ">
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="8.0013" cy="3.33333" r="1.33333" fill="black" />
-                        <circle cx="8.0013" cy="12.6663" r="1.33333" fill="black" />
-                        <circle cx="8.0013" cy="8.00033" r="1.33333" fill="black" />
+                        <g clip-path="url(#clip0_4188_4852)">
+                          <path d="M12 1.33301L14.6667 3.99967" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="square" stroke-linejoin="round" />
+                          <path
+                            d="M4.9987 13.6663L12.6654 5.99967L9.9987 3.33301L2.33203 10.9997L1.33203 14.6663L4.9987 13.6663Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_4188_4852">
+                            <rect width="16" height="16" fill="white" />
+                          </clipPath>
+                        </defs>
                       </svg>
                     </button>
-                    <div id="active-profile-3Dots-DropDown"
-                      class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50">
-                      <ul class="py-1">
-                        <li>
-                          <a href="#" class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            </svg>
-                            Share
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path d="M2.5 7.3L6.625 11.5L13.5 4.5" stroke="currentColor" stroke-width=" 1.5"
-                                stroke-linecap="square" stroke-linejoin="round" />
-                            </svg>
-                            Mark as cured
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M7.99984 1.66699C4.50203 1.66699 1.6665 4.50252 1.6665 8.00033C1.6665 11.4981 4.50203 14.3337 7.99984 14.3337C10.4515 14.3337 12.5778 12.9406 13.6304 10.9029"
-                                stroke="currentColor" stroke-width="1.5" />
-                              <path
-                                d="M14.1953 6.68392C14.922 10.1054 12.7374 13.4682 9.31591 14.1948C5.89442 14.9215 2.53167 12.7369 1.80501 9.31542C1.07834 5.89393 3.26292 2.53119 6.68441 1.80452C10.1059 1.07785 13.4686 3.26244 14.1953 6.68392Z"
-                                stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" />
-                              <path
-                                d="M8.00098 4.18066V7.48549C8.00098 7.80844 8.15694 8.11151 8.41974 8.29922L10.4315 9.73622"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
-                            </svg>
-                            Add more time
-                          </a>
-                        </li>
-                        <li>
-                          <button data-modal-target="archive-modal" data-modal-toggle="archive-modal"
-                            onclick="elementToggle('active-profile-3Dots-DropDown')"
-                            class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M2.66683 5.33333V12.6667C2.66683 13.0203 2.80731 13.3594 3.05735 13.6095C3.3074 13.8595 3.64654 14 4.00016 14H12.0002C12.3538 14 12.6929 13.8595 12.943 13.6095C13.193 13.3594 13.3335 13.0203 13.3335 12.6667V5.33333M6.66683 8H9.3335M2.00016 2H14.0002C14.3684 2 14.6668 2.29848 14.6668 2.66667V4.66667C14.6668 5.03486 14.3684 5.33333 14.0002 5.33333H2.00016C1.63197 5.33333 1.3335 5.03486 1.3335 4.66667V2.66667C1.3335 2.29848 1.63197 2 2.00016 2Z"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            </svg>
-                            Archive
-                          </button>
-                        </li>
-                        <li>
-                          <a href="#"
-                            class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB] text-[#C93636]">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path d="M2 4H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                                stroke-linejoin="round" />
-                              <path
-                                d="M12.6668 4V13.3333C12.6668 14 12.0002 14.6667 11.3335 14.6667H4.66683C4.00016 14.6667 3.3335 14 3.3335 13.3333V4"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                                stroke-linejoin="round" />
-                              <path
-                                d="M5.3335 3.99967V2.66634C5.3335 1.99967 6.00016 1.33301 6.66683 1.33301H9.3335C10.0002 1.33301 10.6668 1.99967 10.6668 2.66634V3.99967"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                                stroke-linejoin="round" />
-                              <path d="M6.6665 7.33301V11.333" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="square" stroke-linejoin="round" />
-                              <path d="M9.3335 7.33301V11.333" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="square" stroke-linejoin="round" />
-                            </svg>
+                    <div class="w-fit h-fit flex items-center">
+                      <button data-dropdown-toggle="active-profile-3Dots-DropDown-nonMobile"
+                        class="cursor-pointer w-fit h-fit flex items-center">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="8.0013" cy="3.33333" r="1.33333" fill="black" />
+                          <circle cx="8.0013" cy="12.6663" r="1.33333" fill="black" />
+                          <circle cx="8.0013" cy="8.00033" r="1.33333" fill="black" />
+                        </svg>
+                      </button>
+                      <div id="active-profile-3Dots-DropDown-nonMobile"
+                        class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50">
+                        <ul class="py-1">
+                          <li>
+                            <a href="#" class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
+                                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                              </svg>
+                              Share
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.5 7.3L6.625 11.5L13.5 4.5" stroke="currentColor" stroke-width=" 1.5"
+                                  stroke-linecap="square" stroke-linejoin="round" />
+                              </svg>
+                              Mark as cured
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M7.99984 1.66699C4.50203 1.66699 1.6665 4.50252 1.6665 8.00033C1.6665 11.4981 4.50203 14.3337 7.99984 14.3337C10.4515 14.3337 12.5778 12.9406 13.6304 10.9029"
+                                  stroke="currentColor" stroke-width="1.5" />
+                                <path
+                                  d="M14.1953 6.68392C14.922 10.1054 12.7374 13.4682 9.31591 14.1948C5.89442 14.9215 2.53167 12.7369 1.80501 9.31542C1.07834 5.89393 3.26292 2.53119 6.68441 1.80452C10.1059 1.07785 13.4686 3.26244 14.1953 6.68392Z"
+                                  stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" />
+                                <path
+                                  d="M8.00098 4.18066V7.48549C8.00098 7.80844 8.15694 8.11151 8.41974 8.29922L10.4315 9.73622"
+                                  stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                              </svg>
+                              Add more time
+                            </a>
+                          </li>
+                          <li>
+                            <button data-modal-target="archive-modal" data-modal-toggle="archive-modal"
+                              onclick="elementToggle('active-profile-3Dots-DropDown-nonMobile')"
+                              class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M2.66683 5.33333V12.6667C2.66683 13.0203 2.80731 13.3594 3.05735 13.6095C3.3074 13.8595 3.64654 14 4.00016 14H12.0002C12.3538 14 12.6929 13.8595 12.943 13.6095C13.193 13.3594 13.3335 13.0203 13.3335 12.6667V5.33333M6.66683 8H9.3335M2.00016 2H14.0002C14.3684 2 14.6668 2.29848 14.6668 2.66667V4.66667C14.6668 5.03486 14.3684 5.33333 14.0002 5.33333H2.00016C1.63197 5.33333 1.3335 5.03486 1.3335 4.66667V2.66667C1.3335 2.29848 1.63197 2 2.00016 2Z"
+                                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                              </svg>
+                              Archive
+                            </button>
+                          </li>
+                          <li>
+                            <a href="#"
+                              class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB] text-[#C93636]">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                                  stroke-linejoin="round" />
+                                <path
+                                  d="M12.6668 4V13.3333C12.6668 14 12.0002 14.6667 11.3335 14.6667H4.66683C4.00016 14.6667 3.3335 14 3.3335 13.3333V4"
+                                  stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                                  stroke-linejoin="round" />
+                                <path
+                                  d="M5.3335 3.99967V2.66634C5.3335 1.99967 6.00016 1.33301 6.66683 1.33301H9.3335C10.0002 1.33301 10.6668 1.99967 10.6668 2.66634V3.99967"
+                                  stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                                  stroke-linejoin="round" />
+                                <path d="M6.6665 7.33301V11.333" stroke="currentColor" stroke-width="1.5"
+                                  stroke-linecap="square" stroke-linejoin="round" />
+                                <path d="M9.3335 7.33301V11.333" stroke="currentColor" stroke-width="1.5"
+                                  stroke-linecap="square" stroke-linejoin="round" />
+                              </svg>
 
-                            Delete
-                          </a>
-                        </li>
-                      </ul>
+                              Delete
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <!-- mobile component -->
+            <div id=""
+              class="-bg-[red] w-full h-fit border-b py-[11px] w825:px-[16px] text-[#E8E8E8] flex items-center justify-center">
+              <div class="-bg-[orange] w-full h-fit text-black flex items-center justify-between">
+                <div class="bg-[blue] w-full h-fit gap-3 flex flex-col leading-[150%] tracking-[-1%]">
+                  <div class="bg-[red] w-full h-fit flex items-center justify-between gap-6">
+                    <div class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap">
+                      KURIO name mobile component
+                    </div>
+                    <div class="bg-[orange] w-fit h-fit flex gap-6">
+                      <button class="cursor-pointer w-fit h-fit flex items-center text-black hover:text-[#960D0D] ">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_4188_4852)">
+                            <path d="M12 1.33301L14.6667 3.99967" stroke="currentColor" stroke-width="1.5"
+                              stroke-linecap="square" stroke-linejoin="round" />
+                            <path
+                              d="M4.9987 13.6663L12.6654 5.99967L9.9987 3.33301L2.33203 10.9997L1.33203 14.6663L4.9987 13.6663Z"
+                              stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                              stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_4188_4852">
+                              <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                      <div class="w-fit h-fit flex items-center">
+                        <button data-dropdown-toggle="active-profile-3Dots-DropDown-mobile"
+                          class="cursor-pointer w-fit h-fit flex items-center">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8.0013" cy="3.33333" r="1.33333" fill="black" />
+                            <circle cx="8.0013" cy="12.6663" r="1.33333" fill="black" />
+                            <circle cx="8.0013" cy="8.00033" r="1.33333" fill="black" />
+                          </svg>
+                        </button>
+                        <div id="active-profile-3Dots-DropDown-mobile"
+                          class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50">
+                          <ul class="py-1">
+                            <li>
+                              <a href="#" class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                </svg>
+                                Share
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2.5 7.3L6.625 11.5L13.5 4.5" stroke="currentColor" stroke-width=" 1.5"
+                                    stroke-linecap="square" stroke-linejoin="round" />
+                                </svg>
+                                Mark as cured
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M7.99984 1.66699C4.50203 1.66699 1.6665 4.50252 1.6665 8.00033C1.6665 11.4981 4.50203 14.3337 7.99984 14.3337C10.4515 14.3337 12.5778 12.9406 13.6304 10.9029"
+                                    stroke="currentColor" stroke-width="1.5" />
+                                  <path
+                                    d="M14.1953 6.68392C14.922 10.1054 12.7374 13.4682 9.31591 14.1948C5.89442 14.9215 2.53167 12.7369 1.80501 9.31542C1.07834 5.89393 3.26292 2.53119 6.68441 1.80452C10.1059 1.07785 13.4686 3.26244 14.1953 6.68392Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" />
+                                  <path
+                                    d="M8.00098 4.18066V7.48549C8.00098 7.80844 8.15694 8.11151 8.41974 8.29922L10.4315 9.73622"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                                </svg>
+                                Add more time
+                              </a>
+                            </li>
+                            <li>
+                              <button data-modal-target="archive-modal" data-modal-toggle="archive-modal"
+                                onclick="elementToggle('active-profile-3Dots-DropDown-mobile')"
+                                class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M2.66683 5.33333V12.6667C2.66683 13.0203 2.80731 13.3594 3.05735 13.6095C3.3074 13.8595 3.64654 14 4.00016 14H12.0002C12.3538 14 12.6929 13.8595 12.943 13.6095C13.193 13.3594 13.3335 13.0203 13.3335 12.6667V5.33333M6.66683 8H9.3335M2.00016 2H14.0002C14.3684 2 14.6668 2.29848 14.6668 2.66667V4.66667C14.6668 5.03486 14.3684 5.33333 14.0002 5.33333H2.00016C1.63197 5.33333 1.3335 5.03486 1.3335 4.66667V2.66667C1.3335 2.29848 1.63197 2 2.00016 2Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                </svg>
+                                Archive
+                              </button>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB] text-[#C93636]">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 4H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                                    stroke-linejoin="round" />
+                                  <path
+                                    d="M12.6668 4V13.3333C12.6668 14 12.0002 14.6667 11.3335 14.6667H4.66683C4.00016 14.6667 3.3335 14 3.3335 13.3333V4"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                                    stroke-linejoin="round" />
+                                  <path
+                                    d="M5.3335 3.99967V2.66634C5.3335 1.99967 6.00016 1.33301 6.66683 1.33301H9.3335C10.0002 1.33301 10.6668 1.99967 10.6668 2.66634V3.99967"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                                    stroke-linejoin="round" />
+                                  <path d="M6.6665 7.33301V11.333" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="square" stroke-linejoin="round" />
+                                  <path d="M9.3335 7.33301V11.333" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="square" stroke-linejoin="round" />
+                                </svg>
+
+                                Delete
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[red] w-full h-fit flex justify-between gap-6">
+                    <p class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap">
+                      Description Description Description Description Description Description
+                    </p>
+                    <div class="bg-[orange] w-fit h-fit gap-2 flex items-center relative">
+                      <div class="w-fit h-fit text-[#454545] flex items-center">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.99984 1.66699C4.50203 1.66699 1.6665 4.50252 1.6665 8.00033C1.6665 11.4981 4.50203 14.3337 7.99984 14.3337C10.4515 14.3337 12.5778 12.9406 13.6304 10.9029"
+                            stroke="currentColor" stroke-width="1.5" />
+                          <path
+                            d="M14.1953 6.68392C14.922 10.1054 12.7374 13.4682 9.31591 14.1948C5.89442 14.9215 2.53167 12.7369 1.80501 9.31542C1.07834 5.89393 3.26292 2.53119 6.68441 1.80452C10.1059 1.07785 13.4686 3.26244 14.1953 6.68392Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" />
+                          <path
+                            d="M8.00098 4.18066V7.48549C8.00098 7.80844 8.15694 8.11151 8.41974 8.29922L10.4315 9.73622"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                        </svg>
+                      </div>
+                      <div class="w-fit h-fit flex items-center">
+                        2hrs left
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-fit h-fit gap-1 flex">
+                    <label
+                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white pt-[5px] pb-[3px] px-3 gap-x-2 flex items-center justify-center  text-[#737373] font-medium ">
+                      Skill 1
+                    </label>
+                  </div>
+                </div>
+                <div class="bg-[lightblue] w-fit h-fit gap-6 flex items-center">
+
                 </div>
               </div>
             </div>
@@ -581,29 +746,33 @@
           </div>
           <div class="hidden overflow-y-scroll w-full h-fit max-h-[320px] scrollbar-hide" id="archived" role="tabpanel"
             aria-labelledby="archived-tab">
-            <div
-              class="-bg-[red] w-full h-fit border-b py-[11px] px-[16px] text-[#E8E8E8] flex items-center justify-center">
+            <!-- you should choose of the below available divs based on screen width.  -->
+            <!-- desktop component -->
+            <div id=""
+              class="-bg-[red] w-full h-fit border-b py-[11px] w825:px-[16px] text-[#E8E8E8] flex items-center justify-center">
               <div class="-bg-[orange] w-full h-fit text-black flex items-center justify-between">
-                <div class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
-                  <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
-                  <div class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap">
-                    KURIO name sdsddsdsdsdsdsdsdsdsdsdsdsdsdsds
+                <div class="bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]">
+                  <div class="bg-[red] w-full h-fit flex items-center justify-between gap-6">
+                    <div class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap">
+                      KURIO name desktop component
+                    </div>
                   </div>
-                  <p class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap">
-                    Description Description Description Description Description Description
-                  </p>
+                  <div class="bg-[red] w-full h-fit flex justify-between gap-6">
+                    <p class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap">
+                      Description Description Description Description Description Description
+                    </p>
+                  </div>
                 </div>
-                <div class="-bg-[lightblue] w-fit h-fit gap-6 flex items-center">
+                <div class="bg-[lightblue] w-fit h-fit gap-6 flex items-center">
 
-                  <div class="-bg-[orange] w-fit h-fit gap-1 flex">
+                  <div class="w-fit h-fit gap-1 flex">
                     <label
                       class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center  text-[#737373] font-medium ">
                       Skill 1
                     </label>
-
                   </div>
 
-                  <div class="-bg-[pink] w-fit h-fit gap-2 flex items-center relative">
+                  <div class="bg-[orange] w-fit h-fit gap-2 flex items-center relative">
                     <div class="w-fit h-fit text-[#454545] flex items-center">
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -623,79 +792,198 @@
                       Expired
                     </div>
                   </div>
-                  <button class="cursor-pointer w-fit h-fit flex items-center text-black hover:text-[#960D0D] ">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_4188_4852)">
-                        <path d="M12 1.33301L14.6667 3.99967" stroke="currentColor" stroke-width="1.5"
-                          stroke-linecap="square" stroke-linejoin="round" />
-                        <path
-                          d="M4.9987 13.6663L12.6654 5.99967L9.9987 3.33301L2.33203 10.9997L1.33203 14.6663L4.9987 13.6663Z"
-                          stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_4188_4852">
-                          <rect width="16" height="16" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </button>
-                  <div class="w-fit h-fit flex items-center">
-                    <button data-dropdown-toggle="archived-profile-3Dots-DropDown"
-                      class="cursor-pointer w-fit h-fit flex items-center">
+                  <div class="bg-[orange] w-fit h-fit flex gap-6">
+                    <button class="cursor-pointer w-fit h-fit flex items-center text-black hover:text-[#960D0D] ">
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="8.0013" cy="3.33333" r="1.33333" fill="black" />
-                        <circle cx="8.0013" cy="12.6663" r="1.33333" fill="black" />
-                        <circle cx="8.0013" cy="8.00033" r="1.33333" fill="black" />
+                        <g clip-path="url(#clip0_4188_4852)">
+                          <path d="M12 1.33301L14.6667 3.99967" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="square" stroke-linejoin="round" />
+                          <path
+                            d="M4.9987 13.6663L12.6654 5.99967L9.9987 3.33301L2.33203 10.9997L1.33203 14.6663L4.9987 13.6663Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_4188_4852">
+                            <rect width="16" height="16" fill="white" />
+                          </clipPath>
+                        </defs>
                       </svg>
                     </button>
-                    <div id="archived-profile-3Dots-DropDown"
-                      class="absolute right-0 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50">
-                      <ul class="py-1">
-                        <li>
-                          <button data-modal-target="share-modal" data-modal-toggle="share-modal"
-                            onclick="elementToggle('archived-profile-3Dots-DropDown')"
-                            class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            </svg>
-                            Share
-                          </button>
-                        </li>
-                        <li>
-                          <a href="#"
-                            class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB] text-[#C93636]">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path d="M2 4H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                                stroke-linejoin="round" />
-                              <path
-                                d="M12.6668 4V13.3333C12.6668 14 12.0002 14.6667 11.3335 14.6667H4.66683C4.00016 14.6667 3.3335 14 3.3335 13.3333V4"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                                stroke-linejoin="round" />
-                              <path
-                                d="M5.3335 3.99967V2.66634C5.3335 1.99967 6.00016 1.33301 6.66683 1.33301H9.3335C10.0002 1.33301 10.6668 1.99967 10.6668 2.66634V3.99967"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
-                                stroke-linejoin="round" />
-                              <path d="M6.6665 7.33301V11.333" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="square" stroke-linejoin="round" />
-                              <path d="M9.3335 7.33301V11.333" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="square" stroke-linejoin="round" />
-                            </svg>
+                    <div class="w-fit h-fit flex items-center">
+                      <button data-dropdown-toggle="archived-profile-3Dots-DropDown-nonMobile"
+                        class="cursor-pointer w-fit h-fit flex items-center">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="8.0013" cy="3.33333" r="1.33333" fill="black" />
+                          <circle cx="8.0013" cy="12.6663" r="1.33333" fill="black" />
+                          <circle cx="8.0013" cy="8.00033" r="1.33333" fill="black" />
+                        </svg>
+                      </button>
+                      <div id="archived-profile-3Dots-DropDown-nonMobile"
+                        class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50">
+                        <ul class="py-1">
+                          <li>
+                            <button data-modal-target="share-modal" data-modal-toggle="share-modal"
+                              onclick="elementToggle('archived-profile-3Dots-DropDown-nonMobile')"
+                              class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
+                                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                              </svg>
+                              Share
+                            </button>
+                          </li>
+                          <li>
+                            <a href="#"
+                              class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB] text-[#C93636]">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                                  stroke-linejoin="round" />
+                                <path
+                                  d="M12.6668 4V13.3333C12.6668 14 12.0002 14.6667 11.3335 14.6667H4.66683C4.00016 14.6667 3.3335 14 3.3335 13.3333V4"
+                                  stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                                  stroke-linejoin="round" />
+                                <path
+                                  d="M5.3335 3.99967V2.66634C5.3335 1.99967 6.00016 1.33301 6.66683 1.33301H9.3335C10.0002 1.33301 10.6668 1.99967 10.6668 2.66634V3.99967"
+                                  stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                                  stroke-linejoin="round" />
+                                <path d="M6.6665 7.33301V11.333" stroke="currentColor" stroke-width="1.5"
+                                  stroke-linecap="square" stroke-linejoin="round" />
+                                <path d="M9.3335 7.33301V11.333" stroke="currentColor" stroke-width="1.5"
+                                  stroke-linecap="square" stroke-linejoin="round" />
+                              </svg>
 
-                            Delete
-                          </a>
-                        </li>
-                      </ul>
+                              Delete
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- mobile component -->
+            <div id=""
+              class="-bg-[red] w-full h-fit border-b py-[11px] w825:px-[16px] text-[#E8E8E8] flex items-center justify-center">
+              <div class="-bg-[orange] w-full h-fit text-black flex items-center justify-between">
+                <div class="bg-[blue] w-full h-fit gap-3 flex flex-col leading-[150%] tracking-[-1%]">
+                  <div class="bg-[red] w-full h-fit flex items-center justify-between gap-6">
+                    <div class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap">
+                      KURIO name mobile component
+                    </div>
+                    <div class="bg-[orange] w-fit h-fit flex gap-6">
+                      <button class="cursor-pointer w-fit h-fit flex items-center text-black hover:text-[#960D0D] ">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_4188_4852)">
+                            <path d="M12 1.33301L14.6667 3.99967" stroke="currentColor" stroke-width="1.5"
+                              stroke-linecap="square" stroke-linejoin="round" />
+                            <path
+                              d="M4.9987 13.6663L12.6654 5.99967L9.9987 3.33301L2.33203 10.9997L1.33203 14.6663L4.9987 13.6663Z"
+                              stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                              stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_4188_4852">
+                              <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                      <div class="w-fit h-fit flex items-center">
+                        <button data-dropdown-toggle="archived-profile-3Dots-DropDown-mobile"
+                          class="cursor-pointer w-fit h-fit flex items-center">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8.0013" cy="3.33333" r="1.33333" fill="black" />
+                            <circle cx="8.0013" cy="12.6663" r="1.33333" fill="black" />
+                            <circle cx="8.0013" cy="8.00033" r="1.33333" fill="black" />
+                          </svg>
+                        </button>
+                        <div id="archived-profile-3Dots-DropDown-mobile"
+                          class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50">
+                          <ul class="py-1">
+                            <li>
+                              <button data-modal-target="share-modal" data-modal-toggle="share-modal"
+                                onclick="elementToggle('archived-profile-3Dots-DropDown-mobile')"
+                                class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M5.22667 9.00634L9.78 11.6597M9.77333 4.33967L5.22667 6.99301M13.5 3.33301C13.5 4.43758 12.6046 5.33301 11.5 5.33301C10.3954 5.33301 9.5 4.43758 9.5 3.33301C9.5 2.22844 10.3954 1.33301 11.5 1.33301C12.6046 1.33301 13.5 2.22844 13.5 3.33301ZM5.5 7.99967C5.5 9.10424 4.60457 9.99967 3.5 9.99967C2.39543 9.99967 1.5 9.10424 1.5 7.99967C1.5 6.8951 2.39543 5.99967 3.5 5.99967C4.60457 5.99967 5.5 6.8951 5.5 7.99967ZM13.5 12.6663C13.5 13.7709 12.6046 14.6663 11.5 14.6663C10.3954 14.6663 9.5 13.7709 9.5 12.6663C9.5 11.5618 10.3954 10.6663 11.5 10.6663C12.6046 10.6663 13.5 11.5618 13.5 12.6663Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                </svg>
+                                Share
+                              </button>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB] text-[#C93636]">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 4H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                                    stroke-linejoin="round" />
+                                  <path
+                                    d="M12.6668 4V13.3333C12.6668 14 12.0002 14.6667 11.3335 14.6667H4.66683C4.00016 14.6667 3.3335 14 3.3335 13.3333V4"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                                    stroke-linejoin="round" />
+                                  <path
+                                    d="M5.3335 3.99967V2.66634C5.3335 1.99967 6.00016 1.33301 6.66683 1.33301H9.3335C10.0002 1.33301 10.6668 1.99967 10.6668 2.66634V3.99967"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="square"
+                                    stroke-linejoin="round" />
+                                  <path d="M6.6665 7.33301V11.333" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="square" stroke-linejoin="round" />
+                                  <path d="M9.3335 7.33301V11.333" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="square" stroke-linejoin="round" />
+                                </svg>
 
+                                Delete
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[red] w-full h-fit flex justify-between gap-6">
+                    <p class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap">
+                      Description Description Description Description Description Description
+                    </p>
+                    <div class="bg-[orange] w-fit h-fit gap-2 flex items-center relative">
+                      <div class="w-fit h-fit text-[#454545] flex items-center">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.99984 1.66699C4.50203 1.66699 1.6665 4.50252 1.6665 8.00033C1.6665 11.4981 4.50203 14.3337 7.99984 14.3337C10.4515 14.3337 12.5778 12.9406 13.6304 10.9029"
+                            stroke="currentColor" stroke-width="1.5" />
+                          <path
+                            d="M14.1953 6.68392C14.922 10.1054 12.7374 13.4682 9.31591 14.1948C5.89442 14.9215 2.53167 12.7369 1.80501 9.31542C1.07834 5.89393 3.26292 2.53119 6.68441 1.80452C10.1059 1.07785 13.4686 3.26244 14.1953 6.68392Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" />
+                          <path
+                            d="M8.00098 4.18066V7.48549C8.00098 7.80844 8.15694 8.11151 8.41974 8.29922L10.4315 9.73622"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                        </svg>
+                      </div>
+                      <div class="w-fit h-fit flex items-center">
+                        Expired
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-fit h-fit gap-1 flex">
+                    <label
+                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white pt-[5px] pb-[3px] px-3 gap-x-2 flex items-center justify-center  text-[#737373] font-medium ">
+                      Skill 1
+                    </label>
+                  </div>
+                </div>
+                <div class="bg-[lightblue] w-fit h-fit gap-6 flex items-center">
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

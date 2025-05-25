@@ -38,7 +38,7 @@ function swapElements(el1, el2) {
   parent1.replaceChild(el_2, temp);
 }
 
-let w825_swap1_check = false;
+
 function swapCondition(width, check, el1, el2) {
   console.log(check)
   if (window.innerWidth < width && !check) {
@@ -54,9 +54,17 @@ function swapCondition(width, check, el1, el2) {
   return check;
 }
 
-
+let w825_swap1_check = false;
+let w825_swap2_check = false;
+let w825_swap3_check = false;
+let w825_swap4_check = false;
 // Run on load
 window.addEventListener('load', () => { w825_swap1_check = swapCondition(825, w825_swap1_check, "swap1_n1", "swap1_n2") });
-
+window.addEventListener('load', () => { w825_swap2_check = swapCondition(825, w825_swap2_check, "swap2_n1", "swap2_n2") });
+window.addEventListener('load', () => { w825_swap3_check = swapCondition(825, w825_swap3_check, "swap3_n1", "swap3_n2") });
+window.addEventListener('load', () => { w825_swap4_check = swapCondition(825, w825_swap4_check, "swap4_n1", "swap4_n2") });
 // Run on resize
 window.addEventListener('resize', () => { w825_swap1_check = swapCondition(825, w825_swap1_check, "swap1_n1", "swap1_n2") });
+window.addEventListener('resize', () => { w825_swap2_check = swapCondition(825, w825_swap2_check, "swap2_n1", "swap2_n2") });
+window.addEventListener('resize', () => { w825_swap3_check = swapCondition(825, w825_swap3_check, "swap3_n1", "swap3_n2") });
+window.addEventListener('resize', () => { w825_swap4_check = swapCondition(825, w825_swap4_check, "swap4_n1", "swap4_n2") });

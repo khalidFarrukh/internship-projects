@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "flowbite";
+@config "../tailwind.config.js";
+
+
+@theme inline {
+  --breakpoint-w1140: 1140px;
+  --breakpoint-w1000: 1000px;
+  --breakpoint-w825: 825px;
+  --breakpoint-w425: 425px;
+}
+
+@layer components {
+  [aria-selected="false"] {
+    @apply !text-[#999999] !border-[#999999];
+  }
+
+  [aria-selected="false"]:hover {
+    @apply !text-[#F48E8B] !border-[#F48E8B];
+  }
+
+  [aria-selected="true"] {
+    @apply !text-[#960D0D] !border-[#960D0D];
+  }
+
+  [aria-selected="true"]:hover {
+    @apply !text-[#F48E8B] !border-[#F48E8B];
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}

@@ -1,0 +1,120 @@
+<nav id="nav-root" class="w-full h-fit flex justify-center">
+  <div
+    class="w-full max-w-[1440px] h-fit border-b py-4 px-6 w825:px-12 gap-4 bg-[#F8EFE8] border-[#4700011A] flex items-center justify-between"
+  >
+    <a href="#" class="text-[#470001]">
+      <img src="images/logo.svg" alt="site logo image" />
+    </a>
+    <div
+      class="-bg-[red] h-fit gap-4 w1000:gap-8 w1140:gap-20 flex items-center justify-between"
+    >
+      <div
+        class="-bg-[blue] w-fit h-fit gap-4 w1000:gap-8 w1140:gap-20 hidden w825:flex items-center"
+      >
+        <div class="w-[328px] h-fit gap-1 flex items-center">
+          <div class="w-full h-fit gap-2 flex items-center">
+            <div
+              class="w-full h-fit rounded-sm border border-[#E8E8E8] py-2.5 px-4 gap-2 bg-white hidden w825:flex items-center"
+            >
+              <input
+                type="text"
+                name="search_bar"
+                placeholder="Search"
+                id=""
+                class="w-full text-sm focus:outline-none border-0 p-0 leading-[146%] tracking-[-1%]"
+              />
+              <img src="images/search.svg" alt="search icon" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-fit h-fit gap-4 w1000:gap-8 w1140:gap-12 text-[#470001] hidden w825:flex items-center justify-between"
+        >
+          <button
+            onclick=""
+            class="cursor-pointer w-fit h-fit font-medium text-[12px] leading-[146%] tracking-[15%] uppercase"
+          >
+            my responses
+          </button>
+          <button
+            onclick=""
+            class="cursor-pointer w-fit h-fit font-medium text-[12px] leading-[146%] tracking-[15%] uppercase"
+          >
+            connections
+          </button>
+        </div>
+      </div>
+      <button
+        class="w-fit h-fit rounded-full p-3 gap-3 flex w825:hidden items-center justify-center"
+      >
+        <img src="images/menu-burger.svg" alt="notification icon" />
+      </button>
+      <div class="w-fit h-fit gap-4 flex items-center">
+        <button
+          onclick=""
+          class="cursor-pointer bg-white w-fit h-fit rounded-full p-3 gap-3 flex items-center justify-center"
+        >
+          <img src="images/notification.svg" alt="notification icon" />
+        </button>
+        <div class="w-fit h-fit flex items-center">
+          <button
+            data-dropdown-toggle="profile-DropDown"
+            class="cursor-pointer w-fit h-fit gap-3 flex items-center"
+          >
+            <div class="w-[40px] h-[40px]">
+              <img
+                class="w-full h-full rounded-full"
+                src="temp_images/user-photo.png"
+                alt="Rounded avatar"
+              />
+            </div>
+            <div class="hidden w1000:block w-fit h-fit">
+              <div
+                class="w-[93px] h-[20px] font-medium text-left text-sm leading-[146%] tracking-[-1%] text-[#454545] truncate"
+              >
+                name dasdasdas
+              </div>
+              <div
+                class="w-[108px] h-[20px] font-medium text-left text-xs leading-[146%] tracking-[-1%] text-[#737373] truncate"
+              >
+                email sdsadasdasdsa
+              </div>
+            </div>
+          </button>
+          <div
+            id="profile-DropDown"
+            class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50"
+          >
+            <ul class="py-1">
+              <li>
+                <a
+                  href="#"
+                  class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                >
+                  My Profile
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                >
+                  Account settings
+                </a>
+              </li>
+              <li>
+                <button
+                  onclick=""
+                  class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                >
+                  <img src="images/log-out.svg" alt="logout icon" />
+                  Log out
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

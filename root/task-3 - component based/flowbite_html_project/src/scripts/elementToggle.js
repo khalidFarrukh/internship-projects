@@ -9,8 +9,3 @@ function elementToggle(elementId, containsClass = 'block') {
     element.classList.add(containsClass);
   }
 }
-
-
-const printSomething = () => {
-  console.log("something")
-}

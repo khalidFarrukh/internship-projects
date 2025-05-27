@@ -42,13 +42,16 @@
   </head>
 
   <body class="-bg-[black] w-full flex flex-col items-center">
-    <header
+    <!-- <header
       id="nav-container"
       class="z-40 bg-[#F8EFE8] text-black w-full h-fit fixed"
-    ></header>
+    ></header> -->
 
-    <main
+    <!-- <main
       class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-[72px] px-6 w825:px-12 flex flex-col items-center"
+    > -->
+    <main
+      class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit px-6 w825:px-12 flex flex-col items-center"
     >
       <div class="-bg-[yellow] w-full h-fit mx-auto">
         <button
@@ -66,7 +69,7 @@
           <div class="w-fit h-fit gap-8 flex items-center">
             <button
               id="mark-as-cured"
-              onclick="console.log('running'),elementToggle('mark-as-cured','flex'),elementToggle('cured','flex')"
+              onclick="elementToggle('mark-as-cured','flex'),elementToggle('cured','flex')"
               class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm text-[#470001]"
             >
               <img src="images/tick.svg" alt="tick icon" />

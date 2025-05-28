@@ -57,7 +57,7 @@
       class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-[72px] px-6 w825:px-12 flex flex-col items-center"
     > -->
     <main
-      class="z-2 bg-white text-black w-full max-w-[1440px] h-fit px-6 w825:px-12 flex flex-col items-center"
+      class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-10 lg:mt-18 px-6 lg:px-12 flex flex-col items-center"
     >
       <div class="-bg-[yellow] w-full h-fit mx-auto">
         <!-- warning panel -->
@@ -65,7 +65,7 @@
         <div id="warning-container" class="w-full h-fit">
           <div class="relative w-full flex justify-center">
             <div
-              class="bg-[#FFF3CB] z-3 w825:absolute mt-3 right-0 w-[418px] h-fit rounded-[8px] py-3 px-4 gap-3 flex flex-col"
+              class="bg-[#FFF3CB] z-3 lg:absolute mt-3 right-0 w-[418px] h-fit rounded-[8px] py-3 px-4 gap-3 flex flex-col"
             >
               <div
                 class="-bg-[red] w-full h-fit flex items-center justify-between"
@@ -86,7 +86,7 @@
                 >
                   Missing sections:
                 </div>
-                <ul class="font-normal">
+                <ul class="font-normal text-[#737373]">
                   <li class="list-disc list-inside">Instagram</li>
                   <li class="list-disc list-inside">Linkedin</li>
                   <li class="list-disc list-inside">Profile Picture</li>
@@ -100,27 +100,28 @@
         <section class="-bg-[red] w-full h-fit flex flex-col items-center">
           <div class="w-full h-fit flex flex-col">
             <div
-              class="-bg-[blue] w-full h-fit mt-[12px] w825:mt-[48px] relative flex flex-col w825:flex-row gap-6 w825:gap-12 w825:justify-between"
+              class="-bg-[blue] w-full h-fit mt-3 lg:mt-12 relative flex flex-col lg:flex-row gap-6 lg:gap-12 lg:justify-between"
             >
-              <!-- <img class="w-[312px] h-[312px]" src="./user-photo.png" alt="user photo"> -->
               <div
-                class="-bg-[green] w-full w825:w-fit h-fit gap-6 flex w825:flex-col justify-between"
+                class="-bg-[green] w-full lg:w-fit h-fit gap-[8%] lg:gap-8 flex lg:flex-col justify-between"
               >
                 <img
-                  class="min-w-[168px] max-w-[312px] min-h-[168px] h-full max-h-[312px]"
+                  class="min-w-[138px] w-fit max-w-[312px] min-h-[138px] max-h-[312px]"
                   src="temp_images/user-photo.png"
                   alt="user photo"
                 />
                 <div
-                  id="swap1_n1"
-                  class="-bg-[red] w-full h-fit flex flex-col gap-6"
+                  data-node="n1"
+                  data-swapWidth="1024"
+                  data-swapped="false"
+                  class="-bg-[red] w-full h-fit pt-6 lg:pt-0 flex flex-col gap-6"
                 >
                   <div
                     class="-bg-[blue] w-full h-fit gap-2 justify-between flex items-center relative"
                   >
                     <div class="w-fit h-fit gap-2 flex items-center">
                       <div
-                        class="w-fit h-fit rounded-full border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-x-2 flex items-center justify-center text-[#454545] z-3"
+                        class="w-fit h-fit rounded-full border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-2 flex items-center justify-center text-[#454545] z-3"
                       >
                         <img src="images/instagram.svg" alt="instagram icon" />
                         <button
@@ -141,7 +142,7 @@
                         </button>
                       </div>
                       <div
-                        class="w-fit h-fit rounded-full border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-x-2 flex items-center justify-center text-[#454545] z-2"
+                        class="w-fit h-fit rounded-full border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-2 flex items-center justify-center text-[#454545] z-2"
                       >
                         <img src="images/linkedin.svg" alt="Linkedincon" />
                         <button
@@ -168,7 +169,7 @@
                       </div>
                     </div>
                     <div
-                      class="-bg-[green] text-[#737373] w-fit h-fit gap-x-2 flex items-center"
+                      class="-bg-[green] text-[#737373] w-fit h-fit gap-2 flex items-center"
                     >
                       Connections:
                       <div class="text-black">10</div>
@@ -181,74 +182,75 @@
                   </button>
                 </div>
               </div>
-              <div class="-bg-[orange] w-full h-fit flex flex-col gap-4">
-                <div
-                  id="swap1_n2"
-                  class="-bg-[red] min-w-[150px] w-full flex flex-col justify-between gap-4"
-                >
+              <div
+                class="-bg-[orange] w-full h-full lg:h-[312px] flex flex-col justify-between gap-4"
+              >
+                <div class="w-full h-full flex flex-col justify-center gap-4">
                   <div
-                    class="-bg-[pink] text-[#470001] text-[40px] leading-[100%] tracking-[0%]"
+                    data-node="n2"
+                    class="-bg-[red] w-fit flex flex-col justify-between gap-4"
                   >
-                    Diana Fleming
+                    <div
+                      class="-bg-[pink] max-w-full w-fit text-[#470001] text-[40px] leading-[100%] tracking-[0%]"
+                    >
+                      Diana Fleming
+                    </div>
+                    <div class="-bg-[yellow] w-fit text-[16px] lg:gap-2">
+                      <span class="text-[#454545] font-medium">
+                        Product Manager
+                      </span>
+                      <div class="-bg-[blue] inline-block">
+                        <span class="text-[#737373] font-medium"> at </span>
+                        <span class="text-[#454545] font-semibold">
+                          LoftView</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="-bg-[purple] text-[#737373] w-fit h-fit text-[16px] mt-1 lg:mt-0 flex gap-2"
+                  >
+                    <div class="flex items-center">
+                      <img src="images/location.svg" alt="location icon" />
+                    </div>
+                    <span class="font-medium"> Madrid, Spain </span>
                   </div>
                   <div
-                    class="-bg-[yellow] w-fit h-fit text-[16px] flex flex-col w825:flex-row w825:gap-2"
+                    class="-bg-[red] text-[#737373] w-fit h-fit flex flex-col gap-2"
                   >
-                    <span class="text-[#454545] font-medium">
-                      Product Manager
-                    </span>
-                    <div class="-bg-[blue]">
-                      <span class="text-[#737373] font-medium"> at </span>
-                      <span class="text-[#454545] font-semibold">
-                        LoftView
-                      </span>
+                    Bio:
+                    <div
+                      class="-bg-[yellow] text-[#454545] w-full max-w-[520px] h-fit max-h-[120px] line-clamp-3 leading-[150%] tracking-[-1%]"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur.
                     </div>
                   </div>
                 </div>
-
-                <div
-                  class="-bg-[purple] text-[#737373] w-fit h-fit text-[16px] mt-[8px] w825:mt-0 flex gap-2"
-                >
-                  <div class="flex items-center">
-                    <img src="images/location.svg" alt="location icon" />
-                  </div>
-                  <span class="font-medium"> Madrid, Spain </span>
-                </div>
-                <div
-                  class="-bg-[red] text-[#737373] w-fit h-fit flex flex-col gap-2"
-                >
-                  Bio:
-                  <div
-                    class="-bg-[yellow] text-[#454545] w-full max-w-[520px] h-fit line-clamp-3 leading-[150%] tracking-[-1%]"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </div>
-                </div>
-                <div class="-bg-[blue] w-fit h-fit gap-2 flex justify-start">
+                <div class="-bg-[blue] w-fit h-fit gap-2 flex uppercase">
                   <label
-                    class="bg-[#FFE2E1] w-fit h-fit flex items-center justify-center text-[#737373] font-medium px-4 py-2 rounded-sm border border-white uppercase"
+                    class="bg-[#FFE2E1] w-fit h-fit flex items-center justify-center text-[#737373] font-medium px-4 py-2 rounded-sm border border-white"
                   >
                     travel
                   </label>
                   <label
-                    class="bg-[#FFE2E1] w-fit h-fit flex items-center justify-center text-[#737373] font-medium px-4 py-2 rounded-sm border border-white uppercase"
+                    class="bg-[#FFE2E1] w-fit h-fit flex items-center justify-center text-[#737373] font-medium px-4 py-2 rounded-sm border border-white"
                   >
                     sport
                   </label>
                   <label
-                    class="bg-[#FFE2E1] w-fit h-fit flex items-center justify-center text-[#737373] font-medium px-4 py-2 rounded-sm border border-white uppercase"
+                    class="bg-[#FFE2E1] w-fit h-fit flex items-center justify-center text-[#737373] font-medium px-4 py-2 rounded-sm border border-white"
                   >
                     tech
                   </label>
                 </div>
               </div>
             </div>
-            <div class="-bg-[pink] w-full h-fit"></div>
           </div>
         </section>
         <section class="-bg-[blue] w-full h-fit mt-10 w825:mt-18 flex flex-col">
@@ -271,12 +273,12 @@
             class="-bg-[pink] w-full h-fit mb-6 border-b border-[#E8E8E8] text-sm font-medium text-center"
           >
             <ul
-              class="-bg-[red] w-fit h-fit flex flex-wrap -mb-px gap-10"
+              class="-bg-[red] w-fit h-fit flex flex-wrap gap-10"
               id="default-tab"
               data-tabs-toggle="#default-tab-content"
               role="tablist"
             >
-              <li class="flex w-fit h-fit gap-x-2">
+              <li class="flex w-fit h-fit gap-2">
                 <button
                   class="cursor-pointer inline-block p-2 border-b-2"
                   id="active-tab"
@@ -289,7 +291,7 @@
                   Active
                 </button>
               </li>
-              <li class="flex w-fit h-fit gap-x-2">
+              <li class="flex w-fit h-fit gap-2">
                 <button
                   class="cursor-pointer inline-block p-2 border-b-2"
                   id="shared-tab"
@@ -302,7 +304,7 @@
                   Shared
                 </button>
               </li>
-              <li class="flex w-fit h-fit gap-x-2">
+              <li class="flex w-fit h-fit gap-2">
                 <button
                   class="cursor-pointer inline-block p-2 border-b-2"
                   id="archived-tab"
@@ -336,7 +338,7 @@
                     class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]"
                   >
                     <div
-                      class="-bg-[red] w-full h-fit flex items-center justify-between gap-6"
+                      class="-bg-[red] w-full h-fit gap-6 flex items-center justify-between"
                     >
                       <div
                         class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap"
@@ -345,32 +347,32 @@
                       </div>
                     </div>
                     <div
-                      class="-bg-[red] w-full h-fit flex justify-between gap-6"
+                      class="-bg-[red] w-full h-fit gap-6 flex justify-between"
                     >
-                      <p
+                      <div
                         class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap"
                       >
                         Description Description Description Description
                         Description Description
-                      </p>
+                      </div>
                     </div>
                   </div>
                   <div
                     class="-bg-[lightblue] w-fit h-fit gap-6 flex items-center"
                   >
-                    <div class="w-fit h-fit gap-1 flex">
+                    <div class="w-fit h-fit gap-1 flex uppercase">
                       <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
                         travel
                       </label>
                       <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
                         gardening
                       </label>
                       <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
                         sport
                       </label>
@@ -415,7 +417,7 @@
                             <li>
                               <a
                                 href="#"
-                                class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                                class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
                               >
                                 <img src="images/share2.svg" alt="share icon" />
                                 Share
@@ -424,7 +426,7 @@
                             <li>
                               <a
                                 href="#"
-                                class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                                class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
                               >
                                 <img src="images/tick.svg" alt="tick icon" />
                                 Mark as cured
@@ -433,7 +435,7 @@
                             <li>
                               <a
                                 href="#"
-                                class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                                class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
                               >
                                 <img
                                   src="images/waiting2.svg"
@@ -448,7 +450,7 @@
                                 data-modal-target="archive-modal"
                                 data-modal-toggle="archive-modal"
                                 onclick=""
-                                class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                                class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
                               >
                                 <img
                                   src="images/archive.svg"
@@ -460,7 +462,7 @@
                             <li>
                               <a
                                 href="#"
-                                class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB] text-[#C93636]"
+                                class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB] text-[#C93636]"
                               >
                                 <img
                                   src="images/delete.svg"
@@ -476,6 +478,7 @@
                   </div>
                 </div>
               </div>
+
               <!-- mobile component -->
               <div
                 class="-bg-[red] w-full h-fit border-b py-[11px] text-[#E8E8E8] flex items-center justify-center"
@@ -483,14 +486,12 @@
                 <div
                   class="-bg-[orange] w-full h-fit text-black flex items-center justify-between"
                 >
-                  <div
-                    class="-bg-[blue] w-full h-fit gap-3 flex flex-col leading-[150%] tracking-[-1%]"
-                  >
+                  <div class="-bg-[blue] w-full h-fit gap-3 flex flex-col">
                     <div
-                      class="-bg-[red] w-full h-fit flex items-center justify-between gap-6"
+                      class="-bg-[red] w-full h-fit gap-6 flex items-center justify-between"
                     >
                       <div
-                        class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap"
+                        class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
                       >
                         KURIO name mobile component
                       </div>
@@ -524,7 +525,7 @@
                               <li>
                                 <a
                                   href="#"
-                                  class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
                                 >
                                   <img
                                     src="images/share2.svg"
@@ -536,7 +537,7 @@
                               <li>
                                 <a
                                   href="#"
-                                  class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
                                 >
                                   <img src="images/tick.svg" alt="tick icon" />
                                   Mark as cured
@@ -545,7 +546,7 @@
                               <li>
                                 <a
                                   href="#"
-                                  class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
                                 >
                                   <img
                                     src="images/waiting2.svg"
@@ -555,12 +556,11 @@
                                 </a>
                               </li>
                               <li>
-                                <!-- onclick="elementToggle('active-profile-3Dots-DropDown-mobile')" -->
                                 <button
                                   data-modal-target="archive-modal"
                                   data-modal-toggle="archive-modal"
                                   onclick=""
-                                  class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
                                 >
                                   <img
                                     src="images/archive.svg"
@@ -572,7 +572,7 @@
                               <li>
                                 <a
                                   href="#"
-                                  class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB] text-[#C93636]"
+                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB] text-[#C93636]"
                                 >
                                   <img
                                     src="images/delete.svg"
@@ -587,14 +587,14 @@
                       </div>
                     </div>
                     <div
-                      class="-bg-[red] w-full h-fit flex justify-between gap-6"
+                      class="-bg-[red] w-full h-fit gap-6 flex justify-between"
                     >
-                      <p
-                        class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap"
+                      <div
+                        class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
                       >
                         Description Description Description Description
                         Description Description
-                      </p>
+                      </div>
                       <div
                         class="-bg-[orange] w-fit h-fit gap-2 flex items-center relative"
                       >
@@ -608,19 +608,19 @@
                         </div>
                       </div>
                     </div>
-                    <div class="-bg-[red] w-fit h-fit gap-1 flex">
+                    <div class="-bg-[red] w-fit h-fit gap-1 flex uppercase">
                       <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
                         travel
                       </label>
                       <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
                         gardening
                       </label>
                       <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
                         sport
                       </label>
@@ -638,12 +638,12 @@
               <!-- you should choose one from the below available divs based on screen width.  -->
               <!-- desktop component -->
               <div
-                class="-bg-[red] w-full h-fit border-b border-[#E8E8E8] py-[11px] px-[16px] gap-x-2 flex items-center justify-center"
+                class="-bg-[red] w-full h-fit border-b border-[#E8E8E8] py-[11px] px-[16px] gap-2 flex items-center justify-center"
               >
                 <div
                   class="-bg-[orange] w-full h-fit text-black flex items-center justify-between"
                 >
-                  <div class="-bg-[red] w-fit h-fit gap-x-8 flex items-center">
+                  <div class="-bg-[red] w-fit h-fit gap-8 flex items-center">
                     <img
                       srcset="temp_images/user-photo.png"
                       class="w-12 h-12 rounded-full"
@@ -658,27 +658,29 @@
                       >
                         KURIO name desktop component
                       </div>
-                      <p
+                      <div
                         class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap"
                       >
                         Description Description Description Description
                         Description Description
-                      </p>
+                      </div>
                     </div>
                   </div>
-                  <div class="-bg-[orange] w-full h-fit gap-1 flex justify-end">
+                  <div
+                    class="-bg-[orange] w-full h-fit gap-1 flex justify-end uppercase"
+                  >
                     <label
-                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                     >
                       travel
                     </label>
                     <label
-                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                     >
                       gardening
                     </label>
                     <label
-                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                     >
                       sport
                     </label>
@@ -687,7 +689,7 @@
               </div>
               <!-- mobile component -->
               <div
-                class="-bg-[red] w-full h-fit border-b border-[#E8E8E8] py-2.75 gap-x-2 flex items-center justify-center"
+                class="-bg-[red] w-full h-fit border-b border-[#E8E8E8] py-2.75 gap-2 flex items-center justify-center"
               >
                 <div
                   class="-bg-[orange] w-full h-fit text-black gap-3 flex flex-col justify-between"
@@ -701,33 +703,32 @@
                     <div
                       class="-bg-[blue] w-fit h-fit gap-3 flex flex-col leading-[150%] tracking-[-1%]"
                     >
-                      <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
                       <div
                         class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap"
                       >
                         KURIO name mobile component
                       </div>
-                      <p
+                      <div
                         class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap"
                       >
                         Description Description Description Description
                         Description Description
-                      </p>
+                      </div>
                     </div>
                   </div>
-                  <div class="w-fit h-fit gap-1 flex">
+                  <div class="w-fit h-fit gap-1 flex uppercase">
                     <label
-                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                     >
                       travel
                     </label>
                     <label
-                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                     >
                       gardening
                     </label>
                     <label
-                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                     >
                       sport
                     </label>
@@ -764,30 +765,30 @@
                     <div
                       class="-bg-[red] w-full h-fit flex justify-between gap-6"
                     >
-                      <p
+                      <div
                         class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap"
                       >
                         Description Description Description Description
                         Description Description
-                      </p>
+                      </div>
                     </div>
                   </div>
                   <div
                     class="-bg-[lightblue] w-fit h-fit gap-6 flex items-center"
                   >
-                    <div class="w-fit h-fit gap-1 flex">
+                    <div class="w-fit h-fit gap-1 flex uppercase">
                       <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
                         travel
                       </label>
                       <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
                         gardening
                       </label>
                       <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
                         sport
                       </label>
@@ -835,7 +836,7 @@
                                 data-modal-target="share-modal"
                                 data-modal-toggle="share-modal"
                                 onclick=""
-                                class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                                class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
                               >
                                 <img
                                   src="images/share2.svg"
@@ -847,7 +848,7 @@
                             <li>
                               <a
                                 href="#"
-                                class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB] text-[#C93636]"
+                                class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB] text-[#C93636]"
                               >
                                 <img
                                   src="images/delete.svg"
@@ -910,12 +911,11 @@
                           >
                             <ul class="py-1">
                               <li>
-                                <!-- onclick="elementToggle('archive-profile-3Dots-DropDown-mobile')" -->
                                 <button
                                   data-modal-target="share-modal"
                                   data-modal-toggle="share-modal"
                                   onclick=""
-                                  class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
+                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
                                 >
                                   <img
                                     src="images/share2.svg"
@@ -927,7 +927,7 @@
                               <li>
                                 <a
                                   href="#"
-                                  class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB] text-[#C93636]"
+                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB] text-[#C93636]"
                                 >
                                   <img
                                     src="images/delete.svg"
@@ -945,12 +945,12 @@
                     <div
                       class="-bg-[red] w-full h-fit flex justify-between gap-6"
                     >
-                      <p
+                      <div
                         class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap"
                       >
                         Description Description Description Description
                         Description Description
-                      </p>
+                      </div>
                       <div
                         class="-bg-[orange] w-fit h-fit gap-2 flex items-center relative"
                       >
@@ -962,19 +962,19 @@
                         <div class="w-fit h-fit flex items-center">Expired</div>
                       </div>
                     </div>
-                    <div class="w-fit h-fit gap-1 flex">
+                    <div class="w-fit h-fit gap-1 flex uppercase">
                       <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
                         travel
                       </label>
                       <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
                         gardening
                       </label>
                       <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-x-2 flex items-center justify-center text-[#737373] font-medium uppercase"
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
                         sport
                       </label>
@@ -983,9 +983,121 @@
                 </div>
               </div>
             </div>
+            <div class="w-full"></div>
           </div>
         </section>
       </div>
+      <!-- <div class="z-40 w-full h-fit flex justify-center absolute">
+        <div class="w-full max-w-[1440px] h-full relative">
+          <div
+            id="sg1"
+            class="bg-[#470001] w-[384px] h-[412px] absolute top-[636px] right-[32px] p-8 flex flex-col gap-6"
+          >
+            <div class="w-fit h-fit flex flex-col gap-8">
+              <div class="w-fit h-fit flex items-center justify-center gap-10">
+                <img
+                  class="w-[51.27px] h-20"
+                  src="images/Kurio_Icon_Bust.png"
+                  alt="kurio statue image"
+                />
+                <div class="w-fit h-fit flex flex-col">
+                  <div
+                    class="text-[#FFE2E1] text-[34px] leading-[142%] tracking-[-1%]"
+                  >
+                    Hello, <span>Diana</span>!
+                  </div>
+                  <div
+                    class="text-white text-[18px] font-medium leading-[142%] tracking-[-1%]"
+                  >
+                    Welcome to KURIO!
+                  </div>
+                </div>
+              </div>
+              <div
+                class="w-full h-fit text-[#FFE2E1B2] text-[14px] leading-[146%] tracking-[-1%]"
+              >
+                Discover how our platform can help you unlock new opportunities,
+                connect with the right people, and share your knowledge
+                effectively. In this short guide, we’ll walk you through the key
+                features and show you how to make the most out of your
+                experience!
+              </div>
+              <div class="w-full h-fit flex flex-col items-center gap-6">
+                <button
+                  onclick="elementToggle('sg1','hidden'),elementToggle('sg2','flex')"
+                  class="cursor-pointer w-full h-fit rounded-lg py-2 px-6 bg-[#960D0D] text-white font-medium text-[15px] leading-[158%] tracking-[-1%]"
+                >
+                  Start guide
+                </button>
+                <button
+                  class="cursor-pointer w-fit h-fit rounded-lg text-white font-medium text-[14px] leading-[146%] tracking-[-1%] underline"
+                >
+                  Skip
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            id="sg2"
+            class=" bg-[#470001] w-[264px] h-fit absolute p-6 pb-4 hidden flex-col gap-6"
+          >
+            <div class="w-full h-fit flex flex-col gap-8">
+              <div class="w-full h-fit flex justify-between">
+                <div
+                  class="bg-[#960D0D] w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <img
+                    src="images/eye-on.svg"
+                    alt="eye-on icon"
+                  />
+                </div>
+                <button class="w-fit h-fit">
+                  <img src="images/cancel.svg" alt="cancel icon">
+                </but>
+              </div>
+              <div
+                class="w-fit h-fit text-[#FFE2E1B2] text-[14px] leading-[146%] tracking-[-1%]"
+              >
+                On the Discover page, you'll find other members of the KURIO Crowd with whom you may want to connect. Take a look and grow your network!
+              </div>
+              <div class="w-fit h-fit flex flex-col items-center gap-6">
+                <button
+                 
+                  class="cursor-pointer w-full h-fit rounded-lg py-2 px-6 bg-[#F0EFEB] text-black font-medium text-[15px] leading-[158%] tracking-[-1%]"
+                >
+                  Watch video
+                </button>
+                
+              </div>
+              <div class="w-full h-fit flex justify-between">
+                <div class="w-fit h-fit flex">
+                  <div class="w-4 h-4 flex items-center justify-center">
+                    <div class="w-[6px] h-[6px] rounded-full bg-white"></div>
+                  </div>
+                  <div class="w-4 h-4 flex items-center justify-center">
+                    <div class="w-[6px] h-[6px] rounded-full bg-[#960D0D]"></div>
+                  </div>
+                  <div class="w-4 h-4 flex items-center justify-center">
+                    <div class="w-[6px] h-[6px] rounded-full bg-[#960D0D]"></div>
+                  </div>
+                  <div class="w-4 h-4 flex items-center justify-center">
+                    <div class="w-[6px] h-[6px] rounded-full bg-[#960D0D]"></div>
+                  </div>
+                  <div class="w-4 h-4 flex items-center justify-center">
+                    <div class="w-[6px] h-[6px] rounded-full bg-[#960D0D]"></div>
+                  </div>
+                </div>
+                <button
+                  onclick="NextSgPosIndex()"
+                  class="cursor-pointer w-fit h-fit rounded-lg text-white font-medium text-[14px] leading-[146%] tracking-[-1%] underline"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </main>
 
     <div
@@ -1083,7 +1195,8 @@
       data-component-path="components/navbar"
       data-container-id="nav-container"
     ></script> -->
-    <!-- <script src="scripts/elementToggle.js"></script>
-    <script src="scripts/swapElements.js"></script> -->
+    <script src="scripts/elementToggle.js"></script>
+    <script src="scripts/startGuideLogic.js"></script>
+    <script src="scripts/swapElements.js"></script>
   </body>
 </html>

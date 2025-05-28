@@ -55,7 +55,7 @@
     >
       <div class="-bg-[yellow] w-full h-fit mx-auto">
         <button
-          class="-bg-[red] cursor-pointer w-fit h-fit mt-[24px] rounded-sm gap-x-2 flex items-center text-[#737373]"
+          class="-bg-[red] cursor-pointer w-fit h-fit mt-[24px] rounded-sm gap-2 flex items-center text-[#737373]"
         >
           <img src="images/arrow.svg" alt="arrow icon" />
           <div class="text-[14px]">Back</div>
@@ -70,7 +70,7 @@
             <button
               id="mark-as-cured"
               onclick="elementToggle('mark-as-cured','flex'),elementToggle('cured','flex')"
-              class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm text-[#470001]"
+              class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#470001]"
             >
               <img src="images/tick.svg" alt="tick icon" />
               Mark as cured
@@ -78,21 +78,21 @@
             <button
               id="cured"
               onclick="elementToggle('cured','flex'),elementToggle('mark-as-cured','flex')"
-              class="cursor-pointer w-fit h-fit hidden items-center gap-x-2 rounded-sm text-[#4BAE00]"
+              class="cursor-pointer w-fit h-fit hidden items-center gap-2 rounded-sm text-[#4BAE00]"
             >
               <img src="images/tick2.svg" alt="tick icon" />
               Cured
             </button>
             <button
               onclick=""
-              class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm text-[#470001]"
+              class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#470001]"
             >
               <img src="images/share2.svg" alt="share icon" />
               Share
             </button>
             <button
               onclick=""
-              class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm text-[#470001]"
+              class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#470001]"
             >
               <img src="images/archive.svg" alt="archive icon" />
 
@@ -100,7 +100,7 @@
             </button>
             <button
               onclick=""
-              class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm text-[#C93636]"
+              class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#C93636]"
             >
               <img src="images/delete.svg" alt="delete icon" />
               Delete
@@ -151,38 +151,59 @@
         </div>
         <div class="w-fit h-fit gap-[40px] mt-[16px] flex items-center">
           <div class="w-fit h-fit gap-4 flex items-center">
-            <button
-              class="overflow-hidden w-[80px] h-[80px] rounded-sm flex items-center justify-center"
+            <div
+              class="overflow-hidden w-[80px] h-[80px] rounded-sm flex items-center justify-center relative"
             >
               <img
                 class="object-contain"
                 src="temp_images/uploaded_image1.png"
                 alt=""
               />
-            </button>
-            <nutton
-              class="overflow-hidden w-[80px] h-[80px] rounded-sm flex items-center justify-center"
+              <button class="cursor-pointer w-fit h-fit">
+                <img
+                  class="absolute top-2 end-2"
+                  src="images/delete.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div
+              class="overflow-hidden w-[80px] h-[80px] rounded-sm flex items-center justify-center relative"
             >
               <img
                 class="object-contain"
                 src="temp_images/uploaded_image2.png"
                 alt=""
               />
-            </nutton>
-            <button
-              class="overflow-hidden w-[80px] h-[80px] rounded-sm flex items-center justify-center"
+              <button class="cursor-pointer w-fit h-fit">
+                <img
+                  class="absolute top-2 end-2"
+                  src="images/delete.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div
+              class="overflow-hidden w-[80px] h-[80px] rounded-sm flex items-center justify-center relative"
             >
               <img
                 class="object-contain"
                 src="temp_images/uploaded_image3.png"
                 alt=""
               />
-            </button>
+              <button class="cursor-pointer w-fit h-fit">
+                <img
+                  class="absolute top-2 end-2"
+                  src="images/delete.svg"
+                  alt=""
+                />
+              </button>
+            </div>
             <!-- image 4 and so on one by one with there parent divs here -->
           </div>
 
           <label
-            class="cursor-pointer w-fit h-fit flex items-center gap-x-2 rounded-sm text-[#470001]"
+            class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#470001]"
             for="file_input"
           >
             <img src="images/image_upload.svg" alt="upload image icon" />
@@ -225,9 +246,10 @@
             <img src="images/plus2.svg" alt="plus icon" />
           </button>
         </div>
-        <div class="w-full h-fit mt-6 flex flex-col">
+        <div class="w-full h-fit mt-6 gap-2 w825:gap-4 flex flex-col">
+          <!-- desktop component -->
           <div
-            class="-bg-[red] w-full h-fit rounded-lg border border-[#E8E8E8] py-[16px] px-[24px] gap-x-10 flex items-center justify-center"
+            class="-bg-[red] w-full h-fit rounded-lg border border-[#E8E8E8] py-[16px] px-[24px] gap-10 flex items-center justify-center"
           >
             <div class="-bg-[blue] w-full h-fit gap-8 flex items-center">
               <img
@@ -244,13 +266,13 @@
                 >
                   Maria
                 </div>
-                <p
+                <div
                   class="-bg-[lightgreen] w-full max-w-[636px] h-fit line-clamp-2 leading-[150%] tracking-[-1%]"
                 >
                   Many desktop publishing packages and web page editors now use
                   Lorem Ipsum as their default model text, and a search for
                   'lorem ipsum'
-                </p>
+                </div>
               </div>
             </div>
             <span
@@ -259,14 +281,81 @@
               Wed, 17 Nov 5:30PM
             </span>
           </div>
+          <div
+            class="-bg-[red] w-full h-fit rounded-lg border border-[#E8E8E8] py-[16px] px-[24px] gap-10 flex items-center justify-center"
+          >
+            <div class="-bg-[blue] w-full h-fit gap-8 flex items-center">
+              <img
+                class="w-12 h-12 rounded-full"
+                src="temp_images/user-photo3.png"
+                alt="Rounded avatar"
+              />
+              <div
+                class="-bg-[blue] w-full h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]"
+              >
+                <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
+                <div
+                  class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap"
+                >
+                  Maria
+                </div>
+                <div
+                  class="-bg-[lightgreen] w-full max-w-[636px] h-fit line-clamp-2 leading-[150%] tracking-[-1%]"
+                >
+                  Many desktop publishing packages and web page editors now use
+                  Lorem Ipsum as their default model text, and a search for
+                  'lorem ipsum'
+                </div>
+              </div>
+            </div>
+            <span
+              class="w-fit h-fit text-[#454545] font-normal leading-[150%] tracking-[-1%]"
+            >
+              Wed, 17 Nov 5:30PM
+            </span>
+          </div>
+          <!-- mobile component -->
+          <!-- <div
+            class="-bg-[red] w-full h-fit rounded-lg border border-[#E8E8E8] py-3 px-4 w825:py-4 w825:px-6 gap-4 flex flex-col justify-center"
+          >
+            <div
+              class="-bg-[blue] w-full h-fit flex items-center justify-between"
+            >
+              <div
+                class="-bg-[red] w-fit h-fit gap-4 flex items-center leading-[150%] tracking-[-1%]"
+              >
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="temp_images/user-photo3.png"
+                  alt="Rounded avatar"
+                />
+                <div
+                  class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap"
+                >
+                  Maria
+                </div>
+              </div>
+              <span
+                class="w-[93px] h-fit text-[#454545] font-normal leading-[150%] tracking-[-1%]"
+              >
+                Wed, 17 Nov 5:30PM
+              </span>
+            </div>
+            <div
+              class="-bg-[blue] w-full h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]"
+            >
+              <div
+                class="-bg-[lightgreen] w-full max-w-[636px] h-fit leading-[150%] tracking-[-1%]"
+              >
+                Many desktop publishing packages and web page editors now use
+                Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+              </div>
+            </div>
+          </div> -->
         </div>
       </div>
     </main>
-    <script
-      src="scripts/component-loader.js"
-      data-component-path="components/navbar"
-      data-container-id="nav-container"
-    ></script>
     <script src="scripts/elementToggle.js"></script>
   </body>
 </html>

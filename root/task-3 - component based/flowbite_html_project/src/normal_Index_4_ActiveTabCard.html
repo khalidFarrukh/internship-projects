@@ -1,0 +1,193 @@
+<!--  desktop component when Not connected -->
+<div class="-bg-[red] w-full h-fit border-b py-[11px] px-4 border-[#E8E8E8]">
+  <div class="-bg-[blue] w-full h-fit flex items-center justify-between">
+    <div class="w-fit h-fit gap-10 flex items-center">
+      <img src="images/locked.svg" alt="lock locked icon" />
+      <div class="w-[208px] font-medium leading-[150%] tracking-[-1%]">
+        KURIO name
+      </div>
+      <div class="-bg-[red] w-fit h-fit flex gap-1">
+        <div class="-bg-[orange] w-fit h-fit gap-1 flex uppercase">
+          <label
+            class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+          >
+            photography
+          </label>
+          <label
+            class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+          >
+            sport
+          </label>
+          <label
+            class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+          >
+            volunteering
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="-bg-[pink] w-fit h-fit gap-2 flex items-center relative">
+      <img src="images/waiting.svg" alt="waiting icon" />
+      2hrs left
+    </div>
+  </div>
+</div>
+<!--  desktop component when connected -->
+<div class="-bg-[red] w-full h-fit border-b py-[11px] px-4 border-[#E8E8E8]">
+  <div class="-bg-[orange] w-full h-fit flex items-center justify-between">
+    <div class="-bg-[red] w-fit h-fit gap-10 flex items-center">
+      <div
+        class="-bg-[orange] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]"
+      >
+        <div
+          class="-bg-[red] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap"
+        >
+          KURIO name sdsddsdsdsdsdsdsdsdsdsdsdsdsdsds
+        </div>
+        <div
+          class="-bg-[red] w-[100px] h-fit truncate max-w-full whitespace-nowrap"
+        >
+          Description Description Description Description Description
+          Description
+        </div>
+      </div>
+      <!-- labels div can come here in some cards -->
+    </div>
+    <div class="-bg-[red] w-fit h-fit flex items-center gap-6">
+      <div class="-bg-[orange] w-fit h-fit gap-1 flex uppercase">
+        <label
+          class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+        >
+          travel
+        </label>
+        <label
+          class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+        >
+          gardening
+        </label>
+        <label
+          class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+        >
+          sport
+        </label>
+      </div>
+
+      <div class="-bg-[orange] w-fit h-fit gap-2 flex items-center relative">
+        <img src="images/waiting.svg" alt="" />
+        2hrs left
+      </div>
+      <button
+        id="mainConnectBtn"
+        data-modal-target="connect-modal"
+        data-modal-toggle="connect-modal"
+        class="-bg-[orange] cursor-pointer w-fit h-fit rounded-[6px] border border-white py-2 px-6 bg-[#960D0D] text-white font-medium block"
+      >
+        Respond
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--  mobile component when not connected  -->
+<div
+  class="-bg-[red] w-full h-fit border-b border-[#E8E8E8] py-[11px] gap-2 flex items-center justify-center"
+>
+  <div class="-bg-[orange] w-full h-fit text-black gap-3 flex flex-col">
+    <div class="-bg-[red] w-full h-fit gap-6 flex items-center justify-between">
+      <div class="-bg-[orange] w-fit h-fit gap-2 flex items-center">
+        <img src="images/locked.svg" alt="lock locked icon" />
+
+        <div
+          class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
+        >
+          KURIO name mobile component
+        </div>
+      </div>
+      <div class="-bg-[orange] w-fit h-fit gap-2 flex items-center relative">
+        <div class="w-fit h-fit text-[#454545] flex items-center">
+          <img src="images/waiting.svg" alt="waiting icon" />
+        </div>
+        <div class="w-fit h-fit flex items-center">2hrs left</div>
+      </div>
+    </div>
+    <div class="-bg-[red] w-fit h-fit gap-1 flex uppercase">
+      <label
+        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+      >
+        travel
+      </label>
+      <label
+        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+      >
+        gardening
+      </label>
+      <label
+        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+      >
+        sport
+      </label>
+    </div>
+  </div>
+</div>
+<!--  mobile component when connected  -->
+<div
+  class="-bg-[red] w-full h-fit border-b py-[11px] text-[#E8E8E8] flex items-center justify-center"
+>
+  <div
+    class="-bg-[orange] w-full h-fit text-black flex items-center justify-between"
+  >
+    <div class="-bg-[blue] w-full h-fit gap-2 flex flex-col">
+      <div
+        class="-bg-[red] w-full h-fit gap-6 flex items-center justify-between"
+      >
+        <div
+          class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
+        >
+          KURIO name mobile component
+        </div>
+
+        <button
+          id="mainConnectBtn"
+          data-modal-target="connect-modal"
+          data-modal-toggle="connect-modal"
+          class="-bg-[red] cursor-pointer w-fit h-fit rounded-[6px] border border-white py-2 px-6 bg-[#960D0D] text-white font-medium block"
+        >
+          Respond
+        </button>
+      </div>
+      <div class="-bg-[red] w-full h-fit gap-6 flex justify-between">
+        <div
+          class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
+        >
+          Description Description Description Description Description
+          Description
+        </div>
+        <div class="-bg-[orange] w-fit h-fit gap-2 flex items-center relative">
+          <div class="w-fit h-fit text-[#454545] flex items-center">
+            <img src="images/waiting.svg" alt="waiting icon" />
+          </div>
+          <div class="w-fit h-fit flex items-center">2hrs left</div>
+        </div>
+      </div>
+      <div class="-bg-[blue] w-full h-fit flex justify-between">
+        <div class="-bg-[red] w-fit h-fit gap-1 flex uppercase">
+          <label
+            class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+          >
+            travel
+          </label>
+          <label
+            class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+          >
+            gardening
+          </label>
+          <label
+            class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+          >
+            sport
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,3 +9,7 @@ function elementToggle(elementId, containsClass = 'block') {
     element.classList.add(containsClass);
   }
 }
+
+function thisElementToggle(el, classToToggle) {
+  el.classList.toggle(classToToggle);
+}

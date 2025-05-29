@@ -37,9 +37,10 @@
         scrollbar-width: none;
         /* Firefox */
       }
-    </style> -->
+    </style> 
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script> -->
     <link rel="stylesheet" href="output.css" />
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script>
+    <script src="/node_modules/flowbite/dist/flowbite.js"></script>
   </head>
 
   <body class="-bg-[black] w-full flex flex-col items-center">
@@ -49,175 +50,265 @@
     ></header> -->
 
     <main
-      class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-[72px] px-6 w825:px-12 flex flex-col items-center"
+      class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-10 md:mt-18 px-6 md:px-12 flex flex-col items-center"
     >
       <div class="-bg-[yellow] w-full h-fit mx-auto">
         <h1
-          class="-bg-[red] w-fit h-fit mt-[44px] text-[40px] text-[#470001] flex items-center"
+          class="-bg-[red] w-fit h-fit mt-11 text-10 text-[#470001] flex items-center"
         >
           My responses
         </h1>
-        <div
-          class="-bg-[yellow] w-full h-fit mt-4 rounded-lg border border-[#E8E8E8] py-4 px-6 gap-6 flex flex-col items-center"
-        >
-          <div class="w-full h-fit gap-4 flex flex-col items-center">
-            <div class="w-full h-fit gap-4 flex flex-col items-center">
+        <!-- all component -->
+        <div id="" data-accordion="collapse" class="mb-6">
+          <div
+            id="collapse-div-1"
+            class="-bg-[yellow] w-full h-fit mt-4 rounded-lg border border-[#E8E8E8] py-2 md:py-4 px-4 md:px-6 gap-6 flex flex-col"
+          >
+            <!-- responsive component -->
+            <div
+              class="-bg-[red] w-full h-fit py-[11px] gap-3 md:gap-4 flex flex-col"
+            >
               <div
-                class="-bg-[red] w-full h-fit flex items-center justify-between"
+                class="-bg-[orange] w-full h-fit flex items-center justify-between"
               >
-                <div class="-bg-[red] w-fit h-fit gap-4 flex items-center">
+                <div
+                  class="-bg-[red] w-fit md:w-fit h-fit gap-4 flex items-center"
+                >
                   <img
                     class="w-12 h-12 rounded-full"
                     src="temp_images/user-photo.png"
                     alt="Rounded avatar"
                   />
-                  <div class="-bg-[green] w-full h-fit font-medium text-[18px]">
-                    KURIO name
+                  <div class="-bg-[orange] w-fit h-fit flex flex-col">
+                    <div
+                      class="-bg-[red] w-fit h-fit flex items-center justify-between"
+                    >
+                      <div
+                        class="-bg-[orange] w-[116px] max-w-full h-fit md:text-lg font-medium truncate whitespace-nowrap leading-[150%] tracking-[-1%]"
+                      >
+                        KURIO name
+                      </div>
+                    </div>
+                    <div
+                      class="-bg-[red] w-fit h-fit flex items-center justify-between"
+                    >
+                      <div
+                        data-node1="c2"
+                        class="-bg-[orange] w-fit h-fit gap-2 flex md:hidden items-center relative"
+                      >
+                        <img src="images/waiting.svg" alt="" />
+                        24hrs left
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="w-fit h-fit gap-8 flex items-center">
+                <div
+                  class="-bg-[red] w-fit h-6 flex items-center gap-6 md:gap-8"
+                >
                   <button
                     onclick=""
                     class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#470001]"
                   >
                     <img src="images/share2.svg" alt="share icon" />
-                    Share
+                    <div class="hidden md:flex">Share</div>
                   </button>
                   <button
                     onclick=""
                     class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#C93636]"
                   >
                     <img src="images/delete.svg" alt="delete icon" />
-                    Delete
+                    <div class="hidden md:flex">Delete</div>
                   </button>
-                  <button onclick="" class="cursor-pointer">
+
+                  <button
+                    type="button"
+                    class="cursor-pointer !bg-white"
+                    data-accordion-target="#div-1-body"
+                    aria-expanded="true"
+                    aria-controls="div-1-body"
+                    onclick="elementToggle('arrow-up','hidden'),elementToggle('arrow-down','block')"
+                  >
                     <img
-                      class="-rotate-90"
-                      src="images/arrow.svg"
+                      id="arrow-up"
+                      src="images/arrowUp.svg"
+                      alt="arrow icon"
+                    />
+                    <img
+                      id="arrow-down"
+                      class="-rotate-180 hidden"
+                      src="images/arrowUp.svg"
                       alt="arrow icon"
                     />
                   </button>
                 </div>
               </div>
-            </div>
-            <div
-              class="-bg-[yellow] w-full h-fit gap-4 flex items-center justify-between"
-            >
-              <div class="-bg-[red] w-[720px] h-fit flex flex-col gap-2">
-                <div class="w-[208px] truncate whitespace-nowrap text-black">
-                  KURIO name
+              <div class="-bg-[orange] w-full h-fit flex justify-between">
+                <div
+                  class="-bg-[red] w-full md:w-fit h-fit gap-4 flex items-center"
+                >
+                  <div class="-bg-[orange] w-fit h-fit flex flex-col">
+                    <div
+                      class="-bg-[red] w-fit h-fit flex items-center justify-between"
+                    >
+                      <div
+                        class="-bg-[orange] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
+                      >
+                        KURIO name
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div
-                  class="-bg-[yellow] text-[#454545] w-fit[720px] line-clamp-2 leading-[150%] tracking-[-1%]"
+                  data-node1="d2"
+                  class="-bg-[red] w-fit h-fit gap-1 hidden md:flex uppercase"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur.
+                  <label
+                    class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+                  >
+                    travel
+                  </label>
+                  <label
+                    class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+                  >
+                    gardening
+                  </label>
+                  <label
+                    class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+                  >
+                    sport
+                  </label>
                 </div>
               </div>
-              <div class="-bg-[blue] w-fit h-fit gap-4 flex flex-col">
-                <div class="-bg-[blue] w-fit h-fit gap-1 flex">
-                  <label
-                    class="bg-[#FFE2E1] w-fit h-fit flex items-center justify-center text-[#737373] font-medium px-4 py-2 rounded-sm border border-white"
-                  >
-                    Skill 1
-                  </label>
-                  <label
-                    class="bg-[#FFE2E1] w-fit h-fit flex items-center justify-center text-[#737373] font-medium px-4 py-2 rounded-sm border border-white"
-                  >
-                    Skill 1
-                  </label>
+              <div
+                class="-bg-[orange] -mt-2 w-full h-fit flex justify-between relative"
+              >
+                <div
+                  onclick="thisElementToggle(this,'md:line-clamp-2')"
+                  class="-bg-[yellow] text-[#454545] w-fit max-w-[400px] lg:max-w-[690px] md:line-clamp-2 leading-[150%] tracking-[-1%]"
+                >
+                  Many desktop publishing packages and web page editors now use
+                  Lorem Ipsum as their default model text, and a search for
+                  'lorem ipsum'
                 </div>
                 <div
-                  class="-bg-[red] w-full h-fit gap-3 flex items-center justify-end text-[#454545]"
+                  data-node1="c2"
+                  class="-bg-[orange] w-fit h-fit gap-2 hidden md:flex items-center absolute end-0 top-6"
                 >
-                  <img src="images/waiting.svg" alt="waiting icon" />
+                  <img src="images/waiting.svg" alt="" />
+                  24hrs left
+                </div>
+              </div>
+              <div
+                class="-bg-[orange] -mt-2 w-full h-fit flex md:hidden justify-between relative"
+              >
+                <div
+                  data-node1="d2"
+                  class="-bg-[red] w-fit h-fit gap-1 flex uppercase"
+                >
+                  <label
+                    class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+                  >
+                    travel
+                  </label>
+                  <label
+                    class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+                  >
+                    gardening
+                  </label>
+                  <label
+                    class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+                  >
+                    sport
+                  </label>
+                </div>
+              </div>
+            </div>
 
-                  <div class="w-fit h-fit flex items-center">24hrs left</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr class="w-full border-b border-[#E8E8E8]" />
-          <div class="w-full h-fit gap-2 flex items-center">
-            Responses:
-            <div>10</div>
-          </div>
-          <div class="w-full h-fit px-8 gap-6 divide-y-2 divide-[#E8E8E8]">
             <div
-              class="-bg-[red] w-full h-fit pt-[16px] pb-[32px] px-[24px] gap-10 flex items-center"
+              id="div-1-body"
+              class="hidden -bg-[red] W-full h-fit"
+              aria-labelledby="collapse-div-1 flex flex-col "
             >
-              <div class="-bg-[blue] w-[900px] h-fit gap-8 flex items-center">
-                <img
-                  class="w-12 h-12 rounded-full"
-                  src="temp_images/user-photo.png"
-                  alt="Rounded avatar"
-                />
-                <div
-                  class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]"
-                >
-                  <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
-                  <div
-                    class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap"
-                  >
-                    KURIO name
-                  </div>
-                  <div
-                    class="-bg-[lightgreen] w-full h-fit line-clamp-2 leading-[150%] tracking-[-1%]"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </div>
-                </div>
+              <hr class="w-full mb-6 border-b border-[#E8E8E8]" />
+              <div class="w-full h-fit gap-2 flex items-center">
+                Responses:
+                <div>10</div>
               </div>
-            </div>
-            <div
-              class="-bg-[red] w-full h-fit pt-[16px] pb-[32px] px-[24px] gap-10 flex items-center"
-            >
-              <div class="-bg-[blue] w-[900px] h-fit gap-8 flex items-center">
-                <img
-                  class="w-12 h-12 rounded-full"
-                  src="temp_images/user-photo.png"
-                  alt="Rounded avatar"
-                />
+              <div
+                class="w-full h-fit px-8 divide-y-2 divide-[#E8E8E8] flex flex-col"
+              >
+                <!-- responsive component -->
                 <div
-                  class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]"
+                  class="-bg-[red] w-full h-fit py-[11px] flex flex-col gap-3 md:gap-0"
                 >
-                  <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
                   <div
-                    class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap"
+                    class="-bg-[orange] w-full h-fit flex items-center justify-between"
                   >
-                    KURIO name
+                    <div
+                      class="-bg-[red] w-full md:w-fit h-full gap-4 md:gap-8 flex items-center relative"
+                    >
+                      <div class="-bg-[orange] w-13 h-18 hidden md:block"></div>
+                      <img
+                        src="temp_images/user-photo.png"
+                        class="-bg-[red] w-12 h-12 rounded-full md:absolute md:top-[18px]"
+                        alt="Rounded avatar"
+                      />
+                      <div
+                        class="-bg-[orange] w-full h-fit gap-3 flex flex-col"
+                      >
+                        <div
+                          class="-bg-[red] w-full h-fit flex items-center justify-between"
+                        >
+                          <div
+                            class="-bg-[orange] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
+                          >
+                            KURIO name
+                          </div>
+                        </div>
+                        <div
+                          class="-bg-[red] w-full h-fit hidden md:flex items-center justify-between"
+                        >
+                          <!-- d2 -->
+                          <div
+                            onclick="thisElementToggle(this,'md:line-clamp-2')"
+                            class="-bg-[lightgreen] w-full h-fit md:line-clamp-2 leading-[150%] tracking-[-1%]"
+                          >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div
-                    class="-bg-[lightgreen] w-full h-fit line-clamp-2 leading-[150%] tracking-[-1%]"
+                    class="-bg-[orange] w-full h-fit flex md:hidden items-center justify-between"
                   >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    <!-- d1 -->
+                    <div
+                      onclick="thisElementToggle(this,'md:line-clamp-2')"
+                      class="-bg-[lightgreen] w-full h-fit md:line-clamp-2 leading-[150%] tracking-[-1%]"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- mobile component -->
       </div>
     </main>
-
-    <!-- <script
-      src="scripts/component-loader.js"
-      data-component-path="components/navbar"
-      data-container-id="nav-container"
-    ></script> -->
+    <script src="scripts/elementToggle.js"></script>
   </body>
 </html>

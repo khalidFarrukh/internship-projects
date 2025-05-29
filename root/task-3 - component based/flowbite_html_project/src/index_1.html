@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flowbite HTML Project</title>
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
-      rel="stylesheet"
-    /> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme inline {
         --breakpoint-w1140: 1140px;
@@ -41,9 +37,10 @@
         scrollbar-width: none;
         /* Firefox */
       }
-    </style> -->
+    </style>
 
-    <link rel="stylesheet" href="output.css" />
+    <!-- <link rel="stylesheet" href="output.css" /> -->
+    <!-- <script src="/node_modules/flowbite/dist/flowbite.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script>
   </head>
 
@@ -54,10 +51,10 @@
     ></header> 
 
     <main
-      class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-[72px] px-6 w825:px-12 flex flex-col items-center"
+      class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-[72px] mt-10 md:mt-18 px-6 md:px-12 flex flex-col items-center"
     > -->
     <main
-      class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-10 lg:mt-18 px-6 lg:px-12 flex flex-col items-center"
+      class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-10 md:mt-18 px-6 lg:px-12 flex flex-col items-center"
     >
       <div class="-bg-[yellow] w-full h-fit mx-auto">
         <!-- warning panel -->
@@ -65,7 +62,7 @@
         <div id="warning-container" class="w-full h-fit">
           <div class="relative w-full flex justify-center">
             <div
-              class="bg-[#FFF3CB] z-3 lg:absolute mt-3 right-0 w-[418px] h-fit rounded-[8px] py-3 px-4 gap-3 flex flex-col"
+              class="bg-[#FFF3CB] z-3 md:absolute mt-3 right-0 w-[418px] h-fit rounded-[8px] py-3 px-4 gap-3 flex flex-col"
             >
               <div
                 class="-bg-[red] w-full h-fit flex items-center justify-between"
@@ -100,10 +97,10 @@
         <section class="-bg-[red] w-full h-fit flex flex-col items-center">
           <div class="w-full h-fit flex flex-col">
             <div
-              class="-bg-[blue] w-full h-fit mt-3 lg:mt-12 relative flex flex-col lg:flex-row gap-6 lg:gap-12 lg:justify-between"
+              class="-bg-[blue] w-full h-fit mt-3 md:mt-12 relative flex flex-col md:flex-row gap-6 lg:gap-12 md:justify-between"
             >
               <div
-                class="-bg-[green] w-full lg:w-fit h-fit gap-[8%] lg:gap-8 flex lg:flex-col justify-between"
+                class="-bg-[green] w-full md:w-fit h-fit gap-[8%] md:gap-8 flex md:flex-col justify-between"
               >
                 <img
                   class="min-w-[138px] w-fit max-w-[312px] min-h-[138px] max-h-[312px]"
@@ -112,9 +109,9 @@
                 />
                 <div
                   data-node="n1"
-                  data-swapWidth="1024"
+                  data-swapWidth="768"
                   data-swapped="false"
-                  class="-bg-[red] w-full h-fit pt-6 lg:pt-0 flex flex-col gap-6"
+                  class="-bg-[red] w-full h-fit pt-6 md:pt-0 flex flex-col gap-6"
                 >
                   <div
                     class="-bg-[blue] w-full h-fit gap-2 justify-between flex items-center relative"
@@ -163,7 +160,7 @@
                         </button>
                       </div>
                       <div
-                        class="cursor-pointer w-fit h-fit rounded-full border-[1px] border-[#CFD8C1] p-1.5 pl-2 gap-2 flex items-center justify-center text-[#454545]"
+                        class="cursor-pointer w-fit h-fit rounded-full border-[1px] border-[#CFD8C1] p-1.5 gap-2 flex items-center justify-center text-[#454545]"
                       >
                         <img src="images/share.svg" alt="share icon" />
                       </div>
@@ -183,7 +180,7 @@
                 </div>
               </div>
               <div
-                class="-bg-[orange] w-full h-full lg:h-[312px] flex flex-col justify-between gap-4"
+                class="-bg-[orange] w-full h-full md:h-[312px] flex flex-col justify-between gap-4"
               >
                 <div class="w-full h-full flex flex-col justify-center gap-4">
                   <div
@@ -195,7 +192,7 @@
                     >
                       Diana Fleming
                     </div>
-                    <div class="-bg-[yellow] w-fit text-[16px] lg:gap-2">
+                    <div class="-bg-[yellow] w-fit text-[16px] md:gap-2">
                       <span class="text-[#454545] font-medium">
                         Product Manager
                       </span>
@@ -209,7 +206,7 @@
                   </div>
 
                   <div
-                    class="-bg-[purple] text-[#737373] w-fit h-fit text-[16px] mt-1 lg:mt-0 flex gap-2"
+                    class="-bg-[purple] text-[#737373] w-fit h-fit text-[16px] mt-1 md:mt-0 flex gap-2"
                   >
                     <div class="flex items-center">
                       <img src="images/location.svg" alt="location icon" />
@@ -221,6 +218,7 @@
                   >
                     Bio:
                     <div
+                      onclick="thisElementToggle(this,'line-clamp-3')"
                       class="-bg-[yellow] text-[#454545] w-full max-w-[520px] h-fit max-h-[120px] line-clamp-3 leading-[150%] tracking-[-1%]"
                     >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -253,16 +251,18 @@
             </div>
           </div>
         </section>
-        <section class="-bg-[blue] w-full h-fit mt-10 w825:mt-18 flex flex-col">
-          <div class="-bg-[lightblue] w-full h-fit mb-8">
+        <section
+          class="-bg-[blue] w-full h-fit mt-10 md:mt-18 gap-6 md:gap-0 flex flex-col"
+        >
+          <div class="-bg-[red] w-full h-fit md:mb-8">
             <div class="-bg-[blue] w-full h-fit">
               <div
-                class="-bg-[red] w-full h-fit flex flex-col w425:flex-row w425:items-center justify-between gap-6"
+                class="-bg-[red] w-full h-fit flex flex-col md:flex-row md:items-center justify-between gap-6"
               >
                 <div class="font-semibold text-[20px]">My KURIOs</div>
                 <button
                   type="submit"
-                  class="cursor-pointer w-full w425:w-fit h-fit rounded-[6px] py-3 px-8 text-white bg-[#960D0D] font-medium text-sm"
+                  class="cursor-pointer w-full md:w-fit h-fit rounded-[6px] py-3 px-8 text-white bg-[#960D0D] font-medium text-sm"
                 >
                   Create a new KURIO
                 </button>
@@ -270,7 +270,7 @@
             </div>
           </div>
           <div
-            class="-bg-[pink] w-full h-fit mb-6 border-b border-[#E8E8E8] text-sm font-medium text-center"
+            class="-bg-[red] w-full h-fit md:mb-6 border-b border-[#E8E8E8] text-sm font-medium text-center"
           >
             <ul
               class="-bg-[red] w-fit h-fit flex flex-wrap gap-10"
@@ -319,48 +319,155 @@
               </li>
             </ul>
           </div>
-          <div id="default-tab-content">
+          <div id="default-tab-content" class="-bg-[red]">
             <div
               class="hidden overflow-y-scroll w-full h-fit max-h-[320px] scrollbar-hide"
               id="active"
               role="tabpanel"
               aria-labelledby="active-tab"
             >
-              <!-- you should choose one from the below available divs based on screen width.  -->
-              <!-- desktop component -->
+              <!-- responsive component -->
+
               <div
-                class="-bg-[red] w-full h-fit border-b py-[11px] w825:px-[16px] text-[#E8E8E8] flex items-center justify-center"
+                class="-bg-[red] w-full h-fit border-b py-[11px] lg:px-4 gap-3 lg:gap-0 border-[#E8E8E8] flex flex-col"
               >
                 <div
-                  class="-bg-[orange] w-full h-fit text-black flex items-center justify-between"
+                  class="-bg-[orange] w-full h-fit flex items-center justify-between"
                 >
                   <div
-                    class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]"
+                    class="-bg-[red] w-full lg:w-fit h-fit gap-2 lg:gap-10 flex items-center"
                   >
-                    <div
-                      class="-bg-[red] w-full h-fit gap-6 flex items-center justify-between"
-                    >
+                    <div class="-bg-[orange] w-full h-fit gap-3 flex flex-col">
                       <div
-                        class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap"
+                        class="-bg-[red] w-full h-fit flex items-center justify-between"
                       >
-                        KURIO name desktop component
+                        <div
+                          class="-bg-[orange] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
+                        >
+                          KURIO name sdsddsdsdsdsdsdsdsdsdsdsdsdsdsds
+                        </div>
+
+                        <div
+                          data-node1="b2"
+                          class="-bg-[orange] w-fit h-fit flex lg:hidden gap-6"
+                        >
+                          <button
+                            class="cursor-pointer w-fit h-fit flex items-center relative group"
+                          >
+                            <img
+                              src="images/edit.svg"
+                              alt="edit icon"
+                              class="inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-200"
+                            />
+                            <img
+                              src="images/edit2.svg"
+                              alt="edit icon hover"
+                              class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                            />
+                          </button>
+                          <div class="w-fit h-fit flex items-center">
+                            <button
+                              data-dropdown-toggle="active-profile-3Dots-DropDown-1"
+                              class="cursor-pointer w-fit h-fit flex items-center"
+                            >
+                              <img src="images/action.svg" alt="3 dots icon" />
+                            </button>
+                            <!-- <div
+                              id="active-profile-3Dots-DropDown-1"
+                              class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50"
+                            >
+                              <ul class="py-1">
+                                <li>
+                                  <a
+                                    href="#"
+                                    class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
+                                  >
+                                    <img
+                                      src="images/share2.svg"
+                                      alt="share icon"
+                                    />
+                                    Share
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    href="#"
+                                    class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
+                                  >
+                                    <img
+                                      src="images/tick.svg"
+                                      alt="tick icon"
+                                    />
+                                    Mark as cured
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    href="#"
+                                    class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
+                                  >
+                                    <img
+                                      src="images/waiting2.svg"
+                                      alt="waiting icon"
+                                    />
+                                    Add more time
+                                  </a>
+                                </li>
+                                <li>
+                                  <button
+                                    data-modal-target="archive-modal"
+                                    data-modal-toggle="archive-modal"
+                                    onclick=""
+                                    class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
+                                  >
+                                    <img
+                                      src="images/archive.svg"
+                                      alt="archive icon"
+                                    />
+                                    Archive
+                                  </button>
+                                </li>
+                                <li>
+                                  <a
+                                    href="#"
+                                    class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB] text-[#C93636]"
+                                  >
+                                    <img
+                                      src="images/delete.svg"
+                                      alt="delete icon"
+                                    />
+                                    Delete
+                                  </a>
+                                </li>
+                              </ul>
+                            </div> -->
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div
-                      class="-bg-[red] w-full h-fit gap-6 flex justify-between"
-                    >
                       <div
-                        class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap"
+                        class="-bg-[red] w-full h-fit flex items-center justify-between"
                       >
-                        Description Description Description Description
-                        Description Description
+                        <div
+                          class="-bg-[orange] w-[100px] h-fit truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
+                        >
+                          Description Description Description Description
+                          Description Description
+                        </div>
+                        <div
+                          data-node1="c2"
+                          class="-bg-[orange] w-fit h-fit gap-2 flex lg:hidden items-center relative"
+                        >
+                          <img src="images/waiting.svg" alt="" />
+                          2hrs left
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="-bg-[lightblue] w-fit h-fit gap-6 flex items-center"
-                  >
-                    <div class="w-fit h-fit gap-1 flex uppercase">
+                  <div class="-bg-[red] w-fit h-fit flex items-center gap-6">
+                    <div
+                      data-node1="d2"
+                      class="-bg-[orange] w-fit h-fit gap-1 hidden lg:flex uppercase"
+                    >
                       <label
                         class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
@@ -379,15 +486,17 @@
                     </div>
 
                     <div
-                      class="-bg-[orange] w-fit h-fit gap-2 flex items-center relative"
+                      data-node1="c2"
+                      class="-bg-[orange] w-fit h-fit gap-2 hidden lg:flex items-center relative"
                     >
-                      <div class="w-fit h-fit text-[#454545] flex items-center">
-                        <img src="images/waiting.svg" alt="waiting icon" />
-                      </div>
-
-                      <div class="w-fit h-fit flex items-center">2hrs left</div>
+                      <img src="images/waiting.svg" alt="" />
+                      2hrs left
                     </div>
-                    <div class="-bg-[orange] w-fit h-fit flex gap-6">
+
+                    <div
+                      data-node1="b2"
+                      class="-bg-[orange] w-fit h-fit hidden lg:flex gap-6"
+                    >
                       <button
                         class="cursor-pointer w-fit h-fit flex items-center relative group"
                       >
@@ -404,13 +513,13 @@
                       </button>
                       <div class="w-fit h-fit flex items-center">
                         <button
-                          data-dropdown-toggle="active-profile-3Dots-DropDown-nonMobile"
+                          data-dropdown-toggle="active-profile-3Dots-DropDown-1"
                           class="cursor-pointer w-fit h-fit flex items-center"
                         >
                           <img src="images/action.svg" alt="3 dots icon" />
                         </button>
                         <div
-                          id="active-profile-3Dots-DropDown-nonMobile"
+                          id="active-profile-3Dots-DropDown-1"
                           class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50"
                         >
                           <ul class="py-1">
@@ -445,7 +554,6 @@
                               </a>
                             </li>
                             <li>
-                              <!-- onclick="elementToggle('active-profile-3Dots-DropDown-nonMobile')" -->
                               <button
                                 data-modal-target="archive-modal"
                                 data-modal-toggle="archive-modal"
@@ -477,197 +585,12 @@
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <!-- mobile component -->
-              <div
-                class="-bg-[red] w-full h-fit border-b py-[11px] text-[#E8E8E8] flex items-center justify-center"
-              >
                 <div
-                  class="-bg-[orange] w-full h-fit text-black flex items-center justify-between"
+                  class="-bg-[orange] w-full h-fit flex items-center justify-between"
                 >
-                  <div class="-bg-[blue] w-full h-fit gap-3 flex flex-col">
-                    <div
-                      class="-bg-[red] w-full h-fit gap-6 flex items-center justify-between"
-                    >
-                      <div
-                        class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
-                      >
-                        KURIO name mobile component
-                      </div>
-                      <div class="-bg-[orange] w-fit h-fit flex gap-6">
-                        <button
-                          class="cursor-pointer w-fit h-fit flex items-center relative group"
-                        >
-                          <img
-                            src="images/edit.svg"
-                            alt="edit icon"
-                            class="inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-200"
-                          />
-                          <img
-                            src="images/edit2.svg"
-                            alt="edit icon hover"
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                          />
-                        </button>
-                        <div class="w-fit h-fit flex items-center">
-                          <button
-                            data-dropdown-toggle="active-profile-3Dots-DropDown-mobile"
-                            class="cursor-pointer w-fit h-fit flex items-center"
-                          >
-                            <img src="images/action.svg" alt="3 dots icon" />
-                          </button>
-                          <div
-                            id="active-profile-3Dots-DropDown-mobile"
-                            class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50"
-                          >
-                            <ul class="py-1">
-                              <li>
-                                <a
-                                  href="#"
-                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
-                                >
-                                  <img
-                                    src="images/share2.svg"
-                                    alt="share icon"
-                                  />
-                                  Share
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
-                                >
-                                  <img src="images/tick.svg" alt="tick icon" />
-                                  Mark as cured
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
-                                >
-                                  <img
-                                    src="images/waiting2.svg"
-                                    alt="waiting icon"
-                                  />
-                                  Add more time
-                                </a>
-                              </li>
-                              <li>
-                                <button
-                                  data-modal-target="archive-modal"
-                                  data-modal-toggle="archive-modal"
-                                  onclick=""
-                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
-                                >
-                                  <img
-                                    src="images/archive.svg"
-                                    alt="archive icon"
-                                  />
-                                  Archive
-                                </button>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB] text-[#C93636]"
-                                >
-                                  <img
-                                    src="images/delete.svg"
-                                    alt="delete icon"
-                                  />
-                                  Delete
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="-bg-[red] w-full h-fit gap-6 flex justify-between"
-                    >
-                      <div
-                        class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
-                      >
-                        Description Description Description Description
-                        Description Description
-                      </div>
-                      <div
-                        class="-bg-[orange] w-fit h-fit gap-2 flex items-center relative"
-                      >
-                        <div
-                          class="w-fit h-fit text-[#454545] flex items-center"
-                        >
-                          <img src="images/waiting.svg" alt="waiting icon" />
-                        </div>
-                        <div class="w-fit h-fit flex items-center">
-                          2hrs left
-                        </div>
-                      </div>
-                    </div>
-                    <div class="-bg-[red] w-fit h-fit gap-1 flex uppercase">
-                      <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
-                      >
-                        travel
-                      </label>
-                      <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
-                      >
-                        gardening
-                      </label>
-                      <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
-                      >
-                        sport
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="hidden overflow-y-scroll w-full h-fit max-h-[320px] scrollbar-hide"
-              id="shared"
-              role="tabpanel"
-              aria-labelledby="shared-tab"
-            >
-              <!-- you should choose one from the below available divs based on screen width.  -->
-              <!-- desktop component -->
-              <div
-                class="-bg-[red] w-full h-fit border-b border-[#E8E8E8] py-[11px] px-[16px] gap-2 flex items-center justify-center"
-              >
-                <div
-                  class="-bg-[orange] w-full h-fit text-black flex items-center justify-between"
-                >
-                  <div class="-bg-[red] w-fit h-fit gap-8 flex items-center">
-                    <img
-                      srcset="temp_images/user-photo.png"
-                      class="w-12 h-12 rounded-full"
-                      alt="Rounded avatar"
-                    />
-                    <div
-                      class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]"
-                    >
-                      <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
-                      <div
-                        class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap"
-                      >
-                        KURIO name desktop component
-                      </div>
-                      <div
-                        class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap"
-                      >
-                        Description Description Description Description
-                        Description Description
-                      </div>
-                    </div>
-                  </div>
                   <div
-                    class="-bg-[orange] w-full h-fit gap-1 flex justify-end uppercase"
+                    data-node1="d2"
+                    class="-bg-[orange] w-fit h-fit gap-1 flex lg:hidden uppercase"
                   >
                     <label
                       class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
@@ -687,36 +610,83 @@
                   </div>
                 </div>
               </div>
-              <!-- mobile component -->
+            </div>
+            <div
+              class="hidden overflow-y-scroll w-full h-fit max-h-[320px] scrollbar-hide"
+              id="shared"
+              role="tabpanel"
+              aria-labelledby="shared-tab"
+            >
+              <!-- responsive component -->
               <div
-                class="-bg-[red] w-full h-fit border-b border-[#E8E8E8] py-2.75 gap-2 flex items-center justify-center"
+                class="-bg-[red] w-full h-fit border-b py-[11px] lg:px-4 border-[#E8E8E8] flex flex-col gap-3 lg:gap-0"
               >
                 <div
-                  class="-bg-[orange] w-full h-fit text-black gap-3 flex flex-col justify-between"
+                  class="-bg-[orange] w-full h-fit flex items-center justify-between"
                 >
-                  <div class="-bg-[red] w-full h-fit gap-3 flex items-center">
+                  <div
+                    class="-bg-[red] w-full lg:w-fit h-fit gap-3 lg:gap-8 flex items-center relative"
+                  >
+                    <div class="-bg-[orange] w-13 h-18 hidden md:block"></div>
                     <img
-                      class="w-12 h-12 rounded-full"
                       src="temp_images/user-photo.png"
+                      class="-bg-[red] w-12 h-12 rounded-full md:absolute md:top-[12px]"
                       alt="Rounded avatar"
                     />
-                    <div
-                      class="-bg-[blue] w-fit h-fit gap-3 flex flex-col leading-[150%] tracking-[-1%]"
-                    >
+                    <div class="-bg-[orange] w-full h-fit gap-3 flex flex-col">
                       <div
-                        class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap"
+                        class="-bg-[red] w-full h-fit flex items-center justify-between"
                       >
-                        KURIO name mobile component
+                        <div
+                          class="-bg-[orange] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
+                        >
+                          KURIO name sdsddsdsdsdsdsdsdsdsdsdsdsdsdsds
+                        </div>
                       </div>
                       <div
-                        class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap"
+                        class="-bg-[red] w-full h-fit flex items-center justify-between"
                       >
-                        Description Description Description Description
-                        Description Description
+                        <div
+                          class="-bg-[orange] w-[100px] h-fit truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
+                        >
+                          Description Description Description Description
+                          Description Description
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="w-fit h-fit gap-1 flex uppercase">
+                  <div class="-bg-[red] w-fit h-fit flex items-center gap-6">
+                    <!-- d2 -->
+                    <div
+                      data-node1="d2"
+                      class="-bg-[orange] w-fit h-fit gap-1 hidden lg:flex uppercase"
+                    >
+                      <label
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+                      >
+                        travel
+                      </label>
+                      <label
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+                      >
+                        gardening
+                      </label>
+                      <label
+                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+                      >
+                        sport
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="-bg-[orange] w-full h-fit flex items-center justify-between"
+                >
+                  <!-- d1 -->
+                  <div
+                    data-node1="d2"
+                    class="-bg-[orange] w-fit h-fit gap-1 flex lg:hidden uppercase"
+                  >
                     <label
                       class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                     >
@@ -742,41 +712,114 @@
               role="tabpanel"
               aria-labelledby="archived-tab"
             >
-              <!-- you should choose one from the below available divs based on screen width.  -->
-              <!-- desktop component -->
+              <!-- responsive component -->
               <div
-                class="-bg-[red] w-full h-fit border-b py-[11px] w825:px-[16px] text-[#E8E8E8] flex items-center justify-center"
+                class="-bg-[red] w-full h-fit border-b py-[11px] lg:px-4 border-[#E8E8E8] flex flex-col gap-3 lg:gap-0"
               >
                 <div
-                  class="-bg-[orange] w-full h-fit text-black flex items-center justify-between"
+                  class="-bg-[orange] w-full h-fit flex items-center justify-between"
                 >
                   <div
-                    class="-bg-[blue] w-fit h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]"
+                    class="-bg-[red] w-full lg:w-fit h-fit gap-2 lg:gap-10 flex items-center"
                   >
-                    <div
-                      class="-bg-[red] w-full h-fit flex items-center justify-between gap-6"
-                    >
+                    <div class="-bg-[orange] w-full h-fit gap-3 flex flex-col">
                       <div
-                        class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap"
+                        class="-bg-[red] w-full h-fit flex items-center justify-between"
                       >
-                        KURIO name desktop component
+                        <div
+                          class="-bg-[orange] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
+                        >
+                          KURIO name sdsddsdsdsdsdsdsdsdsdsdsdsdsdsds
+                        </div>
+                        <!-- b1 -->
+                        <div
+                          data-node1="b2"
+                          class="-bg-[orange] w-fit h-fit flex lg:hidden gap-6"
+                        >
+                          <button
+                            class="cursor-pointer w-fit h-fit flex items-center relative group"
+                          >
+                            <img
+                              src="images/edit.svg"
+                              alt="edit icon"
+                              class="inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-200"
+                            />
+                            <img
+                              src="images/edit2.svg"
+                              alt="edit icon hover"
+                              class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                            />
+                          </button>
+                          <div class="w-fit h-fit flex items-center">
+                            <button
+                              data-dropdown-toggle="archive-profile-3Dots-DropDown-1"
+                              class="cursor-pointer w-fit h-fit flex items-center"
+                            >
+                              <img src="images/action.svg" alt="3 dots icon" />
+                            </button>
+                            <div
+                              id="archive-profile-3Dots-DropDown-1"
+                              class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50"
+                            >
+                              <ul class="py-1">
+                                <li>
+                                  <button
+                                    data-modal-target="share-modal"
+                                    data-modal-toggle="share-modal"
+                                    onclick=""
+                                    class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
+                                  >
+                                    <img
+                                      src="images/share2.svg"
+                                      alt="archive icon"
+                                    />
+                                    Share
+                                  </button>
+                                </li>
+                                <li>
+                                  <a
+                                    href="#"
+                                    class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB] text-[#C93636]"
+                                  >
+                                    <img
+                                      src="images/delete.svg"
+                                      alt="delete icon"
+                                    />
+
+                                    Delete
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div
-                      class="-bg-[red] w-full h-fit flex justify-between gap-6"
-                    >
                       <div
-                        class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap"
+                        class="-bg-[red] w-full h-fit flex items-center justify-between"
                       >
-                        Description Description Description Description
-                        Description Description
+                        <div
+                          class="-bg-[orange] w-[100px] h-fit truncate max-w-full whitespace-nowrap leading-[150%] tracking-[-1%]"
+                        >
+                          Description Description Description Description
+                          Description Description
+                        </div>
+                        <!-- c1 -->
+                        <div
+                          data-node1="c2"
+                          class="-bg-[orange] w-fit h-fit gap-2 flex lg:hidden items-center relative"
+                        >
+                          <img src="images/waiting.svg" alt="" />
+                          Expired
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="-bg-[lightblue] w-fit h-fit gap-6 flex items-center"
-                  >
-                    <div class="w-fit h-fit gap-1 flex uppercase">
+                  <div class="-bg-[red] w-fit h-fit flex items-center gap-6">
+                    <!-- d2 -->
+                    <div
+                      data-node1="d2"
+                      class="-bg-[orange] w-fit h-fit gap-1 hidden lg:flex uppercase"
+                    >
                       <label
                         class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                       >
@@ -793,17 +836,19 @@
                         sport
                       </label>
                     </div>
-
+                    <!-- c2 -->
                     <div
-                      class="-bg-[orange] w-fit h-fit gap-2 flex items-center relative"
+                      data-node1="c2"
+                      class="-bg-[orange] w-fit h-fit gap-2 hidden lg:flex items-center relative"
                     >
-                      <div class="w-fit h-fit text-[#454545] flex items-center">
-                        <img src="images/waiting.svg" alt="waiting icon" />
-                      </div>
-
-                      <div class="w-fit h-fit flex items-center">Expired</div>
+                      <img src="images/waiting.svg" alt="" />
+                      Expired
                     </div>
-                    <div class="-bg-[orange] w-fit h-fit flex gap-6">
+                    <!--b2 -->
+                    <div
+                      data-node1="b2"
+                      class="-bg-[orange] w-fit h-fit hidden lg:flex gap-6"
+                    >
                       <button
                         class="cursor-pointer w-fit h-fit flex items-center relative group"
                       >
@@ -820,18 +865,17 @@
                       </button>
                       <div class="w-fit h-fit flex items-center">
                         <button
-                          data-dropdown-toggle="archive-profile-3Dots-DropDown-nonMobile"
+                          data-dropdown-toggle="archive-profile-3Dots-DropDown-1"
                           class="cursor-pointer w-fit h-fit flex items-center"
                         >
                           <img src="images/action.svg" alt="3 dots icon" />
                         </button>
                         <div
-                          id="archive-profile-3Dots-DropDown-nonMobile"
+                          id="archive-profile-3Dots-DropDown-1"
                           class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50"
                         >
                           <ul class="py-1">
                             <li>
-                              <!-- onclick="elementToggle('archive-profile-3Dots-DropDown-nonMobile')" -->
                               <button
                                 data-modal-target="share-modal"
                                 data-modal-toggle="share-modal"
@@ -864,240 +908,55 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- mobile component -->
-              <div
-                class="-bg-[red] w-full h-fit border-b py-[11px] text-[#E8E8E8] flex items-center justify-center"
-              >
                 <div
-                  class="-bg-[orange] w-full h-fit text-black flex items-center justify-between"
+                  class="-bg-[orange] w-full h-fit flex items-center justify-between"
                 >
+                  <!-- d1 -->
                   <div
-                    class="-bg-[blue] w-full h-fit gap-3 flex flex-col leading-[150%] tracking-[-1%]"
+                    data-node1="d2"
+                    class="-bg-[orange] w-fit h-fit gap-1 flex lg:hidden uppercase"
                   >
-                    <div
-                      class="-bg-[red] w-full h-fit flex items-center justify-between gap-6"
+                    <label
+                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                     >
-                      <div
-                        class="-bg-[green] w-[208px] h-fit font-medium truncate max-w-full whitespace-nowrap"
-                      >
-                        KURIO name mobile component
-                      </div>
-                      <div class="-bg-[orange] w-fit h-fit flex gap-6">
-                        <button
-                          class="cursor-pointer w-fit h-fit flex items-center relative group"
-                        >
-                          <img
-                            src="images/edit.svg"
-                            alt="edit icon"
-                            class="inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-200"
-                          />
-                          <img
-                            src="images/edit2.svg"
-                            alt="edit icon hover"
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                          />
-                        </button>
-                        <div class="w-fit h-fit flex items-center">
-                          <button
-                            data-dropdown-toggle="archive-profile-3Dots-DropDown-mobile"
-                            class="cursor-pointer w-fit h-fit flex items-center"
-                          >
-                            <img src="images/action.svg" alt="3 dots icon" />
-                          </button>
-                          <div
-                            id="archive-profile-3Dots-DropDown-mobile"
-                            class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50"
-                          >
-                            <ul class="py-1">
-                              <li>
-                                <button
-                                  data-modal-target="share-modal"
-                                  data-modal-toggle="share-modal"
-                                  onclick=""
-                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB]"
-                                >
-                                  <img
-                                    src="images/share2.svg"
-                                    alt="archive icon"
-                                  />
-                                  Share
-                                </button>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  class="w-full flex items-center px-4 py-3 gap-3 hover:bg-[#F0EFEB] text-[#C93636]"
-                                >
-                                  <img
-                                    src="images/delete.svg"
-                                    alt="delete icon"
-                                  />
-
-                                  Delete
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="-bg-[red] w-full h-fit flex justify-between gap-6"
+                      travel
+                    </label>
+                    <label
+                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
                     >
-                      <div
-                        class="-bg-[lightgreen] w-[100px] h-fit truncate max-w-full whitespace-nowrap"
-                      >
-                        Description Description Description Description
-                        Description Description
-                      </div>
-                      <div
-                        class="-bg-[orange] w-fit h-fit gap-2 flex items-center relative"
-                      >
-                        <div
-                          class="w-fit h-fit text-[#454545] flex items-center"
-                        >
-                          <img src="images/waiting.svg" alt="" />
-                        </div>
-                        <div class="w-fit h-fit flex items-center">Expired</div>
-                      </div>
-                    </div>
-                    <div class="w-fit h-fit gap-1 flex uppercase">
-                      <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
-                      >
-                        travel
-                      </label>
-                      <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
-                      >
-                        gardening
-                      </label>
-                      <label
-                        class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
-                      >
-                        sport
-                      </label>
-                    </div>
+                      gardening
+                    </label>
+                    <label
+                      class="bg-[#FFE2E1] w-fit h-fit rounded-sm border border-white py-2 px-4 gap-2 flex items-center justify-center text-[#737373] font-medium"
+                    >
+                      sport
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w-full"></div>
+          </div>
+          <div
+            class="-bg-[red] w-full h-fit flex md:hidden items-center justify-between"
+          >
+            <div
+              class="bg-[#F0EFEB] w-6 h-6 rounded-sm p-1 flex justify-items-center"
+            >
+              <img src="images/arrow.svg" alt="arrow icon" />
+            </div>
+            <div
+              class="text-[#999999] text-[14px] leading-[146%] tracking-[-1%]"
+            >
+              1-4 of 4 Results
+            </div>
+            <div
+              class="bg-[#F0EFEB] w-6 h-6 rounded-sm p-1 flex justify-items-center"
+            >
+              <img class="rotate-180" src="images/arrow.svg" alt="arrow icon" />
+            </div>
           </div>
         </section>
       </div>
-      <!-- <div class="z-40 w-full h-fit flex justify-center absolute">
-        <div class="w-full max-w-[1440px] h-full relative">
-          <div
-            id="sg1"
-            class="bg-[#470001] w-[384px] h-[412px] absolute top-[636px] right-[32px] p-8 flex flex-col gap-6"
-          >
-            <div class="w-fit h-fit flex flex-col gap-8">
-              <div class="w-fit h-fit flex items-center justify-center gap-10">
-                <img
-                  class="w-[51.27px] h-20"
-                  src="images/Kurio_Icon_Bust.png"
-                  alt="kurio statue image"
-                />
-                <div class="w-fit h-fit flex flex-col">
-                  <div
-                    class="text-[#FFE2E1] text-[34px] leading-[142%] tracking-[-1%]"
-                  >
-                    Hello, <span>Diana</span>!
-                  </div>
-                  <div
-                    class="text-white text-[18px] font-medium leading-[142%] tracking-[-1%]"
-                  >
-                    Welcome to KURIO!
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-fit text-[#FFE2E1B2] text-[14px] leading-[146%] tracking-[-1%]"
-              >
-                Discover how our platform can help you unlock new opportunities,
-                connect with the right people, and share your knowledge
-                effectively. In this short guide, we’ll walk you through the key
-                features and show you how to make the most out of your
-                experience!
-              </div>
-              <div class="w-full h-fit flex flex-col items-center gap-6">
-                <button
-                  onclick="elementToggle('sg1','hidden'),elementToggle('sg2','flex')"
-                  class="cursor-pointer w-full h-fit rounded-lg py-2 px-6 bg-[#960D0D] text-white font-medium text-[15px] leading-[158%] tracking-[-1%]"
-                >
-                  Start guide
-                </button>
-                <button
-                  class="cursor-pointer w-fit h-fit rounded-lg text-white font-medium text-[14px] leading-[146%] tracking-[-1%] underline"
-                >
-                  Skip
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            id="sg2"
-            class=" bg-[#470001] w-[264px] h-fit absolute p-6 pb-4 hidden flex-col gap-6"
-          >
-            <div class="w-full h-fit flex flex-col gap-8">
-              <div class="w-full h-fit flex justify-between">
-                <div
-                  class="bg-[#960D0D] w-12 h-12 rounded-full flex items-center justify-center"
-                >
-                  <img
-                    src="images/eye-on.svg"
-                    alt="eye-on icon"
-                  />
-                </div>
-                <button class="w-fit h-fit">
-                  <img src="images/cancel.svg" alt="cancel icon">
-                </but>
-              </div>
-              <div
-                class="w-fit h-fit text-[#FFE2E1B2] text-[14px] leading-[146%] tracking-[-1%]"
-              >
-                On the Discover page, you'll find other members of the KURIO Crowd with whom you may want to connect. Take a look and grow your network!
-              </div>
-              <div class="w-fit h-fit flex flex-col items-center gap-6">
-                <button
-                 
-                  class="cursor-pointer w-full h-fit rounded-lg py-2 px-6 bg-[#F0EFEB] text-black font-medium text-[15px] leading-[158%] tracking-[-1%]"
-                >
-                  Watch video
-                </button>
-                
-              </div>
-              <div class="w-full h-fit flex justify-between">
-                <div class="w-fit h-fit flex">
-                  <div class="w-4 h-4 flex items-center justify-center">
-                    <div class="w-[6px] h-[6px] rounded-full bg-white"></div>
-                  </div>
-                  <div class="w-4 h-4 flex items-center justify-center">
-                    <div class="w-[6px] h-[6px] rounded-full bg-[#960D0D]"></div>
-                  </div>
-                  <div class="w-4 h-4 flex items-center justify-center">
-                    <div class="w-[6px] h-[6px] rounded-full bg-[#960D0D]"></div>
-                  </div>
-                  <div class="w-4 h-4 flex items-center justify-center">
-                    <div class="w-[6px] h-[6px] rounded-full bg-[#960D0D]"></div>
-                  </div>
-                  <div class="w-4 h-4 flex items-center justify-center">
-                    <div class="w-[6px] h-[6px] rounded-full bg-[#960D0D]"></div>
-                  </div>
-                </div>
-                <button
-                  onclick="NextSgPosIndex()"
-                  class="cursor-pointer w-fit h-fit rounded-lg text-white font-medium text-[14px] leading-[146%] tracking-[-1%] underline"
-                >
-                  Next
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </main>
 
     <div
@@ -1128,14 +987,14 @@
             <button
               data-modal-hide="archive-modal"
               type="button"
-              class="cursor-pointer w-[50%] h-full text-[15px] text-black font-medium focus:outline-none bg-[#F0EFEB] rounded-lg text-center"
+              class="cursor-pointer w-[50%] h-full text-[15px] text-black font-medium bg-[#F0EFEB] rounded-lg text-center"
             >
               Cancel
             </button>
             <button
               data-modal-hide="archive-modal"
               type="button"
-              class="cursor-pointer w-[50%] h-full text-[15px] text-white font-medium focus:outline-none bg-[#960D0D] rounded-lg text-center"
+              class="cursor-pointer w-[50%] h-full text-[15px] text-white font-medium bg-[#960D0D] rounded-lg text-center"
             >
               Archive
             </button>
@@ -1181,7 +1040,7 @@
             <button
               data-modal-hide="share-modal"
               type="button"
-              class="cursor-pointer w-full h-full text-[15px] text-black font-medium focus:outline-none bg-[#F0EFEB] rounded-lg text-center"
+              class="cursor-pointer w-full h-full text-[15px] text-black font-medium bg-[#F0EFEB] rounded-lg text-center"
             >
               Cancel
             </button>
@@ -1196,7 +1055,7 @@
       data-container-id="nav-container"
     ></script> -->
     <script src="scripts/elementToggle.js"></script>
-    <script src="scripts/startGuideLogic.js"></script>
+    <!-- <script src="scripts/startGuideLogic.js"></script> -->
     <script src="scripts/swapElements.js"></script>
   </body>
 </html>

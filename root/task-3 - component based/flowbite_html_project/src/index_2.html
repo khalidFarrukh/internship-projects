@@ -36,9 +36,10 @@
         scrollbar-width: none;
         /* Firefox */
       }
-    </style> -->
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script> -->
     <link rel="stylesheet" href="output.css" />
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script>
+    <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
   </head>
 
   <body class="-bg-[black] w-full flex flex-col items-center">
@@ -48,25 +49,29 @@
     ></header> -->
 
     <!-- <main
-      class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-[72px] px-6 w825:px-12 flex flex-col items-center"
+      class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-[72px] mt-10 md:mt-18 px-6 md:px-12 flex flex-col items-center"
     > -->
     <main
-      class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit px-6 w825:px-12 flex flex-col items-center"
+      class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-26 md:mt-30 px-6 md:px-12 flex flex-col items-center"
     >
-      <div class="-bg-[yellow] w-full h-fit mx-auto">
+      <div class="-bg-[yellow] w-full h-fit gap-2 md:gap-0 flex flex-col">
         <button
-          class="-bg-[red] cursor-pointer w-fit h-fit mt-[24px] rounded-sm gap-2 flex items-center text-[#737373]"
+          class="-bg-[red] cursor-pointer w-fit h-fit rounded-sm gap-2 flex items-center text-[#737373]"
         >
           <img src="images/arrow.svg" alt="arrow icon" />
           <div class="text-[14px]">Back</div>
         </button>
         <div
-          class="-bg-[red] w-full h-fit mt-[20px] left-[48px] flex items-center justify-between"
+          class="-bg-[red] w-full h-fit md:mt-5 md:left-12 gap-6 md:gap-0 flex flex-col md:flex-row md:items-center justify-between"
         >
-          <div class="font-semibold text-[20px] leading-[140%] tracking-[-1%]">
+          <div
+            class="-bg-[orange] font-semibold text-xl leading-[140%] tracking-[-1%]"
+          >
             Kurio name
           </div>
-          <div class="w-fit h-fit gap-8 flex items-center">
+          <div
+            class="-bg-[orange] md:w-fit h-fit gap-8 flex items-center justify-between"
+          >
             <button
               id="mark-as-cured"
               onclick="elementToggle('mark-as-cured','flex'),elementToggle('cured','flex')"
@@ -83,35 +88,36 @@
               <img src="images/tick2.svg" alt="tick icon" />
               Cured
             </button>
-            <button
-              onclick=""
-              class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#470001]"
-            >
-              <img src="images/share2.svg" alt="share icon" />
-              Share
-            </button>
-            <button
-              onclick=""
-              class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#470001]"
-            >
-              <img src="images/archive.svg" alt="archive icon" />
-
-              Archive
-            </button>
-            <button
-              onclick=""
-              class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#C93636]"
-            >
-              <img src="images/delete.svg" alt="delete icon" />
-              Delete
-            </button>
+            <div class="w-fit h-fit gap-8 flex">
+              <button
+                onclick=""
+                class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#470001]"
+              >
+                <img src="images/share2.svg" alt="share icon" />
+                <div class="hidden md:block">Share</div>
+              </button>
+              <button
+                onclick=""
+                class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#470001]"
+              >
+                <img src="images/archive.svg" alt="archive icon" />
+                <div class="hidden md:block">Archive</div>
+              </button>
+              <button
+                onclick=""
+                class="cursor-pointer w-fit h-fit flex items-center gap-2 rounded-sm text-[#C93636]"
+              >
+                <img src="images/delete.svg" alt="delete icon" />
+                <div class="hidden md:block">Delete</div>
+              </button>
+            </div>
           </div>
         </div>
         <div
-          class="w-full h-fit mt-[32px] gap-4 flex items-center justify-between"
+          class="-bg-[blue] w-full h-fit mt-8 md:mt-6 gap-6 md:gap-4 flex flex-col-reverse md:flex-row md:items-center justify-between"
         >
           <div
-            class="-bg-[red] text-[#737373] sm:w-[400px] md:w-[500px] lg:w-[750px] h-fit flex flex-col gap-2"
+            class="-bg-[red] text-[#737373] w-full md:w-[500px] lg:w-[750px] h-fit flex flex-col gap-2"
           >
             Description:
             <div
@@ -124,7 +130,7 @@
             </div>
           </div>
           <div
-            class="-bg-[blue] w-fit h-fit gap-1 flex items-center justify-end"
+            class="-bg-[blue] md:w-fit h-fit gap-1 flex items-center md:justify-end"
           >
             <div class="-bg-[blue] w-fit h-fit gap-1 flex uppercase">
               <label
@@ -143,13 +149,15 @@
               </label>
             </div>
             <button
-              class="bg-[#960D0D] cursor-pointer w-fit h-fit flex items-center justify-center text-white font-medium px-3 py-3 rounded-sm border border-white"
+              class="bg-[#960D0D] cursor-pointer w-[40px] h-[40px] flex items-center justify-center text-white font-medium rounded-sm border border-white"
             >
               <img src="images/edit3.svg" alt="edit icon" />
             </button>
           </div>
         </div>
-        <div class="w-fit h-fit gap-[40px] mt-[16px] flex items-center">
+        <div
+          class="w-full h-fit gap-4 md:gap-10 mt-6 md:mt-4 flex flex-col md:flex-row md:items-center"
+        >
           <div class="w-fit h-fit gap-4 flex items-center">
             <div
               class="overflow-hidden w-[80px] h-[80px] rounded-sm flex items-center justify-center relative"
@@ -212,10 +220,10 @@
           <input class="hidden" id="file_input" type="file" placeholder="ds" />
         </div>
         <div
-          class="-bg-[blue] w-full h-fit pb-8 border-b border-[#E8E8E8] gap-6 mt-6 flex items-center justify-between"
+          class="-bg-[blue] w-full h-fit pb-8 border-b border-[#E8E8E8] gap-4 md:gap-6 mt-8 md:mt-6 flex flex-col md:flex-row md:items-center md:justify-between"
         >
           <div
-            class="w-fit h-fit gap-3 rounded-sm border border-[#E8E8E8] py-[14px] px-[24px] flex items-center text-[#737373]"
+            class="w-fit h-fit gap-3 rounded-sm border border-[#E8E8E8] py-[14px] px-[24px] flex items-center text-[#737373] start-0"
           >
             <img src="images/info.svg" alt="info icon" />
 
@@ -224,135 +232,96 @@
               disappears!
             </div>
           </div>
-          <button
-            class="cursor-pointer w-fit h-fit rounded-sm border border-[#E8E8E8] py-[8px] px-[16px] gap-2 flex items-center relative"
-          >
-            <img src="images/waiting.svg" alt="waiting icon" />
-            <div class="w-fit h-fit flex items-center">24hrs left</div>
-            <img class="-rotate-90" src="images/arrow.svg" alt="arrow icon" />
-          </button>
+          <div class="-bg-[red] md:w-fit h-fit flex items-center justify-end">
+            <button
+              class="cursor-pointer w-fit h-fit rounded-sm border border-[#E8E8E8] py-2 px-4 gap-2 flex items-center relative"
+            >
+              <img src="images/waiting.svg" alt="waiting icon" />
+              <div class="w-fit h-fit flex items-center">24hrs left</div>
+              <img class="-rotate-90" src="images/arrow.svg" alt="arrow icon" />
+            </button>
+          </div>
         </div>
         <div
-          class="-bg-[blue] w-full h-fit gap-6 mt-6 flex items-center justify-between"
+          class="-bg-[blue] w-full h-fit gap-6 mt-6 flex flex-col md:flex-row md:items-center justify-between"
         >
-          <div class="w-fit h-fit flex items-center">
+          <div
+            class="w-full md:w-fit h-fit flex items-center justify-between md:justify-center"
+          >
             <div>Responses:</div>
             <div class="ml-2">25</div>
           </div>
           <button
-            class="-bg-[red] cursor-pointer w-fit h-fit rounded-[6px] border border-white py-3 px-8 gap-3 bg-[#F0EFEB] text-black font-medium flex items-center"
+            class="-bg-[red] cursor-pointer w-full md:w-fit h-fit rounded-[6px] border border-white py-3 px-8 gap-3 bg-[#F0EFEB] text-black font-medium flex items-center justify-center"
           >
             <div class="w-fit h-fit">Add a response</div>
             <img src="images/plus2.svg" alt="plus icon" />
           </button>
         </div>
-        <div class="w-full h-fit mt-6 gap-2 w825:gap-4 flex flex-col">
-          <!-- desktop component -->
+        <div class="w-full h-fit mt-6 gap-2 md:gap-4 flex flex-col">
+          <!-- responsive component -->
           <div
-            class="-bg-[red] w-full h-fit rounded-lg border border-[#E8E8E8] py-[16px] px-[24px] gap-10 flex items-center justify-center"
-          >
-            <div class="-bg-[blue] w-full h-fit gap-8 flex items-center">
-              <img
-                class="w-12 h-12 rounded-full"
-                src="temp_images/user-photo3.png"
-                alt="Rounded avatar"
-              />
-              <div
-                class="-bg-[blue] w-full h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]"
-              >
-                <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
-                <div
-                  class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap"
-                >
-                  Maria
-                </div>
-                <div
-                  class="-bg-[lightgreen] w-full max-w-[636px] h-fit line-clamp-2 leading-[150%] tracking-[-1%]"
-                >
-                  Many desktop publishing packages and web page editors now use
-                  Lorem Ipsum as their default model text, and a search for
-                  'lorem ipsum'
-                </div>
-              </div>
-            </div>
-            <span
-              class="w-fit h-fit text-[#454545] font-normal leading-[150%] tracking-[-1%]"
-            >
-              Wed, 17 Nov 5:30PM
-            </span>
-          </div>
-          <div
-            class="-bg-[red] w-full h-fit rounded-lg border border-[#E8E8E8] py-[16px] px-[24px] gap-10 flex items-center justify-center"
-          >
-            <div class="-bg-[blue] w-full h-fit gap-8 flex items-center">
-              <img
-                class="w-12 h-12 rounded-full"
-                src="temp_images/user-photo3.png"
-                alt="Rounded avatar"
-              />
-              <div
-                class="-bg-[blue] w-full h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]"
-              >
-                <!-- increase the w-[increase] to increase truncation width else do w-[decrease] -->
-                <div
-                  class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap"
-                >
-                  Maria
-                </div>
-                <div
-                  class="-bg-[lightgreen] w-full max-w-[636px] h-fit line-clamp-2 leading-[150%] tracking-[-1%]"
-                >
-                  Many desktop publishing packages and web page editors now use
-                  Lorem Ipsum as their default model text, and a search for
-                  'lorem ipsum'
-                </div>
-              </div>
-            </div>
-            <span
-              class="w-fit h-fit text-[#454545] font-normal leading-[150%] tracking-[-1%]"
-            >
-              Wed, 17 Nov 5:30PM
-            </span>
-          </div>
-          <!-- mobile component -->
-          <!-- <div
-            class="-bg-[red] w-full h-fit rounded-lg border border-[#E8E8E8] py-3 px-4 w825:py-4 w825:px-6 gap-4 flex flex-col justify-center"
+            class="-bg-[red] w-full h-fit rounded-lg border py-3 px-4 md:py-4 md:px-6 gap-4 md:gap-3 border-[#E8E8E8] flex flex-col"
           >
             <div
-              class="-bg-[blue] w-full h-fit flex items-center justify-between"
+              class="-bg-[orange] w-full h-fit gap-10 flex items-center justify-between"
             >
               <div
-                class="-bg-[red] w-fit h-fit gap-4 flex items-center leading-[150%] tracking-[-1%]"
+                class="-bg-[red] w-fit md:w-fit h-fit gap-2 md:gap-8 flex items-center relative"
               >
+                <div class="-bg-[orange] w-13 h-18 hidden md:block"></div>
                 <img
-                  class="w-12 h-12 rounded-full"
                   src="temp_images/user-photo3.png"
+                  class="-bg-[red] w-12 h-12 rounded-full md:absolute md:top-[18px]"
                   alt="Rounded avatar"
                 />
-                <div
-                  class="-bg-[green] w-[208px] h-[50%] font-medium truncate max-w-full whitespace-nowrap"
-                >
-                  Maria
+                <div class="-bg-[orange] w-full h-fit gap-2 flex flex-col">
+                  <div
+                    class="-bg-[red] w-full h-fit flex items-center justify-between"
+                  >
+                    <div
+                      class="-bg-[orange] w-[150px] h-fit font-medium truncate whitespace-nowrap leading-[150%] tracking-[-1%]"
+                    >
+                      KURIO name sdsddsdsdsdsdsdsdsdsdsdsdsdsdsds
+                    </div>
+                  </div>
+                  <div
+                    class="-bg-[red] w-full h-fit flex items-center justify-between"
+                  >
+                    <!-- d2 -->
+                    <div
+                      data-node1="d2"
+                      class="-bg-[orange] hidden md:block w-full max-w-[636px] md:line-clamp-2 leading-[150%] tracking-[-1%]"
+                    >
+                      Many desktop publishing packages and web page editors now
+                      use Lorem Ipsum as their default model text, and a search
+                      for 'lorem ipsum'
+                    </div>
+                  </div>
                 </div>
               </div>
-              <span
-                class="w-[93px] h-fit text-[#454545] font-normal leading-[150%] tracking-[-1%]"
-              >
-                Wed, 17 Nov 5:30PM
-              </span>
+              <div class="-bg-[red] w-fit h-fit flex items-center gap-6">
+                <span
+                  class="w-[93px] h-fit text-[#454545] font-normal leading-[150%] tracking-[-1%]"
+                >
+                  Wed, 17 Nov 5:30PM
+                </span>
+              </div>
             </div>
             <div
-              class="-bg-[blue] w-full h-fit gap-2 flex flex-col leading-[150%] tracking-[-1%]"
+              class="-bg-[orange] w-full h-fit flex items-center justify-between"
             >
+              <!-- d1 -->
               <div
-                class="-bg-[lightgreen] w-full max-w-[636px] h-fit leading-[150%] tracking-[-1%]"
+                data-node1="d2"
+                class="-bg-[orange] block md:hidden w-full max-w-[636px] md:line-clamp-2 leading-[150%] tracking-[-1%]"
               >
                 Many desktop publishing packages and web page editors now use
                 Lorem Ipsum as their default model text, and a search for 'lorem
                 ipsum'
               </div>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </main>

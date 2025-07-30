@@ -6,12 +6,6 @@
     <title>Flowbite HTML Project</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
-      @theme inline {
-        --breakpoint-w1140: 1140px;
-        --breakpoint-w1000: 1000px;
-        --breakpoint-w825: 825px;
-        --breakpoint-w514: 514px;
-      }
       @layer components {
         [aria-selected="false"] {
           @apply !text-[#999999] !border-[#999999];
@@ -38,19 +32,13 @@
         /* Firefox */
       }
     </style>
-    <!-- <link rel="stylesheet" href="output.css" /> -->
-
-    <!-- <script src="/node_modules/flowbite/dist/flowbite.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script>
+    <!-- <link rel="stylesheet" href="output.css" /> -->
+    <!-- <script src="/node_modules/flowbite/dist/flowbite.min.js"></script> -->
   </head>
 
   <body class="-bg-[black] w-full flex flex-col items-center">
-    <!-- <header
-      id="nav-container"
-      class="z-40 bg-[#F8EFE8] text-black w-full h-fit fixed"
-    ></header> -->
-
-    <main
+    <div
       class="z-2 bg-[white] text-black w-full max-w-[1440px] h-fit mt-26 md:mt-30 px-6 lg:px-12 flex flex-col items-center"
     >
       <div class="-bg-[yellow] w-full h-fit mx-auto">
@@ -592,7 +580,7 @@
           </div>
         </section>
       </div>
-    </main>
+    </div>
 
     <div
       id="connect-modal"
@@ -696,7 +684,128 @@
       </div>
     </div>
 
-    <script src="scripts/elementToggle.js"></script>
-    <script src="scripts/swapElements.js"></script>
+    <script>
+      function elementToggle(elementId, containsClass = "block") {
+        const element = document.getElementById(elementId);
+        if (element && element.classList.contains(containsClass)) {
+          element.classList.add("hidden");
+          element.classList.remove(containsClass);
+        } else {
+          element.classList.remove("hidden");
+          element.classList.add(containsClass);
+        }
+      }
+    </script>
+    <script>
+      function swapElements(el1, el2) {
+        const parent1 = el1.parentNode;
+        const parent2 = el2.parentNode;
+
+        // create a temporary placeholder
+        const temp = document.createElement("div");
+
+        parent1.replaceChild(temp, el1);
+        parent2.replaceChild(el1, el2);
+        parent1.replaceChild(el2, temp);
+      }
+
+      let nodes_n1 = null,
+        nodes_n2 = null,
+        nodes_a1 = null,
+        nodes_a2 = null,
+        nodes_b1 = null,
+        nodes_b2 = null,
+        nodes_c1 = null,
+        nodes_c2 = null,
+        nodes_d1 = null,
+        nodes_d2 = null;
+
+      let areElementsLoaded = false;
+      const loadElements_1 = () => {
+        if (!areElementsLoaded) {
+          nodes_n1 = document.querySelectorAll('[data-node="n1"]');
+          nodes_n2 = document.querySelectorAll('[data-node="n2"]');
+          nodes_a1 = document.querySelectorAll('[data-node="a1"]');
+          nodes_a2 = document.querySelectorAll('[data-node="a2"]');
+          nodes_b1 = document.querySelectorAll('[data-node="b1"]');
+          nodes_b2 = document.querySelectorAll('[data-node="b2"]');
+          nodes_c1 = document.querySelectorAll('[data-node="c1"]');
+          nodes_c2 = document.querySelectorAll('[data-node="c2"]');
+          nodes_d1 = document.querySelectorAll('[data-node="d1"]');
+          nodes_d2 = document.querySelectorAll('[data-node="d2"]');
+          areElementsLoaded = true;
+        }
+        return [
+          nodes_n1,
+          nodes_n2,
+          nodes_a1,
+          nodes_a2,
+          nodes_b1,
+          nodes_b2,
+          nodes_c1,
+          nodes_c2,
+          nodes_d1,
+          nodes_d2,
+        ];
+      };
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const [
+          nodes_n1,
+          nodes_n2,
+          nodes_a1,
+          nodes_a2,
+          nodes_b1,
+          nodes_b2,
+          nodes_c1,
+          nodes_c2,
+          nodes_d1,
+          nodes_d2,
+        ] = loadElements_1();
+        console.log(nodes_a1.length);
+        nodes_n1.length > 0 ? handleResponsiveSwaps(nodes_n1, nodes_n2) : "";
+        nodes_a1.length > 0 ? handleResponsiveSwaps(nodes_a1, nodes_a2) : "";
+        nodes_b1.length > 0 ? handleResponsiveSwaps(nodes_b1, nodes_b2) : "";
+        nodes_c1.length > 0 ? handleResponsiveSwaps(nodes_c1, nodes_c2) : "";
+        nodes_d1.length > 0 ? handleResponsiveSwaps(nodes_d1, nodes_d2) : "";
+      });
+
+      window.addEventListener("resize", () => {
+        const [
+          nodes_n1,
+          nodes_n2,
+          nodes_a1,
+          nodes_a2,
+          nodes_b1,
+          nodes_b2,
+          nodes_c1,
+          nodes_c2,
+          nodes_d1,
+          nodes_d2,
+        ] = loadElements_1();
+        handleResponsiveSwaps(nodes_n1, nodes_n2);
+        handleResponsiveSwaps(nodes_a1, nodes_a2);
+        handleResponsiveSwaps(nodes_b1, nodes_b2);
+        handleResponsiveSwaps(nodes_c1, nodes_c2);
+        handleResponsiveSwaps(nodes_d1, nodes_d2);
+      });
+
+      function handleResponsiveSwaps(nodes1, nodes2) {
+        const width = window.innerWidth;
+
+        nodes1.forEach((el1, i) => {
+          const el2 = nodes2[i];
+          const swapWidth = parseInt(el1.dataset.swapwidth, 10);
+          const swapped = el1.dataset.swapped === "true";
+          if (width < swapWidth && !swapped) {
+            swapElements(el1, el2);
+            el1.dataset.swapped = "true";
+          } else if (width >= swapWidth && swapped) {
+            swapElements(el1, el2);
+            el1.dataset.swapped = "false";
+          }
+        });
+      }
+    </script>
   </body>
 </html>

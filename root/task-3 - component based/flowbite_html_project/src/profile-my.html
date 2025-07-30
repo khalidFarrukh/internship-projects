@@ -33,202 +33,13 @@
       }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- <link rel="stylesheet" href="output.css" />
     <script src="/node_modules/flowbite/dist/flowbite.min.js"></script> -->
   </head>
-  <!-- bg-[#F8EFE8] -->
+
   <body class="-bg-[black] w-full flex flex-col items-center">
-    <header class="z-40 w-full h-fit fixed flex justify-center bg-[#F8EFE8]">
-      <nav class="w-full max-w-[1440px] h-fit">
-        <div class="z-12 text-black flex-1 h-fit relative bg-[#F8EFE8]">
-          <div class="-bg-[blue] flex-1 h-fit flex flex-col justify-center">
-            <div
-              class="flex-1 h-fit border-b py-4 px-6 lg:px-12 gap-4 border-[#4700011A] flex items-center justify-between"
-            >
-              <a href="#" class="text-[#470001]">
-                <img src="images/logo.svg" alt="site logo image" />
-              </a>
-              <div
-                class="-bg-[red] h-fit gap-4 lg:gap-8 xl:gap-20 flex items-center justify-between"
-              >
-                <div
-                  class="-bg-[blue] w-fit h-fit gap-4 lg:gap-8 xl:gap-20 hidden lg:flex items-center"
-                >
-                  <div class="w-[328px] h-fit gap-1 flex items-center">
-                    <div class="w-full h-fit gap-2 flex items-center">
-                      <div
-                        class="w-full h-fit rounded-sm border border-[#E8E8E8] py-2.5 px-4 gap-2 bg-white hidden lg:flex items-center"
-                      >
-                        <input
-                          type="text"
-                          name="search_bar"
-                          placeholder="Search"
-                          id=""
-                          class="w-full text-sm focus:outline-none border-0 p-0 leading-[146%] tracking-[-1%]"
-                        />
-                        <img src="images/search.svg" alt="search icon" />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-fit h-fit gap-4 lg:gap-8 xl:gap-12 text-[#470001] hidden lg:flex items-center justify-between"
-                  >
-                    <button
-                      onclick=""
-                      class="cursor-pointer w-fit h-fit font-medium text-[12px] leading-[146%] tracking-[15%] uppercase"
-                    >
-                      my responses
-                    </button>
-                    <button
-                      onclick=""
-                      class="cursor-pointer w-fit h-fit font-medium text-[12px] leading-[146%] tracking-[15%] uppercase"
-                    >
-                      connections
-                    </button>
-                  </div>
-                </div>
-                <button
-                  onclick="otherElementClassToggle(`menu-burger-list`,`top-[-600px]`),otherElementClassToggle(`menu-burger-list`,`top-[0px]`)"
-                  class="w-fit h-fit rounded-full p-3 gap-3 flex lg:hidden items-center justify-center"
-                >
-                  <img src="images/menu-burger.svg" alt="menu icon" />
-                </button>
-                <div class="w-fit h-fit gap-4 flex items-center">
-                  <button
-                    onclick=""
-                    class="cursor-pointer bg-white w-fit h-fit rounded-full p-3 gap-3 flex items-center justify-center"
-                  >
-                    <img
-                      src="images/notification.svg"
-                      alt="notification icon"
-                    />
-                  </button>
-
-                  <div class="w-fit h-fit flex items-center">
-                    <button
-                      data-dropdown-toggle="profile-DropDown"
-                      class="cursor-pointer w-fit h-fit gap-3 flex items-center"
-                    >
-                      <div class="size-10 rounded-full bg-[#878F7A]">
-                        <!-- some if..else.. condition might be in play here but for now i am explicitly assigning hidden class on else image tag -->
-                        <!-- if -->
-                        <!-- below div will be used if profile image doesn't exist -->
-                        <div class="size-10 flex items-center justify-center">
-                          <img
-                            class="size-[50%]"
-                            src="images/user-photo.svg"
-                            alt=""
-                          />
-                          <!-- <img
-                            class="size-[50%]"
-                            src="{{ asset('images/user-photo.svg') }}"
-                            alt="profile"
-                          /> -->
-                        </div>
-                        <!-- else -->
-                        <!-- below image tag will be used if the profile images exists -->
-                        <img
-                          class="hidden w-full h-full rounded-full"
-                          src=""
-                          alt="Rounded avatar"
-                        />
-                      </div>
-                      <div class="hidden lg:block w-fit h-fit">
-                        <div
-                          class="w-[93px] h-[20px] font-medium text-left text-sm leading-[146%] tracking-[-1%] text-[#454545] truncate"
-                        >
-                          name dasdasdas
-                        </div>
-                        <div
-                          class="w-[108px] h-[20px] font-medium text-left text-xs leading-[146%] tracking-[-1%] text-[#737373] truncate"
-                        >
-                          email sdsadasdasdsa
-                        </div>
-                      </div>
-                    </button>
-                    <div
-                      id="profile-DropDown"
-                      class="absolute right-3 top-[80%] w-fit h-fit bg-white border border-[#F0F1F1] rounded-lg text-sm text-[#470001] hidden z-50"
-                    >
-                      <ul class="py-1">
-                        <li>
-                          <a
-                            href="#"
-                            class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
-                          >
-                            My Profile
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
-                          >
-                            Account settings
-                          </a>
-                        </li>
-                        <li>
-                          <button
-                            onclick=""
-                            class="w-full flex items-center px-4 py-3 gap-x-3 hover:bg-[#F0EFEB]"
-                          >
-                            <img src="images/log-out.svg" alt="logout icon" />
-                            Log out
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="z-10 flex-1 h-fit flex lg:hidden relative">
-          <div
-            id="menu-burger-list"
-            class="bg-[#F8EFE8] min-w-0 w-full h-fit px-6 py-4 transition-all duration-500 ease-in-out flex flex-col absolute top-[-600px] z-0 gap-6"
-          >
-            <div class="min-w-0 w-full h-max gap-1 flex items-center">
-              <div class="w-full h-fit gap-2 flex items-center">
-                <div
-                  class="w-full h-fit rounded-sm border border-[#E8E8E8] py-2.5 px-4 gap-2 bg-white flex items-center"
-                >
-                  <input
-                    type="text"
-                    name="search_bar"
-                    placeholder="Search"
-                    id=""
-                    class="w-full text-sm focus:outline-none border-0 p-0 leading-[146%] tracking-[-1%]"
-                  />
-                  <img src="images/search.svg" alt="search icon" />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-fit h-fit gap-4 text-[#470001] flex flex-col items-center"
-            >
-              <button
-                onclick=""
-                class="cursor-pointer w-fit h-fit font-medium text-[12px] leading-[146%] tracking-[15%] uppercase"
-              >
-                my responses
-              </button>
-              <button
-                onclick=""
-                class="cursor-pointer w-fit h-fit font-medium text-[12px] leading-[146%] tracking-[15%] uppercase"
-              >
-                connections
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main
+    <div
       class="z-2 bg-white text-black w-full max-w-[1440px] h-fit mt-26 md:mt-30 mb-10 md:mb-0 px-6 lg:px-12 flex flex-col items-center"
     >
       <div class="-bg-[yellow] w-full h-fit">
@@ -397,7 +208,6 @@
                   >
                     Bio:
                     <div
-                      onclick="thisClassToggle(this,'line-clamp-3')"
                       class="-bg-[yellow] text-[#454545] w-full max-w-[520px] h-fit max-h-[120px] line-clamp-3 leading-[150%] tracking-[-1%]"
                     >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -541,7 +351,7 @@
                         class="-bg-[red] w-full h-fit flex items-center justify-between gap-6"
                       >
                         <button
-                          class="-bg-[orange] cursor-pointer min-w-0 flex-1 max-w-[100px] h-fit truncate leading-[150%] tracking-[-1%]"
+                          class="-bg-[orange] cursor-pointer min-w-0 flex-1 max-w-[100px] h-fit truncate whitespace-nowrap leading-[150%] tracking-[-1%]"
                         >
                           Description Description Description Description
                           Description Description
@@ -710,30 +520,12 @@
                   <div
                     class="-bg-[red] w-full lg:w-fit h-fit gap-3 lg:gap-8 flex items-center relative"
                   >
-                    <div class="size-12 rounded-full bg-[#878F7A]">
-                      <!-- some if..else.. condition might be in play here but for now i am explicitly assigning hidden class on else image tag -->
-                      <!-- if -->
-                      <!-- below div will be used if profile image doesn't exist -->
-                      <div class="size-12 flex items-center justify-center">
-                        <img
-                          class="size-[50%]"
-                          src="images/user-photo.svg"
-                          alt=""
-                        />
-                        <!-- <img
-                            class="size-[50%]"
-                            src="{{ asset('images/user-photo.svg') }}"
-                            alt="profile"
-                          /> -->
-                      </div>
-                      <!-- else -->
-                      <!-- below image tag will be used if the profile images exists -->
-                      <img
-                        class="hidden w-full h-full rounded-full"
-                        src=""
-                        alt="Rounded avatar"
-                      />
-                    </div>
+                    <div class="-bg-[orange] w-13 h-18 hidden md:block"></div>
+                    <img
+                      src="temp_images/user-photo.png"
+                      class="-bg-[red] w-12 h-12 rounded-full md:absolute md:top-[12px]"
+                      alt="Rounded avatar"
+                    />
                     <div
                       class="-bg-[orange] w-full h-fit gap-0.5 lg:gap-1 flex flex-col"
                     >
@@ -986,7 +778,7 @@
           </div>
         </section>
       </div>
-    </main>
+    </div>
     <footer
       class="footer w-full py-4.5 bg-[#F8EFE8] text-[#470001] text-sm border-t border-[#d1bfb2] flex justify-center"
     >
@@ -1004,40 +796,36 @@
 
             <!-- Center Links -->
             <div
-              class="w-full lg:w-fit h-fit border-t border-b lg:border-none border-[#4700011A] flex lg:justify-center"
+              class="flex w-fit flex-col lg:flex-row lg:items-center lg:justify-center text-xs font-semibold gap-4 w1140:gap-8 text-[#470001] border-t border-b border-[#4700011A] py-4 lg:py-0"
             >
-              <div
-                class="flex w-fit flex-col lg:flex-row lg:items-center lg:justify-center text-xs font-semibold gap-4 xl:gap-8 text-[#470001] py-4 lg:py-0"
+              <a
+                href="https://kurioconnect.com/community-guidelines/"
+                class="hover:underline"
+                >COMMUNITY GUIDELINES</a
               >
-                <a
-                  href="https://kurioconnect.com/community-guidelines/"
-                  class="hover:underline"
-                  >COMMUNITY GUIDELINES</a
-                >
-                <a
-                  href="https://kurioconnect.com/kurio-pro-tips/"
-                  class="hover:underline"
-                  >KURIO PRO TIPS</a
-                >
-                <a href="https://kurioconnect.com/faq/" class="hover:underline"
-                  >FAQS</a
-                >
-                <a
-                  href="https://kurioconnect.com/privacy-and-policy/"
-                  class="hover:underline"
-                  >TERMS & CONDITIONS</a
-                >
-                <a
-                  href="https://kurioconnect.com/terms-and-conditions/"
-                  class="hover:underline"
-                  >PRIVACY POLICY</a
-                >
-                <a
-                  href="https://kurioconnect.com/contact/"
-                  class="hover:underline"
-                  >CONTACT US</a
-                >
-              </div>
+              <a
+                href="https://kurioconnect.com/kurio-pro-tips/"
+                class="hover:underline"
+                >KURIO PRO TIPS</a
+              >
+              <a href="https://kurioconnect.com/faq/" class="hover:underline"
+                >FAQS</a
+              >
+              <a
+                href="https://kurioconnect.com/privacy-and-policy/"
+                class="hover:underline"
+                >TERMS & CONDITIONS</a
+              >
+              <a
+                href="https://kurioconnect.com/terms-and-conditions/"
+                class="hover:underline"
+                >PRIVACY POLICY</a
+              >
+              <a
+                href="https://kurioconnect.com/contact/"
+                class="hover:underline"
+                >CONTACT US</a
+              >
             </div>
             <div class="w-full lg:w-fit h-fit flex justify-between">
               <img
@@ -1161,7 +949,128 @@
       </div>
     </div>
 
-    <script src="scripts/elementToggle.js"></script>
-    <script src="scripts/swapElements.js"></script>
+    <script>
+      function elementToggle(elementId, containsClass = "block") {
+        const element = document.getElementById(elementId);
+        if (element && element.classList.contains(containsClass)) {
+          element.classList.add("hidden");
+          element.classList.remove(containsClass);
+        } else {
+          element.classList.remove("hidden");
+          element.classList.add(containsClass);
+        }
+      }
+    </script>
+    <script>
+      function swapElements(el1, el2) {
+        const parent1 = el1.parentNode;
+        const parent2 = el2.parentNode;
+
+        // create a temporary placeholder
+        const temp = document.createElement("div");
+
+        parent1.replaceChild(temp, el1);
+        parent2.replaceChild(el1, el2);
+        parent1.replaceChild(el2, temp);
+      }
+
+      let nodes_n1 = null,
+        nodes_n2 = null,
+        nodes_a1 = null,
+        nodes_a2 = null,
+        nodes_b1 = null,
+        nodes_b2 = null,
+        nodes_c1 = null,
+        nodes_c2 = null,
+        nodes_d1 = null,
+        nodes_d2 = null;
+
+      let areElementsLoaded = false;
+      const loadElements_1 = () => {
+        if (!areElementsLoaded) {
+          nodes_n1 = document.querySelectorAll('[data-node="n1"]');
+          nodes_n2 = document.querySelectorAll('[data-node="n2"]');
+          nodes_a1 = document.querySelectorAll('[data-node="a1"]');
+          nodes_a2 = document.querySelectorAll('[data-node="a2"]');
+          nodes_b1 = document.querySelectorAll('[data-node="b1"]');
+          nodes_b2 = document.querySelectorAll('[data-node="b2"]');
+          nodes_c1 = document.querySelectorAll('[data-node="c1"]');
+          nodes_c2 = document.querySelectorAll('[data-node="c2"]');
+          nodes_d1 = document.querySelectorAll('[data-node="d1"]');
+          nodes_d2 = document.querySelectorAll('[data-node="d2"]');
+          areElementsLoaded = true;
+        }
+        return [
+          nodes_n1,
+          nodes_n2,
+          nodes_a1,
+          nodes_a2,
+          nodes_b1,
+          nodes_b2,
+          nodes_c1,
+          nodes_c2,
+          nodes_d1,
+          nodes_d2,
+        ];
+      };
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const [
+          nodes_n1,
+          nodes_n2,
+          nodes_a1,
+          nodes_a2,
+          nodes_b1,
+          nodes_b2,
+          nodes_c1,
+          nodes_c2,
+          nodes_d1,
+          nodes_d2,
+        ] = loadElements_1();
+        console.log(nodes_a1.length);
+        nodes_n1.length > 0 ? handleResponsiveSwaps(nodes_n1, nodes_n2) : "";
+        nodes_a1.length > 0 ? handleResponsiveSwaps(nodes_a1, nodes_a2) : "";
+        nodes_b1.length > 0 ? handleResponsiveSwaps(nodes_b1, nodes_b2) : "";
+        nodes_c1.length > 0 ? handleResponsiveSwaps(nodes_c1, nodes_c2) : "";
+        nodes_d1.length > 0 ? handleResponsiveSwaps(nodes_d1, nodes_d2) : "";
+      });
+
+      window.addEventListener("resize", () => {
+        const [
+          nodes_n1,
+          nodes_n2,
+          nodes_a1,
+          nodes_a2,
+          nodes_b1,
+          nodes_b2,
+          nodes_c1,
+          nodes_c2,
+          nodes_d1,
+          nodes_d2,
+        ] = loadElements_1();
+        handleResponsiveSwaps(nodes_n1, nodes_n2);
+        handleResponsiveSwaps(nodes_a1, nodes_a2);
+        handleResponsiveSwaps(nodes_b1, nodes_b2);
+        handleResponsiveSwaps(nodes_c1, nodes_c2);
+        handleResponsiveSwaps(nodes_d1, nodes_d2);
+      });
+
+      function handleResponsiveSwaps(nodes1, nodes2) {
+        const width = window.innerWidth;
+
+        nodes1.forEach((el1, i) => {
+          const el2 = nodes2[i];
+          const swapWidth = parseInt(el1.dataset.swapwidth, 10);
+          const swapped = el1.dataset.swapped === "true";
+          if (width < swapWidth && !swapped) {
+            swapElements(el1, el2);
+            el1.dataset.swapped = "true";
+          } else if (width >= swapWidth && swapped) {
+            swapElements(el1, el2);
+            el1.dataset.swapped = "false";
+          }
+        });
+      }
+    </script>
   </body>
 </html>

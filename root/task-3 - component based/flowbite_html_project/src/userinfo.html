@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flowbite HTML Project</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @layer components {
+        [aria-selected="false"] {
+          @apply !text-[#999999] !border-[#999999];
+        }
+        [aria-selected="false"]:hover {
+          @apply !border-b-2 !text-[#F48E8B] !border-[#F48E8B];
+        }
+        [aria-selected="true"] {
+          @apply !border-b-2 !text-[#960D0D] !border-[#960D0D];
+        }
+        [aria-selected="true"]:hover {
+          @apply !border-b-2 !text-[#F48E8B] !border-[#F48E8B];
+        }
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="output.css" />
+    <script src="/node_modules/flowbite/dist/flowbite.min.js"></script> -->
+  </head>
+
+  <body class="-bg-[black] w-full flex flex-col items-center">
+    <!-- <div class="temp z-10 bg-[red] size-[200px] absolute md:hidden"></div> -->
+    <div class="bg-[#F8EFE8] text-[#2F2F2F] font-sans w-full max-w-[1440px]">
+      <div
+        class="min-h-screen flex flex-col px-4 lg:px-12"
+        x-data="{ step: 1 }"
+      >
+        <div
+          class="h-fit flex flex-col lg:flex-row lg:items-center lg:relative gap-8"
+        >
+          <div
+            class="text-[30px] font-medium font-serif tracking-wide py-3 lg:py-6"
+          >
+            KURIO
+          </div>
+          <div
+            class="w-full h-fit flex flex-row items-center justify-center relative lg:absolute m-auto"
+          >
+            <div
+              class="w-full lg:max-w-[884px] flex items-center md:justify-between lg:justify-center gap-3 xl:gap-6 absolute m-auto"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="step-indicator rounded-full min-w-8 min-h-8 border-[1px] border-[#971E1E] flex items-center justify-center text-[#971E1E]"
+                  data-step="1"
+                >
+                  1
+                </div>
+                <span
+                  class="step-label text-[16px] text-[#960D0D] hidden md:flex"
+                >
+                  Personal information
+                </span>
+              </div>
+              <div
+                class="step-complete-line flex-1 lg:max-w-16 xl:max-w-20 border-b border-[#960D0D] hidden md:flex"
+                data-step-complete="1"
+              ></div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="step-indicator rounded-full min-w-8 min-h-8 border-[1px] border-[#971E1E] flex items-center justify-center text-[#971E1E]"
+                  data-step="2"
+                >
+                  2
+                </div>
+                <span
+                  class="step-label text-[16px] text-[#960D0D] hidden md:flex"
+                >
+                  Experience
+                </span>
+              </div>
+              <div
+                class="step-complete-line flex-1 lg:max-w-16 xl:max-w-20 border-b border-[#960D0D] hidden md:flex"
+                data-step-complete="2"
+              ></div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="step-indicator rounded-full min-w-8 min-h-8 border-[1px] border-[#971E1E] flex items-center justify-center text-[#971E1E]"
+                  data-step="3"
+                >
+                  3
+                </div>
+                <span
+                  class="step-label text-[16px] text-[#960D0D] hidden md:flex"
+                >
+                  Additional information
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form
+          id="user-info-form"
+          method="POST"
+          action="{{ route('profile.info') }}"
+        >
+          @csrf @if ($errors->any())
+          <div class="alert alert-danger">
+            <ul>
+              @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
+          @endif
+          <!-- Step 1: Personal Information -->
+          <div
+            data-step="1"
+            style="display: block"
+            class="form-step max-w-[352px] mx-auto w-[350px] pt-30"
+          >
+            <h2
+              style="font-family: 'Pinyon Script', cursive"
+              class="text-center text-[40px] text-[#641212] mb-6"
+            >
+              Set up your profile
+            </h2>
+            <label class="block text-[#737373] text-sm mb-1">Country</label>
+            <input
+              type="text"
+              placeholder="Country"
+              class="form-control w-full h-[48px] mb-3 px-3 py-2 border rounded"
+            />
+
+            <label class="block text-[#737373] text-sm mb-1">City</label>
+            <input
+              type="text"
+              placeholder="City"
+              class="form-control w-full h-[48px] mb-3 px-3 py-2 border rounded"
+            />
+
+            <label class="block text-[#737373] text-sm mb-1"
+              >Phone number</label
+            >
+            <div
+              class="flex items-center gap-2 mb-3 border rounded px-3 py-2 bg-white"
+            >
+              <img
+                src="https://flagcdn.com/us.svg"
+                class="w-3 h-3 rounded-full object-cover"
+                alt="US Flag"
+              />
+              <input
+                class="input-field nbr-feild"
+                placeholder="(000) 000-000"
+                name="phone"
+                type="tel"
+                id="phone"
+                style="width: 500px"
+                value="{{ old('phone') }}"
+              />
+            </div>
+            <label class="block text-[#737373] text-sm mb-1"
+              >Date of birth</label
+            >
+            <input
+              id="dob"
+              type="text"
+              placeholder="__ /__ /__"
+              onfocus="(this.type='date')"
+              onblur="if(!this.value)this.type='text'"
+              class="form-control w-full h-[48px] mb-3 px-3 py-2 border rounded"
+            />
+            <button
+              type="button"
+              class="next-btn w-full bg-[#960D0D] text-white py-2 rounded"
+            >
+              Next
+            </button>
+            <p
+              class="mt-3 text-center text-sm font-medium cursor-pointer text-[#470001]"
+            >
+              Back to Sign up
+            </p>
+          </div>
+        </form>
+
+        <!-- Experience step 2 -->
+        <div
+          data-step="2"
+          style="display: none"
+          class="form-step max-w-md mx-auto w-[352px] py-30"
+        >
+          <h2
+            style="font-family: 'Pinyon Script', cursive"
+            class="text-center text-[40px] text-[#641212] mb-6"
+          >
+            Tell us about your experience
+          </h2>
+          <form>
+            <div class="row">
+              <div class="col-lg-12">
+                <label class="text-[#737373]"
+                  >In which industry do you work?</label
+                >
+              </div>
+              <div class="col-lg-12">
+                <select class="js-example-basic-single" name="industry_id">
+                  <option class="!mb-0" value="" selected disabled hidden>
+                    E.g Law, Medicine, Engineering, Tech etc.
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-12">
+                <label class="text-[#737373]">Company</label>
+              </div>
+              <div class="col-lg-12">
+                <input
+                  class="form-control h-[48px]"
+                  id="company_title"
+                  type="text"
+                  name="company_title"
+                  maxlength="100"
+                  placeholder="Name of your company"
+                  value="{{ !empty($user['company_title']) ? $user['company_title'] : '' }}"
+                />
+              </div>
+            </div>
+            <input type="hidden" name="page_type" value="userinfo" />
+            <div class="row mb-3">
+              <div class="col-lg-12">
+                <label class="text-[#737373]">Your role in the company</label>
+              </div>
+              <div class="col-lg-12">
+                <input
+                  class="form-control h-[48px]"
+                  id="job_title"
+                  type="text"
+                  name="job_title"
+                  maxlength="100"
+                  value="{{ !empty($user['job_title']) ? $user['job_title'] : '' }}"
+                  placeholder="Founder, Partner, Associate, etc."
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-12 col-md-12">
+                <label class="text-[#737373]">Instagram URL</label>
+              </div>
+              <div class="col-lg-12 col-md-12">
+                <input
+                  id="instagram_url"
+                  type="text"
+                  class="form-control @error('instagram_url') is-invalid @enderror h-[48px]"
+                  name="instagram_url"
+                  value="{{ !empty($user['instagram_url']) ? $user['instagram_url'] : '' }}"
+                  placeholder="https://instagram.com/username"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-lg-12 col-md-12">
+                <label class="text-[#737373]">LinkedIn URL</label>
+              </div>
+              <div class="col-lg-12 col-md-12">
+                <input
+                  id="linkedin_url"
+                  type="text"
+                  class="form-control @error('linkedin_url') is-invalid @enderror h-[48px]"
+                  name="linkedin_url"
+                  value="{{ !empty($user['linkedin_url']) ? $user['linkedin_url'] : '' }}"
+                  placeholder="https://linkedin.com/yourprofile"
+                  autocomplete="new-password"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <button
+                type="button"
+                class="next-btn w-full bg-[#960D0D] text-white py-2 rounded"
+              >
+                Next
+              </button>
+              <button
+                type="button"
+                class="prev-btn mt-3 text-center text-sm font-medium cursor-pointer text-[#470001]"
+              >
+                Back
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 3 -->
+        <div
+          data-step="3"
+          style="display: none"
+          class="form-step mx-auto bg-[#f7eee5] min-h-screen max-w-[352px] font-sans flex flex-col items-center py-30"
+        >
+          <div
+            class="w-full max-w-xl bg-transparent flex flex-col items-center"
+          >
+            <h2
+              style="font-family: 'Pinyon Script', cursive"
+              class="text-[40px] text-[#470001] mb-4"
+            >
+              Complete your profile
+            </h2>
+            <div class="flex item-center space-x-4 mb-6 w-full">
+              <input
+                type="hidden"
+                id="profile_image_check"
+                value="{{!empty($user['avatar']) ? 1 : 2}}"
+              />
+              <img
+                id="oldPicture"
+                src="{{ !empty($user['avatar']) ? $user['avatar'] : asset('images/blank-profile-picture.png') }}"
+                class="w-[96px] h-[96px] rounded-full object-cover border border-gray-300 ml-0"
+              />
+              <div class="flex flex-col justify-around">
+                <p class="text-sm text-black">Profile image</p>
+                <div
+                  class="flex items-center justify-between text-gray-600 space-x-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#999999" />
+                    <circle cx="12" cy="8" r="1" fill="white" />
+                    <rect x="11" y="10" width="2" height="6" fill="white" />
+                  </svg>
+                  <span class="text-[12px] text-[#999999]"
+                    >jpg, .png, up to 10mb</span
+                  >
+                </div>
+
+                <label
+                  for="picture"
+                  class="cursor-pointer text-[#470001] font-semibold text-sm flex items-center space-x-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12V4m0 0L8 8m4-4l4 4"
+                    />
+                  </svg>
+                  <span class="text-sm text-[#470001]">Upload</span>
+                </label>
+
+                <input
+                  id="picture"
+                  class="hidden"
+                  type="file"
+                  name="picture"
+                  accept=".gif, .png, .jpg, .jpeg"
+                  onchange="loadImage(event)"
+                />
+              </div>
+              <p class="text-sm text-[#BABABA]">Required *</p>
+            </div>
+
+            <div
+              class="bg-white px-4 py-3 rounded shadow-sm text-sm text-gray-700 w-full mb-6"
+            >
+              <div class="flex items-start space-x-1">
+                <div class="text-[#737373]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 mt-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 16h-1v-4h-1m1-4h.01M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"
+                    />
+                  </svg>
+                </div>
+                <p class="text-[#737373]">
+                  Upload a recent photo where we can see your beautiful face
+                  clearly. KURIO is built on trust and we want our users to feel
+                  confident that all accounts are authentic.
+                </p>
+              </div>
+            </div>
+
+            <div class="w-full mb-6">
+              <label class="block text-[#737373] text-sm font-medium mb-2"
+                >Interests (choose up to 3):</label
+              >
+              <div
+                class="grid grid-cols-2 gap-x-8 gap-y-2 text-sm text-[#454545]"
+              >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                  />Art</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                  />Reading</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                  />Music</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                  />Social media</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                    checked
+                  />Blogging</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                  />Volunteering</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                    checked
+                  />Photography</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                  />Sports</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                    checked
+                  />Fashion</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                  />Travel</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                  />Gardening</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                  />VC/Start-ups</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                  />Cooking</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="text-sm mr-2 accent-[#960D0D]"
+                  />Tech</label
+                >
+              </div>
+            </div>
+
+            <div class="w-full mb-6">
+              <label class="block text-sm text-[#737373] font-medium mb-1"
+                >Short bio</label
+              >
+              <textarea
+                class="w-full p-3 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#E8E8E8] text-[#A7AAA9]"
+                rows="3"
+                placeholder="London by way of Atlanta. Lawyer, mom and entrepreneur..."
+              >
+London by way of Atlanta. Lawyer, mom and entrepreneur. Excited to meet other small business owners...</textarea
+              >
+            </div>
+            <button
+              class="w-full h-[48px] bg-gray-300 text-white py-2 px-6 rounded cursor-not-allowed"
+            >
+              Finish
+            </button>
+            <button class="prev-btn text-[#470001] font-medium mt-4">
+              Back
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        let currentStep = 1;
+
+        function showStep(step) {
+          $(".form-step").hide();
+          $(`.form-step[data-step="${step}"]`).show();
+
+          $(".step-indicator").each(function () {
+            const stepNumber = $(this).data("step");
+
+            $(this).removeClass(
+              "bg-[#960D0D] bg-[#F48E8B] border-[#960D0D] border-[#F48E8B] text-white text-[#971E1E]"
+            );
+
+            if (stepNumber < step) {
+              $(this).addClass("bg-[#F48E8B] border-[#F48E8B] text-white");
+            } else if (stepNumber === step) {
+              $(this).addClass("bg-[#960D0D] text-white");
+            } else {
+              $(this).addClass("text-[#971E1E]");
+            }
+          });
+
+          $(".step-complete-line").each(function () {
+            const stepNumber = $(this).data("step-complete");
+
+            $(this).removeClass("border-[#960D0D] border-[#F48E8B] hidden");
+
+            if (stepNumber < step) {
+              $(this).addClass("border-[#F48E8B]");
+            } else {
+              $(this).addClass("border-[#960D0D]");
+            }
+            if (stepNumber > step) {
+              $(this).addClass("hidden");
+            }
+          });
+
+          $(".step-label").each(function (index) {
+            const labelStep = index + 1;
+            $(this).removeClass("text-[#960D0D] text-medium text-white hidden");
+            if (labelStep === step) {
+              $(this).addClass("text-[#960D0D] text-medium");
+            } else {
+              $(this).addClass("text-[#960D0D] text-medium hidden");
+            }
+          });
+        }
+
+        $(".next-btn").on("click", function () {
+          console.log("next-click");
+          if (currentStep < 3) {
+            currentStep++;
+            showStep(currentStep);
+          }
+        });
+
+        $(".prev-btn").on("click", function () {
+          if (currentStep > 1) {
+            currentStep--;
+            showStep(currentStep);
+          }
+        });
+
+        showStep(currentStep);
+      });
+    </script>
+
+    <script src="scripts/swapElements.js"></script>
+  </body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flowbite HTML Project</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @layer components {
+        [aria-selected="false"] {
+          @apply !text-black;
+        }
+        [aria-selected="false"]:hover {
+          @apply border-b-2 !text-[#2768b8] !border-[#2768b8];
+        }
+        [aria-selected="true"] {
+          @apply border-b-2 !text-[#13488A]  !border-[#13488A];
+        }
+        [aria-selected="true"]:hover {
+          @apply !text-[#13488A] !border-[#13488A];
+        }
+      }
+    </style>
+
+    <!-- <link rel="stylesheet" href="output.css" /> -->
+    <!-- <script src="/node_modules/flowbite/dist/flowbite.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script>
+    <script>
+      function otherElementClassToggle(elementId, classToToggle) {
+        document.getElementById(elementId).classList.toggle(classToToggle);
+      }
+      function elementToggle(elementId, oldClass, newClass) {
+        const element = document.getElementById(elementId);
+        element.classList.replace(oldClass, newClass);
+      }
+    </script>
+  </head>
+  <div class="w-full h-fit px-5 flex flex-col gap-5 bg-gray-200">
+    <header class="w-full h-fit">
+      <div class="w-full h-fit flex gap-4">
+        <div class="w-full h-fit flex flex-col gap-1">
+          <div
+            class="w-full h-fit text-[20px] font-semibold leading-8 tracking-normal"
+          >
+            Ironbark Summit Trail
+          </div>
+          <div class="w-full h-fit leading-6 tracking-normal">
+            Customize and create your trail here.
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="w-full h-[440px] rounded-3xl p-5 bg-white">
+      <div class="w-full h-full rounded-3xl bg-[lightgreen]"></div>
+    </div>
+    <div class="w-full h-fit rounded-3xl p-5 bg-white">
+      <div
+        class="w-full h-fit pb-6 border-b border-[#0000001A] font-semibold text-black text-center leading-6 flex-col"
+      >
+        <ul
+          class="w-fit h-fit flex flex-wrap gap-6"
+          id="default-tab"
+          data-tabs-toggle="#default-tab-content"
+          role="tablist"
+        >
+          <li class="flex w-fit h-fit gap-2">
+            <button
+              class="cursor-pointer inline-block p-2"
+              id="show-trails-details-tab"
+              data-tabs-target="#show-trails-details"
+              type="button"
+              role="tab"
+              aria-controls="show-trails-details"
+              aria-selected="true"
+            >
+              Trails details
+            </button>
+          </li>
+          <li class="flex w-fit h-fit gap-2">
+            <button
+              class="cursor-pointer inline-block p-2"
+              id="show-trails-overview-tab"
+              data-tabs-target="#show-trails-overview"
+              type="button"
+              role="tab"
+              aria-controls="show-trails-overview"
+              aria-selected="false"
+            >
+              Overview
+            </button>
+          </li>
+          <li class="flex w-fit h-fit gap-2">
+            <button
+              class="cursor-pointer inline-block p-2"
+              id="show-trails-photos-tab"
+              data-tabs-target="#show-trails-photos"
+              type="button"
+              role="tab"
+              aria-controls="show-trails-photos"
+              aria-selected="false"
+            >
+              Photos
+            </button>
+          </li>
+          <li class="flex w-fit h-fit gap-2">
+            <button
+              class="cursor-pointer inline-block p-2"
+              id="show-trails-videos-tab"
+              data-tabs-target="#show-trails-videos"
+              type="button"
+              role="tab"
+              aria-controls="show-trails-videos"
+              aria-selected="false"
+            >
+              Videos
+            </button>
+          </li>
+          <li class="flex w-fit h-fit gap-2">
+            <button
+              class="cursor-pointer inline-block p-2"
+              id="show-trails-tags_categortion-tab"
+              data-tabs-target="#show-trails-tags_categortion"
+              type="button"
+              role="tab"
+              aria-controls="show-trails-tags_categortion"
+              aria-selected="false"
+            >
+              Tags & categoration
+            </button>
+          </li>
+          <li class="flex w-fit h-fit gap-2">
+            <button
+              class="cursor-pointer inline-block p-2"
+              id="show-trails-comments-tab"
+              data-tabs-target="#show-trails-comments"
+              type="button"
+              role="tab"
+              aria-controls="show-trails-comments"
+              aria-selected="false"
+            >
+              Comments
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div id="default-tab-content" class="-bg-[red]">
+        <div
+          class="hidden w-full h-fit py-5"
+          id="show-trails-details"
+          role="tabpanel"
+          aria-labelledby="show-trails-details-tab"
+        >
+          <div class="w-fit h-fit flex flex-col gap-4">
+            <div class="w-full h-fit flex gap-4">
+              <div
+                class="w-fit h-fit py-2 pl-3 pr-2 rounded-[40px] bg-[#F1F1F1] flex items-center justify-center gap-3"
+              >
+                Difficulty level
+                <div
+                  class="py-1 px-5 rounded-[40px] text-[12px] text-[#FF1A1A] bg-[#FF1A1A1A] flex items-center justify-center"
+                >
+                  Hard
+                </div>
+              </div>
+              <div
+                class="w-fit h-fit py-2 pl-3 pr-2 rounded-[40px] bg-[#F1F1F1] flex items-center justify-center gap-3"
+              >
+                Elevation gain
+                <div
+                  class="py-1 px-5 rounded-[40px] text-[12px] text-black bg-white flex items-center justify-center"
+                >
+                  Hard
+                </div>
+              </div>
+            </div>
+            <div class="w-full h-fit flex gap-4">
+              <div
+                class="w-fit h-fit py-2 px-3 rounded-[40px] bg-[#F1F1F1] flex items-center justify-center gap-3"
+              >
+                Surface type: Gravel
+                <!-- <div
+                  class="py-1 px-5 rounded-[40px] text-[12px] text-[#FF1A1A] bg-[#FF1A1A1A] flex items-center justify-center"
+                >
+                  Hard
+                </div> -->
+              </div>
+              <div
+                class="w-fit h-fit py-2 pl-3 pr-5 rounded-[40px] bg-[#F1F1F1] flex items-center justify-center gap-3"
+              >
+                <!-- weather image -->
+                <div
+                  class="w-[23px] h-[23px] flex items-center justify-center bg-[red]"
+                >
+                  <img class="w-full h-full" src="" alt="weather image" />
+                </div>
+
+                29° | Hum 54%
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden w-full h-fit py-5"
+          id="show-trails-overview"
+          role="tabpanel"
+          aria-labelledby="show-trails-overview-tab"
+        >
+          <div class="w-full h-fit">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. Lorem Ipsum is simply dummy text of
+            the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type
+            specimen book. It has survived not only five centuries, but also the
+            leap into electronic typesetting, remaining essentially unchanged.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+          </div>
+        </div>
+        <div
+          class="hidden w-full h-fit py-5"
+          id="show-trails-photos"
+          role="tabpanel"
+          aria-labelledby="show-trails-photos-tab"
+        >
+          <div class="w-full h-full flex flex-wrap gap-6">
+            <button
+              data-modal-target="photos-modal"
+              data-modal-toggle="photos-modal"
+              class="cursor-pointer w-full h-full max-w-[207px] max-h-[140px] bg-[gray] rounded-2xl overflow-hidden flex items-center justify-center"
+            >
+              <img
+                class="w-full"
+                src="temp_images/user-photo2.png"
+                alt="no image avaliable"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="hidden w-full h-fit py-5"
+          id="show-trails-videos"
+          role="tabpanel"
+          aria-labelledby="show-trails-videos-tab"
+        >
+          <div class="w-full h-full flex flex-wrap gap-6">
+            <button
+              data-modal-target="videos-modal"
+              data-modal-toggle="videos-modal"
+              class="cursor-pointer w-full h-full max-w-[207px] max-h-[140px] bg-[gray] rounded-2xl overflow-hidden relative flex items-center justify-center"
+            >
+              <img
+                class="w-full"
+                src="temp_images/4f6cf0e066e3966ec3011aa214c97875f20e9626.jpg"
+                alt="no thumbnail avaliable"
+              />
+              <div
+                class="absolute w-full h-full bg-[#ff000025] flex items-center justify-center"
+              >
+                <div class="w-10 h-10">
+                  <svg
+                    width="41"
+                    height="42"
+                    viewBox="0 0 41 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <ellipse
+                      cx="20.1399"
+                      cy="21"
+                      rx="20.1399"
+                      ry="21"
+                      fill="#13488A"
+                    />
+                    <ellipse
+                      cx="20.1399"
+                      cy="21"
+                      rx="20.1399"
+                      ry="21"
+                      fill="#13488A"
+                    />
+                    <path
+                      d="M20.503 16.0097L20.437 15.9697C19.689 15.5147 19.031 15.1137 18.467 14.9117C18.1561 14.7922 17.8237 14.7387 17.491 14.7547C17.1408 14.7814 16.806 14.9101 16.528 15.1247C15.949 15.5587 15.699 16.1977 15.562 16.9047C15.429 17.5897 15.378 18.4817 15.315 19.5677L15.312 19.6237C15.274 20.2737 15.25 20.9167 15.25 21.4997C15.25 22.0827 15.274 22.7267 15.312 23.3767L15.315 23.4317C15.378 24.5177 15.429 25.4097 15.562 26.0937C15.699 26.8017 15.949 27.4397 16.528 27.8747C16.814 28.0897 17.135 28.2177 17.491 28.2447C17.833 28.2697 18.161 28.1977 18.467 28.0877C19.031 27.8857 19.689 27.4847 20.437 27.0307L20.503 26.9907C20.929 26.7307 21.347 26.4637 21.72 26.2007C22.1768 25.8757 22.6221 25.5349 23.055 25.1787L23.105 25.1377C23.869 24.5147 24.517 23.9857 24.965 23.4657C25.453 22.8957 25.75 22.2837 25.75 21.4997C25.75 20.7157 25.453 20.1027 24.964 19.5337C24.517 19.0137 23.869 18.4837 23.106 17.8617L23.056 17.8207C22.602 17.4507 22.146 17.0967 21.72 16.7987C21.3227 16.5226 20.9169 16.2592 20.503 16.0087"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="hidden w-full h-fit py-5"
+          id="show-trails-tags_categortion"
+          role="tabpanel"
+          aria-labelledby="show-trails-tags_categortion-tab"
+        >
+          <div class="w-full h-fit flex gap-4">
+            <div
+              class="min-w-[117px] w-fit h-fit py-1 px-6 rounded-[40px] text-[12px] text-[#13488A] bg-[#C8E1FF] flex items-center justify-center gap-3"
+            >
+              Dog-friendly
+            </div>
+            <div
+              class="min-w-[117px] w-fit h-fit py-1 px-6 rounded-[40px] text-[12px] text-[#13488A] bg-[#C8E1FF] flex items-center justify-center gap-3"
+            >
+              Family
+            </div>
+            <div
+              class="min-w-[117px] w-fit h-fit py-1 px-6 rounded-[40px] text-[12px] text-[#13488A] bg-[#C8E1FF] flex items-center justify-center gap-3"
+            >
+              Historical
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden w-full h-fit py-5"
+          id="show-trails-comments"
+          role="tabpanel"
+          aria-labelledby="show-trails-comments-tab"
+        >
+          <div class="w-full h-max flex flex-col gap-6">
+            <div id="comment-container-1" class="w-full h-max flex gap-1">
+              <!-- profile image -->
+              <img class="w-8 h-8" src="" alt="avatar rounded" />
+              <div
+                class="flex-1 h-max p-2 bg-[#F7F8F9] rounded-[10px] flex flex-col gap-2"
+              >
+                <div class="w-full h-fit flex items-center justify-between">
+                  <div class="w-[567px] h-fit flex gap-4">
+                    <div class="text-black leading-6">Albert Flores</div>
+                    <div class="text-[#A0AFC3]">9/4/12</div>
+                  </div>
+                  <button class="cursor-pointer w-4 h-4">
+                    <img class="w-full h-full" src="" alt="delete icon" />
+                  </button>
+                </div>
+                <div class="w-full h-max">
+                  <div
+                    id="comment-text-1"
+                    class="w-full h-max text-black leading-6 line-clamp-3"
+                  >
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet
+                    luctusLorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    elit ut aliquam, purus sit amet luctus Lorem ipsum dolor sit
+                    amet aliquam, purus sit amet luctus liquam, purus sit amet
+                    luctus Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    elit ut aliquam, purus sit amet luctus Lorem ipsum dolor sit
+                    amet aliquam, purus sit amet luctus liquam, purus sit amet
+                    luctus Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    elit ut aliquam, purus sit amet luctus Lorem ipsum dolor sit
+                    amet aliquam, purus sit amet luctus liquam, purus sit amet
+                    luctus Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                  </div>
+                  <button
+                    id="comment-readmore-1"
+                    class="w-max h-max text-[#13488A] hover:text-[#4373ad] block"
+                    onclick="otherElementClassToggle(`comment-text-${1}`,`line-clamp-3`),elementToggle(`comment-readless-${1}`,`hidden`,`block`),elementToggle(`comment-readmore-${1}`,`block`,`hidden`)"
+                  >
+                    read more
+                  </button>
+                  <button
+                    id="comment-readless-1"
+                    class="w-max h-max text-[red] hover:text-[#ff5757] hidden"
+                    onclick="otherElementClassToggle(`comment-text-${1}`,`line-clamp-3`),elementToggle(`comment-readmore-${1}`,`hidden`,`block`),elementToggle(`comment-readless-${1}`,`block`,`hidden`)"
+                  >
+                    read less
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="comment-p-container-2" class="w-full h-max flex gap-1">
+              <!-- profile image -->
+              <img class="w-8 h-8" src="" alt="avatar rounded" />
+              <div
+                class="flex-1 h-max p-2 bg-[#F7F8F9] rounded-[10px] flex flex-col gap-2"
+              >
+                <div class="w-full h-fit flex items-center justify-between">
+                  <div class="w-[567px] h-fit flex gap-4">
+                    <div class="text-black leading-6">Albert Flores</div>
+                    <div class="text-[#A0AFC3]">9/4/12</div>
+                  </div>
+                  <button class="cursor-pointer w-4 h-4">
+                    <img class="w-full h-full" src="" alt="delete icon" />
+                  </button>
+                </div>
+                <div class="w-full h-max">
+                  <div
+                    id="comment-text-2"
+                    class="w-full h-max text-black leading-6 line-clamp-3"
+                  >
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet
+                    luctusLorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    elit ut aliquam, purus sit amet luctus Lorem ipsum dolor sit
+                    amet aliquam, purus sit amet luctus liquam, purus sit amet
+                    luctus Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    elit ut aliquam, purus sit amet luctus Lorem ipsum dolor sit
+                    amet aliquam, purus sit amet luctus liquam, purus sit amet
+                    luctus Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                    elit ut aliquam, purus sit amet luctus Lorem ipsum dolor sit
+                    amet aliquam, purus sit amet luctus liquam, purus sit amet
+                    luctus Lorem ipsum dolor sit amet, coetur adipiscing elit ut
+                    aliquam, purus sit amet luctus Lorem ipsum dolor sit amet
+                    aliquam, purus sit amet luctus liquam, purus sit amet luctus
+                  </div>
+                  <button
+                    id="comment-readmore-2"
+                    class="w-max h-max text-[#13488A] hover:text-[#4373ad] block"
+                    onclick="otherElementClassToggle(`comment-text-${2}`,`line-clamp-3`),elementToggle(`comment-readless-${2}`,`hidden`,`block`),elementToggle(`comment-readmore-${2}`,`block`,`hidden`)"
+                  >
+                    read more
+                  </button>
+                  <button
+                    id="comment-readless-2"
+                    class="w-max h-max text-[red] hover:text-[#ff5757] hidden"
+                    onclick="otherElementClassToggle(`comment-text-${2}`,`line-clamp-3`),elementToggle(`comment-readmore-${2}`,`hidden`,`block`),elementToggle(`comment-readless-${2}`,`block`,`hidden`)"
+                  >
+                    read less
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full h-fit flex justify-end pb-6">
+      <button
+        class="cursor-pointer w-fit h-fit py-2 px-14 rounded-[40px] text-white bg-[#13488A] flex items-center justify-center gap-3"
+      >
+        Back
+      </button>
+    </div>
+  </div>
+  <div
+    id="photos-modal"
+    tabindex="-1"
+    aria-hidden="true"
+    class="hidden overflow-y-auto fixed top-0 left-0 z-50 justify-center items-center w-full h-full"
+  >
+    <div
+      class="bg-white relative w-full max-w-[950px] h-max rounded-lg py-4 px-8 flex flex-col gap-4"
+    >
+      <div class="text-xl font-semibold leading-8">View image</div>
+      <div
+        class="w-full max-w-[876px] h-[396px] bg-[gray] rounded-2xl overflow-hidden flex items-center justify-center"
+      >
+        <img
+          class="w-full"
+          src="temp_images/user-photo2.png"
+          alt="no image avaliable"
+        />
+      </div>
+      <div class="w-full h-fit flex justify-end pb-6">
+        <button
+          data-modal-hide="photos-modal"
+          class="cursor-pointer w-fit h-fit py-2 px-14 rounded-[40px] text-white bg-[#13488A] flex items-center justify-center gap-3"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    id="videos-modal"
+    tabindex="-1"
+    aria-hidden="true"
+    class="hidden overflow-y-auto overflow fixed top-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full"
+  >
+    <div
+      class="bg-white relative w-full max-w-[950px] rounded-lg py-4 px-8 flex flex-col gap-4"
+    >
+      <div class="text-xl font-semibold leading-8">View video</div>
+      <div
+        class="w-full max-w-[876px] h-[396px] bg-[gray] rounded-2xl overflow-hidden relative flex items-center justify-center"
+      >
+        <img
+          class="w-full"
+          src="temp_images/4f6cf0e066e3966ec3011aa214c97875f20e9626.jpg"
+          alt="no thumbnail avaliable"
+        />
+        <div class="absolute w-full h-full flex items-center justify-center">
+          <div class="w-10 h-10">
+            <svg
+              width="41"
+              height="42"
+              viewBox="0 0 41 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <ellipse
+                cx="20.1399"
+                cy="21"
+                rx="20.1399"
+                ry="21"
+                fill="#13488A"
+              />
+              <ellipse
+                cx="20.1399"
+                cy="21"
+                rx="20.1399"
+                ry="21"
+                fill="#13488A"
+              />
+              <path
+                d="M20.503 16.0097L20.437 15.9697C19.689 15.5147 19.031 15.1137 18.467 14.9117C18.1561 14.7922 17.8237 14.7387 17.491 14.7547C17.1408 14.7814 16.806 14.9101 16.528 15.1247C15.949 15.5587 15.699 16.1977 15.562 16.9047C15.429 17.5897 15.378 18.4817 15.315 19.5677L15.312 19.6237C15.274 20.2737 15.25 20.9167 15.25 21.4997C15.25 22.0827 15.274 22.7267 15.312 23.3767L15.315 23.4317C15.378 24.5177 15.429 25.4097 15.562 26.0937C15.699 26.8017 15.949 27.4397 16.528 27.8747C16.814 28.0897 17.135 28.2177 17.491 28.2447C17.833 28.2697 18.161 28.1977 18.467 28.0877C19.031 27.8857 19.689 27.4847 20.437 27.0307L20.503 26.9907C20.929 26.7307 21.347 26.4637 21.72 26.2007C22.1768 25.8757 22.6221 25.5349 23.055 25.1787L23.105 25.1377C23.869 24.5147 24.517 23.9857 24.965 23.4657C25.453 22.8957 25.75 22.2837 25.75 21.4997C25.75 20.7157 25.453 20.1027 24.964 19.5337C24.517 19.0137 23.869 18.4837 23.106 17.8617L23.056 17.8207C22.602 17.4507 22.146 17.0967 21.72 16.7987C21.3227 16.5226 20.9169 16.2592 20.503 16.0087"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-fit flex justify-end pb-6">
+        <button
+          data-modal-hide="videos-modal"
+          class="cursor-pointer w-fit h-fit py-2 px-14 rounded-[40px] text-white bg-[#13488A] flex items-center justify-center gap-3"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- <div
+    id="videos-modal"
+    tabindex="-1"
+    aria-hidden="true"
+    class="hidden overflow-y-auto overflow fixed top-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full"
+  >
+    <div
+      class="bg-white relative w-[950px] rounded-lg py-4 px-8 flex flex-col gap-4"
+    >
+      <div class="text-xl font-semibold leading-8">View video</div>
+      <div
+        class="cursor-pointer w-full h-fit bg-[gray] rounded-2xl relative flex"
+      >
+        <img
+          class="object-cover w-full"
+          src="temp_images/user-photo2.png"
+          alt="no thumbnail avaliable"
+        />
+        <div class="absolute w-full h-full flex items-center justify-center">
+          <div class="w-10 h-10">
+            <svg
+              width="41"
+              height="42"
+              viewBox="0 0 41 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <ellipse
+                cx="20.1399"
+                cy="21"
+                rx="20.1399"
+                ry="21"
+                fill="#13488A"
+              />
+              <ellipse
+                cx="20.1399"
+                cy="21"
+                rx="20.1399"
+                ry="21"
+                fill="#13488A"
+              />
+              <path
+                d="M20.503 16.0097L20.437 15.9697C19.689 15.5147 19.031 15.1137 18.467 14.9117C18.1561 14.7922 17.8237 14.7387 17.491 14.7547C17.1408 14.7814 16.806 14.9101 16.528 15.1247C15.949 15.5587 15.699 16.1977 15.562 16.9047C15.429 17.5897 15.378 18.4817 15.315 19.5677L15.312 19.6237C15.274 20.2737 15.25 20.9167 15.25 21.4997C15.25 22.0827 15.274 22.7267 15.312 23.3767L15.315 23.4317C15.378 24.5177 15.429 25.4097 15.562 26.0937C15.699 26.8017 15.949 27.4397 16.528 27.8747C16.814 28.0897 17.135 28.2177 17.491 28.2447C17.833 28.2697 18.161 28.1977 18.467 28.0877C19.031 27.8857 19.689 27.4847 20.437 27.0307L20.503 26.9907C20.929 26.7307 21.347 26.4637 21.72 26.2007C22.1768 25.8757 22.6221 25.5349 23.055 25.1787L23.105 25.1377C23.869 24.5147 24.517 23.9857 24.965 23.4657C25.453 22.8957 25.75 22.2837 25.75 21.4997C25.75 20.7157 25.453 20.1027 24.964 19.5337C24.517 19.0137 23.869 18.4837 23.106 17.8617L23.056 17.8207C22.602 17.4507 22.146 17.0967 21.72 16.7987C21.3227 16.5226 20.9169 16.2592 20.503 16.0087"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-fit flex justify-end pb-6">
+        <button
+          data-modal-hide="videos-modal"
+          class="cursor-pointer w-fit h-fit py-2 px-14 rounded-[40px] text-white bg-[#13488A] flex items-center justify-center gap-3"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div> -->
+</html>

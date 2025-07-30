@@ -10,6 +10,10 @@ function elementToggle(elementId, containsClass = 'block') {
   }
 }
 
-function thisElementToggle(el, classToToggle) {
+function thisClassToggle(el, classToToggle) {
   el.classList.toggle(classToToggle);
+}
+
+function otherElementClassToggle(id, classToToggle) {
+  document.getElementById(id).classList.toggle(classToToggle);
 }

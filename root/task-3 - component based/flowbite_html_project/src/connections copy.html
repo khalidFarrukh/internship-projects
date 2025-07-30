@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flowbite HTML Project</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @layer components {
+        [aria-selected="false"] {
+          @apply !text-[#999999] !border-[#999999];
+        }
+        [aria-selected="false"]:hover {
+          @apply !border-b-2 !text-[#F48E8B] !border-[#F48E8B];
+        }
+        [aria-selected="true"] {
+          @apply !border-b-2 !text-[#960D0D] !border-[#960D0D];
+        }
+        [aria-selected="true"]:hover {
+          @apply !border-b-2 !text-[#F48E8B] !border-[#F48E8B];
+        }
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="output.css" />
+    <script src="/node_modules/flowbite/dist/flowbite.min.js"></script> -->
+  </head>
+
+  <body class="-bg-[black] w-full flex flex-col items-center">
+    <!-- <header
+      id="nav-container"
+      class="z-40 bg-[#F8EFE8] text-black w-full h-fit fixed"
+    ></header> -->
+
+    <main
+      class="z-2 bg-white text-black w-full max-w-[1440px] h-fit mt-26 md:mt-29 mb-10 md:mb-0 px-6 lg:px-12 flex flex-col items-center"
+    >
+      <div class="-bg-[blue] w-full h-fit gap-7 md:gap-10 flex flex-col">
+        <div class="-bg-[red] w-full h-fit">
+          <h1
+            style="font-family: 'Pinyon Script', cursive"
+            class="text-[40px] text-[#470001] w-full h-fit"
+          >
+            Connections
+          </h1>
+        </div>
+        <div class="min-w-0 flex-1 h-fit flex flex-col gap-4">
+          <div
+            class="-bg-[red] min-w-0 flex-1 h-fit border-b border-[#E8E8E8] text-sm font-medium text-center"
+          >
+            <ul
+              class="-bg-[red] min-w-0 overflow-x-auto scrollbar-hide flex-1 h-fit flex flex-nowrap gap-7 md:gap-10"
+              data-tabs-toggle="#tab-content"
+              role="tablist"
+            >
+              <li class="w-fit h-fit">
+                <button
+                  class="cursor-pointer p-2 flex whitespace-nowrap tab-button"
+                  id="myconnections-tab"
+                  data-tabs-target="#my-connections"
+                  type="button"
+                  role="tab"
+                  aria-controls="my-connections"
+                  aria-selected="true"
+                >
+                  My connections (100+)
+                </button>
+              </li>
+              <li class="w-fit h-fit">
+                <button
+                  class="cursor-pointer p-2 flex whitespace-nowrap tab-button"
+                  id="pending-tab"
+                  data-tabs-target="#pending"
+                  type="button"
+                  role="tab"
+                  aria-controls="pending"
+                  aria-selected="false"
+                >
+                  Pending (2)
+                </button>
+              </li>
+              <li class="w-fit h-fit">
+                <button
+                  class="cursor-pointer p-2 flex whitespace-nowrap tab-button"
+                  id="request-tab"
+                  data-tabs-target="#request"
+                  type="button"
+                  role="tab"
+                  aria-controls="request"
+                  aria-selected="false"
+                >
+                  Requests (3)
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div id="tab-content" class="-bg-[red]">
+            <div
+              class="w-full h-fit"
+              id="my-connections"
+              role="tabpanel"
+              aria-labelledby="myconnections-tab"
+            >
+              <div class="w-full h-fit flex flex-col gap-4">
+                <!-- responsive component -->
+                <div
+                  class="w-full h-fit bg-white border border-[#E8E8E8] rounded-lg py-3 px-4 md:py-4 md:px-6 flex flex-col gap-4"
+                >
+                  <div
+                    class="w-full h-fit flex items-center justify-between md:gap-10"
+                  >
+                    <div
+                      class="-bg-[orange] flex-1 h-fit flex items-center gap-4 md:gap-8"
+                    >
+                      <div
+                        class="size-10 md:size-[96px] rounded-full bg-[#EA6F49]"
+                      >
+                        <!-- some if..else.. condition might be in play here but for now i am explicitly assigning hidden class on else image tag -->
+                        <!-- if -->
+                        <!-- below div will be used if profile image doesn't exist -->
+                        <div
+                          class="size-10 md:size-[96px] flex items-center justify-center"
+                        >
+                          <img
+                            class="size-[50%]"
+                            src="images/user-photo.svg"
+                            alt=""
+                          />
+                          <!-- <img
+                            class="size-[50%]"
+                            src="{{ asset('images/user-photo.svg') }}"
+                            alt="profile"
+                          /> -->
+                        </div>
+                        <!-- else -->
+                        <!-- below image tag will be used if the profile images exists -->
+                        <img
+                          class="hidden w-full h-full rounded-full"
+                          src=""
+                          alt="Rounded avatar"
+                        />
+                      </div>
+                      <div
+                        class="-bg-[gray] w-full h-fit flex flex-col justify-between gap-2"
+                      >
+                        <h2
+                          class="md:text-lg font-medium flex flex-col md:flex-row md:items-center md:gap-6"
+                        >
+                          Courtney Duffy
+                          <span class="text-sm text-[#737373]"
+                            >CEO at VienDoB</span
+                          >
+                        </h2>
+                        <!-- b2 -->
+                        <p
+                          data-node="b2"
+                          class="min-w-0 flex-1 max-w-[636px] h-fit text-sm text-gray-400"
+                        >
+                          Many desktop publishing packages and web page editors
+                          now use Lorem Ipsum as their default model text, and a
+                          search for 'lorem ipsum'
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="w-fit h-fit text-left flex flex-col justify-center"
+                    >
+                      <p class="text-sm text-gray-500 mb-1">Responses:</p>
+                      <p class="font-bold text-[#454545] text-lg">10</p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex-1 h-fit flex md:hidden items-center justify-between"
+                  >
+                    <!-- b1 -->
+                    <div
+                      data-node="b1"
+                      data-swapWidth="768"
+                      data-swapped="false"
+                      class="hidden"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden w-full h-fit"
+              id="pending"
+              role="tabpanel"
+              aria-labelledby="pending-tab"
+            >
+              <div class="w-full h-fit flex flex-col gap-4">
+                <!-- responsive component -->
+                <div
+                  class="flex-1 h-fit bg-white border border-[#E8E8E8] rounded-lg py-3 px-4 md:py-4 md:px-6 flex flex-col gap-4"
+                >
+                  <div
+                    class="min-w-0 flex-1 h-fit flex items-center justify-between md:gap-10"
+                  >
+                    <div
+                      class="-bg-[red] min-w-0 w-fit h-fit flex items-center gap-4 md:gap-8"
+                    >
+                      <div
+                        class="size-10 md:size-[96px] rounded-full bg-[#EA6F49]"
+                      >
+                        <!-- some if..else.. condition might be in play here but for now i am explicitly assigning hidden class on else image tag -->
+                        <!-- if -->
+                        <!-- below div will be used if profile image doesn't exist -->
+                        <div
+                          class="size-10 md:size-[96px] flex items-center justify-center"
+                        >
+                          <img
+                            class="size-[50%]"
+                            src="images/user-photo.svg"
+                            alt=""
+                          />
+                          <!-- <img
+                            class="size-[50%]"
+                            src="{{ asset('images/user-photo.svg') }}"
+                            alt="profile"
+                          /> -->
+                        </div>
+                        <!-- else -->
+                        <!-- below image tag will be used if the profile images exists -->
+                        <img
+                          class="hidden w-full h-full rounded-full"
+                          src=""
+                          alt="Rounded avatar"
+                        />
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <h2
+                          class="md:text-lg font-medium flex flex-col md:flex-row md:items-center md:gap-6"
+                        >
+                          Charlotte Hayes
+                          <span class="text-sm text-[#737373]"
+                            >Brand Strategist</span
+                          >
+                        </h2>
+                        <!-- b2 -->
+                        <p
+                          data-node="b2"
+                          class="min-w-0 flex-1 max-w-[636px] h-fit text-sm text-gray-400"
+                        >
+                          Many desktop publishing packages and web page editors
+                          now use Lorem Ipsum as their default model text, and a
+                          search for 'lorem ipsum'
+                        </p>
+                      </div>
+                    </div>
+                    <!-- c2 -->
+                    <div
+                      data-node="c2"
+                      class="flex-1 md:flex-0 whitespace-nowrap flex flex-col"
+                    >
+                      <button
+                        class="cursor-pointer px-8 py-4 rounded text-black text-[16px] bg-[#F0EFEB]"
+                      >
+                        Cancel request
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex-1 h-fit flex md:hidden items-center justify-between"
+                  >
+                    <!-- b1 -->
+                    <div
+                      data-node="b1"
+                      data-swapWidth="768"
+                      data-swapped="false"
+                      class="hidden"
+                    ></div>
+                  </div>
+                  <div
+                    class="flex-1 h-fit flex md:hidden items-center justify-between"
+                  >
+                    <!-- c1 -->
+                    <div
+                      data-node="c1"
+                      data-swapWidth="768"
+                      data-swapped="false"
+                      class="hidden"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden w-full h-fit"
+              id="request"
+              role="tabpanel"
+              aria-labelledby="request-tab"
+            >
+              <div class="w-full h-fit flex flex-col gap-4">
+                <!-- responsive component -->
+                <div
+                  class="flex-1 h-fit bg-white border border-[#E8E8E8] rounded-lg py-3 px-4 md:py-4 md:px-6 flex flex-col gap-4"
+                >
+                  <div
+                    class="min-w-0 flex-1 h-fit flex items-center justify-between md:gap-10"
+                  >
+                    <div
+                      class="-bg-[red] min-w-0 w-fit h-fit flex items-center gap-4 md:gap-8"
+                    >
+                      <div
+                        class="size-10 md:size-[96px] rounded-full bg-[#EA6F49]"
+                      >
+                        <!-- some if..else.. condition might be in play here but for now i am explicitly assigning hidden class on else image tag -->
+                        <!-- if -->
+                        <!-- below div will be used if profile image doesn't exist -->
+                        <div
+                          class="size-10 md:size-[96px] flex items-center justify-center"
+                        >
+                          <img
+                            class="size-[50%]"
+                            src="images/user-photo.svg"
+                            alt=""
+                          />
+                          <!-- <img
+                            class="size-[50%]"
+                            src="{{ asset('images/user-photo.svg') }}"
+                            alt="profile"
+                          /> -->
+                        </div>
+                        <!-- else -->
+                        <!-- below image tag will be used if the profile images exists -->
+                        <img
+                          class="hidden w-full h-full rounded-full"
+                          src=""
+                          alt="Rounded avatar"
+                        />
+                      </div>
+
+                      <img
+                        src=""
+                        alt="profile"
+                        class="hidden size-10 md:size-[96px] rounded-full"
+                      />
+                      <div class="flex flex-col gap-2">
+                        <h2
+                          class="md:text-lg font-medium flex flex-col md:flex-row md:items-center md:gap-6"
+                        >
+                          Sophie Bennett
+                          <span class="text-sm text-[#737373]"
+                            >Fashion Designer</span
+                          >
+                        </h2>
+                        <!-- b2 -->
+                        <p
+                          data-node="b2"
+                          class="min-w-0 flex-1 max-w-[636px] h-fit text-sm text-gray-400"
+                        >
+                          Many desktop publishing packages and web page editors
+                          now use Lorem Ipsum as their default model text, and a
+                          search for 'lorem ipsum'
+                        </p>
+                      </div>
+                    </div>
+                    <!-- c2 -->
+                    <div
+                      data-node="c2"
+                      class="flex-1 md:w-fit flex-nowrap flex flex-row md:justify-end gap-4"
+                    >
+                      <button
+                        class="cursor-pointer flex-1 md:flex-0 px-8 py-3 rounded text-white text-[16px] bg-[#960D0D]"
+                      >
+                        Accept
+                      </button>
+                      <button
+                        class="cursor-pointer flex-1 md:flex-0 px-8 py-3 rounded text-black text-[16px] bg-[#F0EFEB]"
+                      >
+                        Decline
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex-1 h-fit flex md:hidden items-center justify-between"
+                  >
+                    <!-- b1 -->
+                    <div
+                      data-node="b1"
+                      data-swapWidth="768"
+                      data-swapped="false"
+                      class="hidden"
+                    ></div>
+                  </div>
+                  <div
+                    class="flex-1 h-fit flex md:hidden items-center justify-between"
+                  >
+                    <!-- c1 -->
+                    <div
+                      data-node="c1"
+                      data-swapWidth="768"
+                      data-swapped="false"
+                      class="hidden"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="-bg-[red] w-full h-fit flex md:hidden items-center justify-between"
+        >
+          <div
+            class="w-6 h-6 rounded-sm p-1 flex justify-items-center bg-[#F0EFEB]"
+          >
+            <img src="images/arrow.svg" alt="arrow icon" />
+          </div>
+          <div class="text-[14px] leading-[146%] tracking-[-1%] text-[#999999]">
+            1-4 of 4 Results
+          </div>
+          <div
+            class="w-6 h-6 rounded-sm p-1 flex justify-items-center bg-[#F0EFEB]"
+          >
+            <img class="rotate-180" src="images/arrow.svg" alt="arrow icon" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabButtons = document.querySelectorAll(".tab-button");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remove active styles from all buttons
+            tabButtons.forEach((btn) => {
+              btn.classList.remove(
+                "border-b-2",
+                "border-[#960D0D]",
+                "text-[#960D0D]"
+              );
+              btn.classList.add("text-[#A7AAA9]");
+            });
+
+            // Add active styles to clicked button
+            this.classList.add(
+              "border-b-2",
+              "border-[#960D0D]",
+              "text-[#960D0D]"
+            );
+            this.classList.remove("text-[#A7AAA9]");
+
+            // Show corresponding tab content
+            const tab = this.dataset.tab;
+            tabContents.forEach((content) => content.classList.add("hidden"));
+            document.getElementById(tab).classList.remove("hidden");
+          });
+        });
+
+        // Activate the first tab button by default
+        const firstButton = tabButtons[0];
+        if (firstButton) {
+          firstButton.classList.add(
+            "border-b-2",
+            "border-[#960D0D]",
+            "text-[#960D0D]"
+          );
+          firstButton.classList.remove("text-[#A7AAA9]");
+        }
+      });
+    </script>
+
+    <script src="scripts/swapElements.js"></script>
+  </body>
+</html>

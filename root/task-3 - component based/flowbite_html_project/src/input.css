@@ -5,13 +5,6 @@
 @config "../tailwind.config.js";
 
 
-@theme inline {
-  --breakpoint-w1140: 1140px;
-  --breakpoint-w1000: 1000px;
-  --breakpoint-w825: 825px;
-  --breakpoint-w425: 425px;
-}
-
 @layer components {
   [aria-selected="false"] {
     @apply !text-[#999999] !border-[#999999];

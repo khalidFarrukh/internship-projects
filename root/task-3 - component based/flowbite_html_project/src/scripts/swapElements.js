@@ -54,8 +54,6 @@ function swapElements(el1, el2) {
 }
 
 let nodes_n1 = null,
-  nodes_n2 = null,
-  nodes_a1 = null,
   nodes_a2 = null,
   nodes_b1 = null,
   nodes_b2 = null,
@@ -66,10 +64,8 @@ let nodes_n1 = null,
 
 
 let areElementsLoaded = false;
-const loadElements = () => {
+const loadElements_1 = () => {
   if (!areElementsLoaded) {
-    nodes_n1 = document.querySelectorAll('[data-node="n1"]');
-    nodes_n2 = document.querySelectorAll('[data-node="n2"]');
     nodes_a1 = document.querySelectorAll('[data-node="a1"]');
     nodes_a2 = document.querySelectorAll('[data-node="a2"]');
     nodes_b1 = document.querySelectorAll('[data-node="b1"]');
@@ -81,8 +77,6 @@ const loadElements = () => {
     areElementsLoaded = true;
   }
   return [
-    nodes_n1,
-    nodes_n2,
     nodes_a1,
     nodes_a2,
     nodes_b1,
@@ -98,8 +92,6 @@ const loadElements = () => {
 
 window.addEventListener("DOMContentLoaded", () => {
   const [
-    nodes_n1,
-    nodes_n2,
     nodes_a1,
     nodes_a2,
     nodes_b1,
@@ -108,9 +100,8 @@ window.addEventListener("DOMContentLoaded", () => {
     nodes_c2,
     nodes_d1,
     nodes_d2
-  ] = loadElements();
+  ] = loadElements_1();
   console.log(nodes_a1.length)
-  nodes_n1.length > 0 ? handleResponsiveSwaps(nodes_n1, nodes_n2) : "";
   nodes_a1.length > 0 ? handleResponsiveSwaps(nodes_a1, nodes_a2) : "";
   nodes_b1.length > 0 ? handleResponsiveSwaps(nodes_b1, nodes_b2) : "";
   nodes_c1.length > 0 ? handleResponsiveSwaps(nodes_c1, nodes_c2) : "";
@@ -119,8 +110,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("resize", () => {
   const [
-    nodes_n1,
-    nodes_n2,
     nodes_a1,
     nodes_a2,
     nodes_b1,
@@ -129,8 +118,7 @@ window.addEventListener("resize", () => {
     nodes_c2,
     nodes_d1,
     nodes_d2
-  ] = loadElements();
-  handleResponsiveSwaps(nodes_n1, nodes_n2)
+  ] = loadElements_1();
   handleResponsiveSwaps(nodes_a1, nodes_a2)
   handleResponsiveSwaps(nodes_b1, nodes_b2)
   handleResponsiveSwaps(nodes_c1, nodes_c2)
